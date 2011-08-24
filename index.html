@@ -1,0 +1,9 @@
+---
+layout: default
+title: Home
+---
+Welcome!
+
+{% for post in site.posts limit: 7 %}
+<a href="{{ post.url }}">{{ post.title }}</a>
+{% endfor %}
