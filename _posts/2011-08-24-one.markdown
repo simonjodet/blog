@@ -1,0 +1,6 @@
+---
+layout: post
+title: One
+---
+
+This is my first post

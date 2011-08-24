@@ -2,8 +2,11 @@
 layout: default
 title: Home
 ---
-Welcome!
+<h1>Welcome on Simon's Boring Ass Life!</h1>
 
-{% for post in site.posts limit: 7 %}
-<a href="{{ post.url }}">{{ post.title }}</a>
+<strong>Posts:</strong>
+<ul>
+{% for post in site.posts %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
+</ul>
