@@ -14,6 +14,15 @@
         color: #404040;
         text-decoration: none;
     }
+    .main-content {
+        padding:10px;
+    }
+    .post-img {
+        float:right;
+        max-width:150px;
+        max-height:150px;
+        padding:5px;
+    }
     </style>
 </head>
 <body>
@@ -24,12 +33,9 @@
                 <small>Not the most original blog name</small>
             </h1>
         </div>
-        <div class="row">
-            <div class="span1 columns">&nbsp;</div>
-            <div class="span14 columns">
-                {{ content }}
-            </div>
-            <div class="span1 columns">&nbsp;</div>
+        <div class="main-content">
+            {{ content }}
+        </div>
         </div>
     </div>
 </body>

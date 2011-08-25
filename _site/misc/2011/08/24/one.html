@@ -14,6 +14,15 @@
         color: #404040;
         text-decoration: none;
     }
+    .main-content {
+        padding:10px;
+    }
+    .post-img {
+        float:right;
+        max-width:150px;
+        max-height:150px;
+        padding:5px;
+    }
     </style>
 </head>
 <body>
@@ -24,21 +33,32 @@
                 <small>Not the most original blog name</small>
             </h1>
         </div>
-        <div class="row">
-            <div class="span1 columns">&nbsp;</div>
-            <div class="span14 columns">
-                <div id="post">
-    <h2><a href="/misc/2011/08/24/one.html">
-        One
-    </a><br/><small>Published on 24 Aug 2011</small></h2>
-    <div id="date"></div>
-<p>This is my first post</p>
+        <div class="main-content">
+            <div class="page-header">
+    <h2>
+        One<br/>
+        <small>Published on 24 Aug 2011</small>
+    </h2>
+</div>
+<div>
+    <img class='post-img' src='/img/2011-08-24-one/u2_one.jpg' />
+<p>Ok. For the <em>tenth</em> time at least, I&#8217;m starting a blog. I&#8217;m like a little school girl promising to herself every year to keep a diary. Epic fail each time&#8230;</p>
+
+<p>Every time, there is a good reason for me to start a blog. This time around, I really wanted to use Jekyll and get rid of Wordpress.</p>
+
+<p>Wordpress is probably one of the best blog engine out there. However, it doesn&#8217;t fit my needs and has a number of major flaws:</p>
+
+<ul>
+<li>Wordpress is too stressful. I mean my blog got hacked a couple of time with 0-day injection issues. This engine is way to much used and like Windows is a favorite target for hackers.</li>
+
+<li>I don&#8217;t need this bloated engine to write maybe ten posts in total before I switch to something else again.</li>
+</ul>
+</div>
 <!-- <div id="disqus">
 <div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/git-ready/embed.js"></script><noscript><a href="http://git-ready.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
 </div> -->
-</div>
-            </div>
-            <div class="span1 columns">&nbsp;</div>
+
+        </div>
         </div>
     </div>
 </body>
