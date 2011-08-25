@@ -1,6 +1,7 @@
 ---
 layout: post
 title: One
+categories: - misc
 ---
 
 This is my first post
