@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Recent PHP discoveries - Simon's Boring Ass Life</title>
+    <meta name="generator" content="Jekyll">
+    <meta name="author" content="Simon Jodet">
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap-1.1.0.min.css">
+    <style>
+    .main-title,
+    .main-title:hover {
+        color: #404040;
+        text-decoration: none;
+    }
+    .main-content {
+        padding:10px;
+    }
+    .post-img {
+        float:right;
+        max-width:150px;
+        max-height:150px;
+        padding:5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>
+                <a href="/" class="main-title">Simon's Blog</a><br/>
+                <small>Not the most original blog name</small>
+            </h1>
+        </div>
+        <div class="main-content">
+            <div class="page-header">
+    <h2>
+        Recent PHP discoveries<br/>
+        <small>Published on 25 Aug 2011</small>
+    </h2>
+</div>
+<div>
+    <img class='post-img' src='/img/2011-08-25-recent-php-discoveries/php-med-trans.png' />
+<h3 id='trim'>Trim</h3>
+
+<p>I just discovered the <a href='http://us.php.net/manual/en/function.trim.php' title='trim documentation'>trim</a> function I&#8217;ve been using for so long to remove whitespaces around strings can also remove any other character. I&#8217;ve been cleaning <em>by hand</em> those path items of possible trailing slashes for so long&#8230;</p>
+
+<h3 id='curl_issue_with_php_538'>Curl issue with PHP 5.3.8</h3>
+
+<p>I&#8217;ve encountered an issue on a project after updating to PHP 5.3.8 (the dotdeb package on Debian).<br />If you&#8217;re calling a HTTPS domain with a self-signed certificate, <code>CURLOPT_SSL_VERIFYPEER</code> to 0 is not enough anymore. <code>CURLOPT_SSL_VERIFYHOST</code> should be also set to 0.</p>
+
+<h3 id='head_stop'>HEAD stop</h3>
+
+<p>Accordind to <a href='https://students.mimuw.edu.pl/~ai292615/php_head_trick.pdf'>this</a>, calling PHP with the HEAD http method will make stop execution on the first output. This is potentially dangerous and a security breach.</p>
+
+<h3 id='british_php'>British PHP</h3>
+
+<p>What would have happened if PHP had been invented by some British chap? The answer is <a href='http://www.addedbytes.com/blog/if-php-were-british/'>here</a>.</p>
+</div>
+<!-- <div id="disqus">
+<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/git-ready/embed.js"></script><noscript><a href="http://git-ready.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div> -->
+
+        </div>
+        </div>
+    </div>
+</body>
+</html>
