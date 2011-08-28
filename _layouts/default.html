@@ -7,25 +7,60 @@
     <title>{{ page.title }} - Simon's Boring Ass Life</title>
     <meta name="generator" content="Jekyll">
     <meta name="author" content="Simon Jodet">
-    <link rel="stylesheet" href="/lib/bootstrap/bootstrap-1.1.0.min.css">
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap-1.1.1.min.css" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="/lib/jquery.tweet.css" type="text/css" charset="utf-8"/>
+    <script src="/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/lib/jquery.tweet.js" type="text/javascript" charset="utf-8"></script>
+    <script type='text/javascript'>
+        jQuery(function($){
+            $(".tweet").tweet({
+                username: "simonjodet",
+                avatar_size: 32,
+                count: 4,
+                loading_text: "loading tweets...",
+                template: '{text}{join}{time}<br/><img src="/style/dummy.gif" class="tweet_icon tweet_reply_icon" />{reply_action} <img src="/style/dummy.gif" class="tweet_icon tweet_retweet_icon" />{retweet_action} <img src="/style/dummy.gif" class="tweet_icon tweet_favorite_icon" />{favorite_action}'
+            });
+        });
+    </script>
     <style>
+    code, pre {
+        font-size:10px;
+        line-height:150%;
+    }
     .main-title,
     .main-title:hover {
         color: #404040;
         text-decoration: none;
     }
     .main-content {
-        padding:10px;
+        margin:10px;
     }
     .post-img {
-        float:right;
         max-width:150px;
         max-height:150px;
-        padding:5px;
+        padding:15px;
+    }
+    .float-right {
+        float:right;        
+    }
+    .float-left {
+        float:left;        
+    }
+    .footer {
+        text-align:center;
+    }
+    .twitter_follow_link,
+    .twitter_follow_link:hover {
+        color: #404040;
+        text-decoration: none;
+    }
+    .twitter_bird_icon {
+        vertical-align:middle;
     }
     </style>
 </head>
 <body>
+
     <div class="container">
         <div class="page-header">
             <h1>
@@ -33,10 +68,25 @@
                 <small>Not the most original blog name</small>
             </h1>
         </div>
-        <div class="main-content">
-            {{ content }}
+    <div>
+    <div class="container page-header">
+        <div class="row">
+            <div class="span11 columns">
+                {{ content }}
+            </div>
+            <div class="span4 columns offset1">
+                <div class="page-header">
+                    <h3>
+                        <a href="http://twitter.com/intent/user?screen_name=simonjodet" target="_blank" class="twitter_follow_link"><img src="/style/twitter_bird.png" class="twitter_bird_icon"/>&nbsp;Twitter feed</a>
+                    </h3>
+                </div>
+                <div class="tweet"></div>
+                
+            </div>
         </div>
-        </div>
+    </div>
+    <div class="container" class="footer">
+        Copyright &copy; 2011 Simon Jodet - All rights reserved
     </div>
 </body>
 </html>

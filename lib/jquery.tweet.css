@@ -1,0 +1,70 @@
+.tweet,
+.query {
+    font-size: 100%;
+}
+
+.tweet_time, .tweet_action {
+    font-size: 85%;
+}
+
+.tweet_list {
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    background-color: #FFFFFF;
+}
+
+.tweet_list .awesome,
+.tweet_list .epic {
+    text-transform: uppercase;
+}
+
+.tweet_list li {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.5em;
+}
+
+.tweet_list li a {
+    color: #0069d6;
+}
+
+.tweet_list li a:hover {
+    color: #0050a3;
+}
+
+.tweet_list .tweet_even {
+    background-color: #EAEAEA;
+}
+
+.tweet_list .tweet_avatar {
+    padding-right: .5em; float: left;
+}
+
+.tweet_list .tweet_avatar img {
+    vertical-align: middle;
+}
+
+.tweet_icon {
+    width:8px;
+    height:8px;
+    background:url("/style/twitter_sprite.png") 0 0 no-repeat;
+    padding-right:1px;
+    vertical-align:middle;
+}
+
+.tweet_reply_icon {
+    background-position:0 0;
+}
+
+.tweet_retweet_icon {
+    background-position:0 -16px;
+}
+
+.tweet_favorite_icon {
+    background-position:0 -8px;
+}

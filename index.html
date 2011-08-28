@@ -5,8 +5,13 @@ title: Home
 <ul class="unstyled">
 {% for post in site.posts limit: 10 %}
     <li>
-        <div><h3><a href="{{ post.url }}">{{ post.title }}</a></h3></div>
-        <div>{{ post.content | truncate: 450 }}</div>
+        <div class="page-header">
+            <h3>
+                <a href="{{ post.url }}">{{ post.title }}</a><br/>
+                <small>on {{ post.date | date: "%Y/%m/%d" }} in </small>
+            </h3>
+        </div>
+        <div>{{ post.content }}</div>
     </li>
 {% endfor %}
 </ul>
