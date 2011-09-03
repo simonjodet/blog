@@ -13,4 +13,4 @@ Wordpress is probably one of the best blog engine out there. However, it doesn't
 
 * Wordpress is too stressful. I mean my blog got hacked a couple of time with 0-day injection issues. This engine is way to much used and like Windows is a favorite target for hackers.
 * I don't need this bloated engine to write maybe ten posts in total before I switch to something else again. 
-* Jekyll seems a nice little tool and it gives me an excuse to use 2 things I've been using a lot lately: Git and markdown-like writing with Sphynx.
+* Jekyll seems to be a nice little tool and it gives me an excuse to use 2 things I've been using a lot lately: Git and markdown-like writing with Sphynx.
