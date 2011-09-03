@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Mixing up TDD, PHPUnit, Namespaces and Jenkins - Simon's Boring Ass Life</title>
+    <title>Mixing up TDD, PHPUnit, Namespaces and Jenkins - Simon's Blog</title>
     <meta name="generator" content="Jekyll">
     <meta name="author" content="Simon Jodet">
     <link rel="stylesheet" href="/lib/bootstrap/bootstrap-1.1.1.min.css" type="text/css" charset="utf-8"/>
@@ -21,7 +21,7 @@
                     <div class="twipsy-arrow"></div> 
                     <div class="twipsy-inner">Back to home page</div> 
                 </div>
-                <small>Not the most original blog name</small>
+                <small>Not the most original blog name in the world</small>
             </h1>
         </div>
     <div>
@@ -94,7 +94,11 @@ class Client
 
 <p>I&#8217;ve got 2 new quick tips:</p>
 
-<p>I use Netbeans to code and it is really simple to have a split screen in Netbeans. Just drag the file tab you want to split to the right and you&#8217;ll have a split screen. Really handy for TDD to write your test and your code side by side. I found out that mocking 2 consecutive calls to the same method is not explained in PHPUnit&#8217;s documentation. But it&#8217;s simple: instead of using <code>once()</code>, <code>any()</code> or <code>none()</code> in <code>expects()</code>, use <code>at(0)</code> for the first call and <code>at(1)</code> in the second and so on. You can even make the mock return different values each time. I needed this in my previous example because you usually retrieve configuration more than once.</p>
+<ul>
+<li>I use Netbeans to code and it is really simple to have a split screen in Netbeans. Just drag the file tab you want to split to the right and you&#8217;ll have a split screen. Really handy for TDD to write your test and your code side by side.</li>
+
+<li>I found out that mocking 2 consecutive calls to the same method is not explained in PHPUnit&#8217;s documentation. But it&#8217;s simple: instead of using <code>once()</code>, <code>any()</code> or <code>none()</code> in <code>expects()</code>, use <code>at(0)</code> for the first call and <code>at(1)</code> in the second and so on. You can even make the mock return different values each time. I needed this in my previous example because you usually retrieve configuration more than once.</li>
+</ul>
     <div id="disqus_thread"></div>
     <script type="text/javascript">
         var disqus_shortname = 'simonjodet';
@@ -124,7 +128,7 @@ class Client
             </div>
         </div>
     </div>
-    <div class="container" class="footer">
+    <div class="container footer">
         Copyright &copy; 2011 Simon Jodet - All rights reserved
     </div>
     <script src="/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>

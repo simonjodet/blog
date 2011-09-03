@@ -64,5 +64,5 @@ __Update:__
 
 I've got 2 new quick tips:
 
-I use Netbeans to code and it is really simple to have a split screen in Netbeans. Just drag the file tab you want to split to the right and you'll have a split screen. Really handy for TDD to write your test and your code side by side.
-I found out that mocking 2 consecutive calls to the same method is not explained in PHPUnit's documentation. But it's simple: instead of using ``once()``, ``any()`` or ``none()`` in ``expects()``, use ``at(0)`` for the first call and ``at(1)`` in the second and so on. You can even make the mock return different values each time. I needed this in my previous example because you usually retrieve configuration more than once.
+* I use Netbeans to code and it is really simple to have a split screen in Netbeans. Just drag the file tab you want to split to the right and you'll have a split screen. Really handy for TDD to write your test and your code side by side.
+* I found out that mocking 2 consecutive calls to the same method is not explained in PHPUnit's documentation. But it's simple: instead of using ``once()``, ``any()`` or ``none()`` in ``expects()``, use ``at(0)`` for the first call and ``at(1)`` in the second and so on. You can even make the mock return different values each time. I needed this in my previous example because you usually retrieve configuration more than once.
