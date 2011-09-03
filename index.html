@@ -8,10 +8,11 @@ title: Home
         <div class="page-header">
             <h3>
                 <a href="{{ post.url }}">{{ post.title }}</a><br/>
-                <small>on {{ post.date | date: "%Y/%m/%d" }} in </small>
+                <small>on {{ post.date | date: "%Y/%m/%d" }}</small>
             </h3>
         </div>
         <div>{{ post.content }}</div>
+        <div class="post-separator"></div>
     </li>
 {% endfor %}
 </ul>
