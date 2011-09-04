@@ -2,6 +2,7 @@
 layout: post
 title: One
 category: misc
+tags: [blog, security, speed, performance, git, markdown, sphinx]
 ---
 
 <img src="/img/misc/2011-08-24-one/u2_one.jpg" class="post-img float-right"/>
