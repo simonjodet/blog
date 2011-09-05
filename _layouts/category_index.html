@@ -12,7 +12,7 @@ body: blog archive
                     <small>Published on {{ post.date | date: "%Y/%m/%d" }} in <a href="/categories/{{ post.category }}">{{ post.category }}</a></small>
                 </h3>
             </div>
-            <div>{{ post.content | markdownify }}</div>
+            <div>{{ post.content | markdownify | truncatewords 37}} <a href="{{ post.url }}">Continue reading</a></div>
             <div class="post-separator"></div>
         </li>
     {% endif %}
