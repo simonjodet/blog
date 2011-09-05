@@ -15,8 +15,8 @@
 <body>
 
     <div class="container">
-        <div class="page-header">
-            <h1>
+        <div>
+            <h1 class="main-title">
                 <a href="/" class="main-title" id="home">Simon's Blog</a><br/>
                 <div class="twipsy below tooltips" id="home-tooltip"> 
                     <div class="twipsy-arrow"></div> 
@@ -25,14 +25,34 @@
                 <small>Not the most original blog name in the world</small>
             </h1>
         </div>
-    <div>
+    </div>
     <div class="container page-header">
         <div class="row">
             <div class="span11 columns">
                 {{ content }}
             </div>
             <div class="span4 columns offset1">
-                <div class="page-header">
+                <div class="page-header"><h3>
+                    <a href="/" class="main-title" id="menu_title">
+                        <img src="/style/home.png" class="menu_icon_title"/>Menu
+                    </a>
+                    <div class="twipsy below tooltips" id="menu_title-tooltip"> 
+                        <div class="twipsy-arrow"></div> 
+                        <div class="twipsy-inner">Back to home page</div> 
+                    </div>
+                    </h3></div>
+                <div class="menu">
+                    <strong>
+                        <a href="/categories/index.html"><img src="/style/folder.png" class="menu_icon"/>Categories</a>
+                    </strong>
+                </div>
+                <div class="menu">
+                    <strong>
+                        <a href="http://feeds.feedburner.com/jodet/blog"><img src="/style/rss.png" class="menu_icon"/>RSS</a>
+                    </strong>
+                </div>
+                <div class="page-header">&nbsp;</div>
+                <div>
                     <h3>
                         <a href="http://twitter.com/intent/user?screen_name=simonjodet" target="_blank" class="twitter_follow_link" id="twitter-link"><img src="/style/twitter_bird.png" class="twitter_bird_icon"/>&nbsp;Twitter feed</a>
                         <div class="twipsy below tooltips" id="twitter-tooltip"> 

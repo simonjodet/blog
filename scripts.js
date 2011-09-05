@@ -15,6 +15,12 @@ jQuery(function($){
     $('#home').mouseleave(function(){
         $('#home-tooltip').hide();
     });
+    $('#menu_title').mouseenter(function(){
+        $('#menu_title-tooltip').show();
+    });
+    $('#menu_title').mouseleave(function(){
+        $('#menu_title-tooltip').hide();
+    });
     //Add tooltip to twitter link
     $('#twitter-link').mouseenter(function(){
         $('#twitter-tooltip').show();
