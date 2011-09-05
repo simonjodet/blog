@@ -9,7 +9,7 @@ title: Home
             <div class="page-header">
                 <h3>
                     <a href="{{ post.url }}">{{ post.title }}</a><br/>
-                    <small>on {{ post.date | date: "%Y/%m/%d" }}</small>
+                    <small>Published on {{ post.date | date: "%Y/%m/%d" }} in <a href="/categories/{{ post.category }}">{{ post.category }}</a></small>
                 </h3>
             </div>
             <div>{{ post.content }}</div>
@@ -18,9 +18,3 @@ title: Home
     {% endif %}
 {% endfor %}
 </ul>
-<!-- <strong>Categories:</strong>
-<ul>
-{% for category in site.categories %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul> -->

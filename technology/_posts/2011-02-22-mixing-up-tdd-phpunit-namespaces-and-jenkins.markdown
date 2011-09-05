@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mixing up TDD, PHPUnit, Namespaces and Jenkins
-category: geek-technology
+category: technology
 tags: [TDD, PHPUnit, namespace, Jenkins, PHP]
 ---
 Hi all,

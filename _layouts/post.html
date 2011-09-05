@@ -4,7 +4,7 @@ layout: default
 <div class="page-header">
     <h3>
         {{ page.title }}<br/>
-        <small>Published on {{ page.date | date_to_string }}</small>
+        <small>Published on {{ page.date | date: "%Y/%m/%d" }} in <a href="/categories/{{ page.category }}">{{ page.category }}</a></small>
     </h3>
 </div>
 <div>
