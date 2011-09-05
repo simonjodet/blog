@@ -23,7 +23,9 @@ I got 3 major issues with PHPUnit:
 2- Namespace support is weird, especially when using type hinting of classes. My advice: use full-qualified names. Not a big deal, you SHOULD always use full-qualified names anyway. That way, your fellow developer will not have to learn the whole namespace hierarchy to understand your code.
 
 3- Mocks are cool but they're not meant to fix all your problems. You want to test if an object's method is called: mocks are the solution. You want to make sure that during a future rewrite your fellow developer will not forget to update the client class of another? Use a real instance of the object, not a mock of it. Here's a stupid example:
-
+ 
+{% highlight php %}
+    <?php
     class Conf
     {
         public function get_conf($key)
@@ -50,6 +52,8 @@ I got 3 major issues with PHPUnit:
             }
         }
     }
+    ?>
+{% endhighlight %}
 
 To make sure the ``get_conf`` method is called by ``Client``'s constructor, use a mock.  
 To make sure the exception is thrown if ``$conf_entry_2`` is empty, use an instance of ``Conf``. Why?  

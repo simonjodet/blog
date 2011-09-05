@@ -1,3 +1,4 @@
 auto: false
 pygments: true
+markdown: rdiscount
 exclude: ["nginx_conf", "lib"]
