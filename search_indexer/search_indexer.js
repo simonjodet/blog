@@ -39,7 +39,7 @@ var postKeywords = {
                 throw error;
               }
               postKeywords.post_id = rows[0]['id'];
-              console.log('post already existing at ', postKeywords.post_id);
+              // console.log('post already existing at ', postKeywords.post_id);
               postKeywords.insertWords();
             }
           );
@@ -52,7 +52,7 @@ var postKeywords = {
                 throw error;
               }
               postKeywords.post_id = rows[0]['last_insert_rowid()'];
-              console.log('post inserted at id', postKeywords.post_id);
+              // console.log('post inserted at id', postKeywords.post_id);
               postKeywords.insertWords();
             }
           );
@@ -73,7 +73,7 @@ var postKeywords = {
               if (error) {
                 throw error;
               }
-              console.log('word', word, 'already existing at', rows[0]['id']);
+              // console.log('word', word, 'already existing at', rows[0]['id']);
               if(postKeywords.words.length > 1){
                 postKeywords.insertWords();
               }
@@ -90,7 +90,7 @@ var postKeywords = {
             if (error) {
               throw error;
             }
-            console.log('word', word, 'inserted at id', rows[0]['last_insert_rowid()']);
+            // console.log('word', word, 'inserted at id', rows[0]['last_insert_rowid()']);
             if(postKeywords.words.length > 1){
               postKeywords.insertWords();
             }
@@ -108,7 +108,7 @@ fs.unlink('search.db', function(error){
   if (error) {
     console.log(error);
   }
-  console.log('Database erased.')
+  // console.log('Database erased.')
   db.open('search.db', function (error) {
     if (error) {
       console.log(error);
@@ -121,21 +121,21 @@ fs.unlink('search.db', function(error){
         if (error) {
           throw error;
         }
-        console.log('Foreign keys activated.');
+        // console.log('Foreign keys activated.');
         var sql = 'CREATE TABLE IF NOT EXISTS "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, "post" TEXT NOT NULL UNIQUE, "content" TEXT NOT NULL UNIQUE);';
         db.execute( sql, [],
           function (error, rows) {
             if (error) {
               throw error;
             }
-            console.log("posts table created.");
+            // console.log("posts table created.");
             var sql = 'CREATE TABLE IF NOT EXISTS "words" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" TEXT NOT NULL UNIQUE);';
             db.execute( sql, [],
               function (error, rows) {
                 if (error) {
                   throw error;
                 }
-                console.log("words table created.");
+                // console.log("words table created.");
                 fs.readFile('../_site/search/keywords.html', function (err, data) {
                   if (err) {
                     throw err;
