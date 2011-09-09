@@ -80,29 +80,29 @@ var postKeywords = {
               else{
                 postKeywords.callback();
               }
-          }
-        );
-      }
-      else {
-        var sql = 'SELECT last_insert_rowid() FROM words;';
-        db.execute( sql, [],
-          function (error, rows) {
-            if (error) {
-              throw error;
             }
-            // console.log('word', word, 'inserted at id', rows[0]['last_insert_rowid()']);
-            if(postKeywords.words.length > 1){
-              postKeywords.insertWords();
-            }
-            else{
-              postKeywords.callback();
-            }
+          );
         }
-      );
-    }
+        else {
+          var sql = 'SELECT last_insert_rowid() FROM words;';
+          db.execute( sql, [],
+            function (error, rows) {
+              if (error) {
+                throw error;
+              }
+              // console.log('word', word, 'inserted at id', rows[0]['last_insert_rowid()']);
+              if(postKeywords.words.length > 1){
+                postKeywords.insertWords();
+              }
+              else{
+                postKeywords.callback();
+              }
+            }
+          );
+        }
+      }
+    );
   }
-);
-}
 };
 fs.unlink('search.db', function(error){
   if (error) {
@@ -114,40 +114,30 @@ fs.unlink('search.db', function(error){
       console.log(error);
       throw error;
     }
-
-    var sql = 'PRAGMA foreign_keys = ON;';
+    var sql = 'CREATE TABLE IF NOT EXISTS "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, "post" TEXT NOT NULL UNIQUE, "content" TEXT NOT NULL UNIQUE);';
     db.execute( sql, [],
       function (error, rows) {
         if (error) {
           throw error;
         }
-        // console.log('Foreign keys activated.');
-        var sql = 'CREATE TABLE IF NOT EXISTS "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, "post" TEXT NOT NULL UNIQUE, "content" TEXT NOT NULL UNIQUE);';
+        // console.log("posts table created.");
+        var sql = 'CREATE TABLE IF NOT EXISTS "words" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" TEXT NOT NULL UNIQUE);';
         db.execute( sql, [],
           function (error, rows) {
             if (error) {
               throw error;
             }
-            // console.log("posts table created.");
-            var sql = 'CREATE TABLE IF NOT EXISTS "words" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" TEXT NOT NULL UNIQUE);';
-            db.execute( sql, [],
-              function (error, rows) {
-                if (error) {
-                  throw error;
-                }
-                // console.log("words table created.");
-                fs.readFile('../_site/search/keywords.html', function (err, data) {
-                  if (err) {
-                    throw err;
-                  }
-                  postKeywords.posts = data.toString().split('---POST_SPLIT---');
-                  postKeywords.finalCallback = function(){
-                    console.log("I'm done!");
-                  };
-                  postKeywords.iteratePosts();
-                });
+            // console.log("words table created.");
+            fs.readFile('../_site/search/keywords.html', function (err, data) {
+              if (err) {
+                throw err;
               }
-            );
+              postKeywords.posts = data.toString().split('---POST_SPLIT---');
+              postKeywords.finalCallback = function(){
+                console.log("I'm done!");
+              };
+              postKeywords.iteratePosts();
+            });
           }
         );
       }
