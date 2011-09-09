@@ -14,10 +14,10 @@ var postKeywords = {
     var wholePost = postKeywords.posts[0].match(/---POST_URL_S---(.*)---POST_URL_E---/);
     postKeywords.post = {
       'title': wholePost[1],
-      'content': wholePost.input.replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, '').replace(/\n/gi, ' ').replace(/\s{2,}/gi,' ')
+      'content': wholePost.input.replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/\s{2,}/gi,' ')
     };
 
-    postKeywords.words = wholePost.input.toLowerCase().replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, '').replace(/\n/gi, ' ').replace(/[^A-Za-z0-9]/gi,' ').replace(/\b[A-Za-z0-9]{1,2}\b/gi,' ').replace(/\s{2,}/gi,' ').replace(/^\s+/, '').replace(/\s+$/, '').split(' ');
+    postKeywords.words = wholePost.input.toLowerCase().replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/[^A-Za-z0-9]/gi,' ').replace(/\b[A-Za-z0-9]{1,2}\b/gi,' ').replace(/\s{2,}/gi,' ').replace(/^\s+/, '').replace(/\s+$/, '').split(' ');
     postKeywords.posts.shift();
     if(postKeywords.posts.length > 1){
       postKeywords.callback = postKeywords.iteratePosts;
