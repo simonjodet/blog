@@ -38,7 +38,7 @@ jQuery(function($){
     });
     $('#search_test').click(function(event){
         event.preventDefault();
-        $.getJSON('http://search.blog.jodet.com/?search=php', function(data) {
+        $.getJSON('http://blog.jodet.com/search/?search=php', function(data) {
             console.log(data);
         });
     });
