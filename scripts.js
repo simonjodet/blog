@@ -36,4 +36,10 @@ jQuery(function($){
             element.target = '_blank';
         }
     });
+    $('#search_test').click(function(event){
+        event.preventDefault();
+        $.getJSON('http://search.blog.jodet.com/?search=php', function(data) {
+            console.log(data);
+        });
+    });
 });
