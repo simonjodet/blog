@@ -15,7 +15,6 @@ layout: nil
  </author>
 
  {% for post in site.posts %}
- {% if post.category != 'private' %}
  <entry>
    <title>{{ post.title }}</title>
    <link href="http://blog.jodet.com{{ post.url }}"/>
@@ -23,7 +22,6 @@ layout: nil
    <id>http://blog.jodet.com{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
- {% endif %}
  {% endfor %}
  
 </feed>

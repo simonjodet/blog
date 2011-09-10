@@ -4,8 +4,6 @@ title: Categories
 ---
 <ul class="unstyled">
 {% for category in page.categories %}
-    {% if category != 'private' %}
 	<li><h3><a href="/categories/{{ category | replace:' ', '-' | downcase  }}">{{ category }}</a></h3></li>
-	{% endif %}
 {% endfor %}
 </ul>
