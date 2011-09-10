@@ -28,7 +28,7 @@ http.createServer(function (req, res) {
     }
     if(searchStrings.length > 0 && searchStrings[0] != '') {
       var sql = 'SELECT DISTINCT post, content FROM posts WHERE content LIKE "%' + searchStrings[0] + '%"' + additionnalStrings + ';';
-      console.log(sql);
+      // console.log(sql);
       db.execute( sql, [],
         function (error, rows) {
           if (error) {
