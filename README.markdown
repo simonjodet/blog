@@ -1,5 +1,5 @@
 # Simon's Blog #
-This github repository contains my personal blog's source files.
+This github repository contains [my personal blog](http://blog.jodet.com)'s source files.
 
 ## Description ##
 This repository contains all the development I've done on my personal blog.  
