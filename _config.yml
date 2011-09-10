@@ -1,5 +1,5 @@
 auto: false
 pygments: true
 markdown: rdiscount
-exclude: ["nginx_conf", "lib", "search_indexer"]
+exclude: ["README.markdown", "lib", "search_indexer"]
 permalink: /:title
