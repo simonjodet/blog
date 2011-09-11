@@ -54,6 +54,16 @@ h1.main-title, div.main-title {
     padding-right:6px;
     margin-bottom:-3px;
 }
+img.search_icon {
+    padding-right:6px;
+    margin-bottom:-6px;
+}
+div.search_field {
+    margin-left:0;
+}
+#search_field {
+    width:140px;
+}
 #home-tooltip {
     margin:0px 30px;
 }
