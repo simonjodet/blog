@@ -70,6 +70,9 @@ div.search_field {
 #menu_title-tooltip {
     margin-left:-25px;
 }
+#search_container, #search_result_template {
+    display:none;
+}
 
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #808080 } /* Comment */

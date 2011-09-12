@@ -36,10 +36,25 @@ meta-robots: "noodp, noydir"
     <div class="container page-header">
         <div class="row">
             <div class="span11 columns">
-                {{ content }}
+                <div id="content_container">
+                    {{ content }}
+                </div>
+                <div id="search_container">
+                    <span id="searching_message">Searching...</span>
+                    <ul class="search_results">
+                        <li id="search_result_template">
+                            <div>
+                                <h3>
+                                    <a href="" class="search_post_link"></a><br/>
+                                    <small>Published on <span class="search_post_date"></span></a></small>
+                                </h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="span4 columns offset1">
-                <div class="page-header">
+                <div>
                     <h3>
                         <a href="/" class="main-title" id="menu_title">
                             <img src="/style/home.png" class="menu_icon_title"/>Menu
@@ -60,13 +75,14 @@ meta-robots: "noodp, noydir"
                         <a href="http://feeds.feedburner.com/jodet/blog"><img src="/style/rss.png" class="menu_icon"/>RSS</a>
                     </strong>
                 </div>
-                <div class="page-header">
+                <div class="page-header">&nbsp;</div>
+                <div>
                     <h3>
                         <img src="/style/search.png" class="search_icon"/>Search
                     </h3>
                 </div>
                 <div class="input search_field">
-                    <input id="search_field" name="search_field" size="20" type="text" />&nbsp;<button class="btn primary small">Search</button>
+                    <input id="search_field" name="search_field" size="20" type="text" />&nbsp;<button id="search_btn" class="btn primary small">Search</button>
                 </div>
                 <div class="page-header">&nbsp;</div>
                 <div>
