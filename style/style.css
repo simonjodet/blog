@@ -70,7 +70,7 @@ div.search_field {
 #menu_title-tooltip {
     margin-left:-25px;
 }
-#search_container, #search_result_template {
+#search_container, #search_result_template, #no_result_message {
     display:none;
 }
 
