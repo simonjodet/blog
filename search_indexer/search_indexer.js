@@ -11,13 +11,14 @@ var postKeywords = {
   'finalCallback':function(){},
   'iteratePosts': function()
   {
-    var wholePost = postKeywords.posts[0].match(/---POST_URL_S---(.*)---POST_URL_E---/);
     postKeywords.post = {
-      'title': wholePost[1],
-      'content': wholePost.input.replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/\s{2,}/gi,' ')
+      'post': postKeywords.posts[0].match(/---POST_URL_S---(.*)---POST_URL_E---/)[1],
+      'date': postKeywords.posts[0].match(/---POST_DATE_S---(.*)---POST_DATE_E---/)[1],
+      'title': postKeywords.posts[0].match(/---POST_TITLE_S---(.*)---POST_TITLE_E---/)[1],
+      'content': postKeywords.posts[0].replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/---POST_DATE_S---.*---POST_DATE_E---/i,'').replace(/---POST_TITLE_S---.*---POST_TITLE_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/\s{2,}/gi,' ')
     };
-
-    postKeywords.words = wholePost.input.toLowerCase().replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/[^A-Za-z0-9]/gi,' ').replace(/\b[A-Za-z0-9]{1,2}\b/gi,' ').replace(/\s{2,}/gi,' ').replace(/^\s+/, '').replace(/\s+$/, '').split(' ');
+    // console.log(postKeywords.post);
+    postKeywords.words = postKeywords.posts[0].toLowerCase().replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/[^A-Za-z0-9]/gi,' ').replace(/\b[A-Za-z0-9]{1,2}\b/gi,' ').replace(/\s{2,}/gi,' ').replace(/^\s+/, '').replace(/\s+$/, '').split(' ');
     postKeywords.posts.shift();
     if(postKeywords.posts.length > 1){
       postKeywords.callback = postKeywords.iteratePosts;
@@ -28,11 +29,11 @@ var postKeywords = {
     postKeywords.createPost();
   },
   'createPost': function(){
-    var sql = 'INSERT INTO posts (post, content) VALUES ("' + postKeywords.post.title + '", "' + postKeywords.post.content.replace(/"/, '') + '")';
+    var sql = 'INSERT INTO posts (post, title, date, content) VALUES ("' + postKeywords.post.post + '", "' + postKeywords.post.title + '", "' + postKeywords.post.date + '", "' + postKeywords.post.content.replace(/"/, '') + '")';
     db.execute( sql, [],
       function (error, rows) {
         if (error && error.message == 'constraint failed') {
-          var sql = "SELECT id FROM posts WHERE post = '" + postKeywords.post.title + "';";
+          var sql = "SELECT id FROM posts WHERE post = '" + postKeywords.post.post + "';";
           db.execute( sql, [],
             function (error, rows) {
               if (error) {
@@ -114,7 +115,7 @@ fs.unlink('search.db', function(error){
       console.log(error);
       throw error;
     }
-    var sql = 'CREATE TABLE IF NOT EXISTS "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, "post" TEXT NOT NULL UNIQUE, "content" TEXT NOT NULL UNIQUE);';
+    var sql = 'CREATE TABLE IF NOT EXISTS "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT UNIQUE, "post" TEXT NOT NULL UNIQUE, "title" TEXT NOT NULL, "date" TEXT NOT NULL, "content" TEXT NOT NULL);';
     db.execute( sql, [],
       function (error, rows) {
         if (error) {
