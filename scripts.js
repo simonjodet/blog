@@ -36,6 +36,14 @@ jQuery(function($){
             element.target = '_blank';
         }
     });
+    $('#search_close_btn').click(function(event){
+        event.preventDefault();
+        $('#content_container').show();
+        $('#search_container').hide();
+        $('.search_result').detach();
+      }
+    );
+    
     $('#search_btn').click(function(event){
         event.preventDefault();
         $('#content_container').hide();
@@ -46,7 +54,7 @@ jQuery(function($){
           $('#searching_message').hide();
           $.each(data, function(index, post){
             console.log(post.post);
-            var search_result = $('#search_result_template').clone().insertAfter($('#search_result_template')).show();
+            var search_result = $('#search_result_template').clone().insertAfter($('#search_result_template')).addClass('search_result').removeAttr('id').show();
             search_result.find('.search_post_link').html(post.title).attr('href', post.post);
             search_result.find('.search_post_date').html(post.date);
             search_result.find('.search_post_content').html(post.content);
