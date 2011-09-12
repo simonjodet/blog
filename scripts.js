@@ -36,13 +36,13 @@ jQuery(function($){
       element.target = '_blank';
     }
   });
-  
+
   var resetSearch = function() {
     $('.search_result').detach();
     $('#no_result_message').hide();
     $('#searching_message').show();
   }
-  
+
   $('#search_close_btn').click(function(event){
     event.preventDefault();
     $('#search_container').hide();
@@ -72,4 +72,11 @@ jQuery(function($){
     }
     $.getJSON('http://blog.jodet.com/search/?search=' + $('#search_field').attr('value'), displaySearchResults);
   });
+
+  $('#search_field').keypress(function(e) {
+    if(e.which == 13) {
+      jQuery('#search_btn').click();
+    }
+  });
+
 });
