@@ -18,7 +18,7 @@ var postKeywords = {
       'content': postKeywords.posts[0].replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/---POST_DATE_S---.*---POST_DATE_E---/i,'').replace(/---POST_TITLE_S---.*---POST_TITLE_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/\s{2,}/gi,' ')
     };
     // console.log(postKeywords.post);
-    postKeywords.words = postKeywords.posts[0].toLowerCase().replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/[^A-Za-z0-9]/gi,' ').replace(/\b[A-Za-z0-9]{1,2}\b/gi,' ').replace(/\s{2,}/gi,' ').replace(/^\s+/, '').replace(/\s+$/, '').split(' ');
+    // postKeywords.words = postKeywords.posts[0].toLowerCase().replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/[^A-Za-z0-9]/gi,' ').replace(/\b[A-Za-z0-9]{1,2}\b/gi,' ').replace(/\s{2,}/gi,' ').replace(/^\s+/, '').replace(/\s+$/, '').split(' ');
     postKeywords.posts.shift();
     if(postKeywords.posts.length > 1){
       postKeywords.callback = postKeywords.iteratePosts;
@@ -41,7 +41,8 @@ var postKeywords = {
               }
               postKeywords.post_id = rows[0]['id'];
               // console.log('post already existing at ', postKeywords.post_id);
-              postKeywords.insertWords();
+              // postKeywords.insertWords();
+              postKeywords.callback();
             }
           );
         }
@@ -54,7 +55,8 @@ var postKeywords = {
               }
               postKeywords.post_id = rows[0]['last_insert_rowid()'];
               // console.log('post inserted at id', postKeywords.post_id);
-              postKeywords.insertWords();
+              // postKeywords.insertWords();
+              postKeywords.callback();
             }
           );
         }
@@ -122,25 +124,27 @@ fs.unlink('search.db', function(error){
           throw error;
         }
         // console.log("posts table created.");
+        fs.readFile('../_site/search/keywords.html', function (err, data) {
+          if (err) {
+            throw err;
+          }
+          postKeywords.posts = data.toString().split('---POST_SPLIT---');
+          postKeywords.finalCallback = function(){
+            console.log("I'm done!");
+          };
+          postKeywords.iteratePosts();
+        });
+        /*
         var sql = 'CREATE TABLE IF NOT EXISTS "words" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "word" TEXT NOT NULL UNIQUE);';
         db.execute( sql, [],
-          function (error, rows) {
-            if (error) {
-              throw error;
-            }
-            // console.log("words table created.");
-            fs.readFile('../_site/search/keywords.html', function (err, data) {
-              if (err) {
-                throw err;
-              }
-              postKeywords.posts = data.toString().split('---POST_SPLIT---');
-              postKeywords.finalCallback = function(){
-                console.log("I'm done!");
-              };
-              postKeywords.iteratePosts();
-            });
-          }
+        function (error, rows) {
+        if (error) {
+        throw error;
+        }
+        // console.log("words table created.");
+        }
         );
+        //*/
       }
     );
   });
