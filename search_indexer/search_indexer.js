@@ -15,7 +15,7 @@ var postKeywords = {
       'post': postKeywords.posts[0].match(/---POST_URL_S---(.*)---POST_URL_E---/)[1],
       'date': postKeywords.posts[0].match(/---POST_DATE_S---(.*)---POST_DATE_E---/)[1],
       'title': postKeywords.posts[0].match(/---POST_TITLE_S---(.*)---POST_TITLE_E---/)[1],
-      'content': postKeywords.posts[0].replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/---POST_DATE_S---.*---POST_DATE_E---/i,'').replace(/---POST_TITLE_S---.*---POST_TITLE_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/\s{2,}/gi,' ')
+      'content': postKeywords.posts[0].replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/---POST_DATE_S---.*---POST_DATE_E---/i,'').replace(/---POST_TITLE_S---.*---POST_TITLE_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/"/gi, ' ').replace(/\s{2,}/gi,' ')
     };
     // console.log(postKeywords.post);
     // postKeywords.words = postKeywords.posts[0].toLowerCase().replace(/---POST_URL_S---.*---POST_URL_E---/i,'').replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ' ').replace(/\n/gi, ' ').replace(/[^A-Za-z0-9]/gi,' ').replace(/\b[A-Za-z0-9]{1,2}\b/gi,' ').replace(/\s{2,}/gi,' ').replace(/^\s+/, '').replace(/\s+$/, '').split(' ');
