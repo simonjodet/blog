@@ -5,7 +5,7 @@ category: technology
 tags: [PHP, trim, curl, head, british, humour]
 ---
 
-<img src="/img/geek-technology/2011-08-25-recent-php-discoveries/php-med-trans.png" class="post-img float-left"/>
+<img src="/img/technology/2011-08-25-recent-php-discoveries/php-med-trans.png" class="post-img float-left"/>
 
 __Trim__
 

@@ -24,7 +24,7 @@ h1.main-title, div.main-title {
 .post-img {
     max-width:150px;
     max-height:150px;
-    padding:15px;
+    padding:0 15px 15px 0;
 }
 .float-right {
     float:right;        
