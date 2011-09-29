@@ -4,7 +4,7 @@ This github repository contains [my personal blog](http://blog.jodet.com)'s sour
 ## Description ##
 This repository contains all the development I've done on my personal blog.  
 It is built with [Jekyll](http://jekyllrb.com/), styled with [Bootstrap](http://twitter.github.com/bootstrap/), connected to Twitter with [Tweet!](http://tweet.seaofclouds.com/) and enhanced with custom JavaScript code of my own.  
-It will also very soon have a search engine built on [Node.js](http://nodejs.org/).
+It also has a search engine built on [Node.js](http://nodejs.org/).
 
 ## License ##
 All post files (usually but not always in *\_posts* folders) are personal and all rights on them are reserved by me, Simon Jodet. They cannot be used without my written consent.
