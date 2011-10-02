@@ -52,7 +52,7 @@
 .tweet_icon {
     width:8px;
     height:8px;
-    background:url("/style/twitter_sprite.png") 0 0 no-repeat;
+    background:url("/style/img/twitter_sprite.png") 0 0 no-repeat;
     padding-right:1px;
     vertical-align:middle;
 }
