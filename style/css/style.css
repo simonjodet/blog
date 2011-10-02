@@ -1,5 +1,6 @@
 body,li{color:#606060;}
 code,pre{font-size:10px;line-height:150%;background-color:#EAEAEA;}
+.custom_topbar{position:relative;margin-bottom:15px;}
 .main-title,.main-title:hover,.menu a,.menu a:hover,.twitter_follow_link,.twitter_follow_link:hover{color:#404040;text-decoration:none;}
 h1.main-title,div.main-title{margin-bottom:10px;}
 .main-content{margin:10px;}

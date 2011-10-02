@@ -2,6 +2,8 @@
 layout: default
 body: blog archive
 ---
+<h2>Category: {{ page.category }}</h2>
+<div class="page-header">&nbsp;</div>
 <ul class="unstyled">
 {% for post in site.categories[page.category] %}
     <li>

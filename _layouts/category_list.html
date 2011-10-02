@@ -2,7 +2,9 @@
 layout: default
 title: Categories
 ---
-<ul class="unstyled">
+<h2>Categories</h2>
+<div class="page-header">&nbsp;</div>
+<ul>
 {% for category in page.categories %}
 	<li><h3><a href="/categories/{{ category | replace:' ', '-' | downcase  }}">{{ category }}</a></h3></li>
 {% endfor %}
