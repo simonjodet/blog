@@ -6,7 +6,7 @@ jQuery(function($){
     count: 5,
     loading_text: "loading tweets...",
     refresh_interval: 60,
-    template: '{text}{join}{time}<br/><img src="/style/dummy.gif" class="tweet_icon tweet_reply_icon" />{reply_action} <img src="/style/dummy.gif" class="tweet_icon tweet_retweet_icon" />{retweet_action} <img src="/style/dummy.gif" class="tweet_icon tweet_favorite_icon" />{favorite_action}'
+    template: '{text}{join}{time}<br/><img src="/style/img/dummy.gif" class="tweet_icon tweet_reply_icon" />{reply_action} <img src="/style/img/dummy.gif" class="tweet_icon tweet_retweet_icon" />{retweet_action} <img src="/style/img/dummy.gif" class="tweet_icon tweet_favorite_icon" />{favorite_action}'
   });
   //Add tooltip to home link
   $('#home').mouseenter(function(){
