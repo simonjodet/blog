@@ -1,0 +1,7 @@
+---
+layout: post
+title: RIP Steve Jobs
+category: misc
+tags: [Steve, Jobs, RIP, Apple]
+---
+<div style="text-align:center;"><a href="http://www.apple.com/stevejobs/"><img src="/img/misc/2011-10-06-rip_steve/rip_steve.png" style="max-width:600px;"/></a></div>
