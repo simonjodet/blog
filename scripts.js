@@ -75,6 +75,7 @@ jQuery(function($){
 
   $('#search_field').keypress(function(e) {
     if(e.which == 13) {
+      e.preventDefault();
       jQuery('#search_btn').click();
     }
   });
