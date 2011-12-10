@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My journey with Ruby(1)
+title: My journey with Ruby(*)
 category: technology
 tags: [Ruby]
 ---
@@ -18,6 +18,14 @@ This introduction is already way too long so let's get to the point. Right now I
 
 * A pretty cool language, clearly designed for the convenience of the developer, with a lot of alternative syntaxes and shortcuts.  
   The language is, I feel, sometimes a bit too forgiving, leaving the developer free to write bad code without realizing it.
-* blah
+* I just love the fact that Ruby has closures. It's like a mix between PHP and JavaScript.
+* Gems seem to be way better than PHP's PEAR. 
+* The documentation is huge, a bit too much actually. My first tries at Ruby were a bit rushed. I've been hearing praises for Ruby On Rails for so long, I tried to learn the language through RoR.  
+  Even though there is a lot of [good tutorials](http://railsforzombies.org/), you should start by learning Ruby first, RoR second. So, I got the [Learning Ruby](http://shop.oreilly.com/product/9780596529864.do) book and just read it. It's not a perfect book, I feel it sometimes even expressed dangerous opinions for junior developers. But if you want to learn the basics of the language, it does the trick.
+* Still regarding the documentation, for whatever reason, it's hard for me to understand the reference documentation. It's just a mess for me. I tried to learn the language with a small program that manipulate file paths. In other words, strings. When I started looking for a way to use Regexp, I hit [a wall](http://www.ruby-doc.org/core-1.8.7/Regexp.html). Where is the legend? Where is the real life example? Oh I see, I have to use the ``new`` method to transform a string in a pattern. I mean, the php.net documentation is not that good but a least you get examples in their context...
+* I took me 2 hours and a lot of digging to understand why my ``require 'json'`` directive didn't work even though I had installed the gem. Actually, I still don't understand why, I just found that with ``require 'rubygems'`` before, it was working.
+* Even though Ruby is installed by default on Mac OS X, some struff doesn't really work well. Or I just broken it earlier digging in my system. I know use the macports version of Ruby (1.8.7). I may eventually decide to compile it myself or use rvm.
+ 
 
-(1) Yes pun intended!
+
+(*) Yes pun intended!
