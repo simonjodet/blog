@@ -4,17 +4,8 @@ body: blog archive
 ---
 <h2>Category: {{ page.category }}</h2>
 <div class="page-header">&nbsp;</div>
-<ul class="unstyled">
+<ul>
 {% for post in site.categories[page.category] %}
-    <li>
-        <div class="page-header">
-            <h3>
-                <a href="{{ post.url }}">{{ post.title }}</a><br/>
-                <small>Published on {{ post.date | date: "%Y/%m/%d" }} in <a href="/categories/{{ post.category }}">{{ post.category }}</a></small>
-            </h3>
-        </div>
-        <div>{{ post.content | markdownify | truncatewords 37}} <a href="{{ post.url }}">Continue reading</a></div>
-        <div class="post-separator"></div>
-    </li>
+	<li><h3><a href="{{ post.url }}">{{ post.title }}</a></h3></li>
 {% endfor %}
 </ul>
