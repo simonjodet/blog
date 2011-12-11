@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My journey with Ruby(*)
+title: My journey with Ruby
 category: technology
 tags: [Ruby]
 ---
@@ -28,5 +28,3 @@ This introduction is already way too long so let's get to the point.
 * Even though Ruby is installed by default on Mac OS X, some struff doesn't really work well. Or I just broke it earlier digging in my system. I'm currently using the macports version of Ruby (1.8.7). I may eventually decide to compile it myself or use rvm.
  
 So, for the couple of geeks that'll read this, if you know soemthing about Ruby, have advices, books I should read, please let me know in the comments :)
-
-(*) Yes pun intended!
