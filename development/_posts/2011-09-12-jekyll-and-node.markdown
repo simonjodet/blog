@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jekyll and Node
-category: technology
+category: development 
 tags: [Jekyll, JavaScript, Node]
 ---
 <img src="/img/technology/2011-09-12-jekyll-and-node/jekyll_node.png" class="post-img float-left"/>

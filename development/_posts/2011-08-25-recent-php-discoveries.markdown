@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Recent PHP discoveries
-category: technology
+category: development 
 tags: [PHP, trim, curl, head, british, humour]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My journey with Ruby
-category: technology
+category: development 
 tags: [Ruby]
 ---
 <img src="/img/technology/2011-12-10-my-journey-with-ruby/ruby.png" class="post-img float-left"/>

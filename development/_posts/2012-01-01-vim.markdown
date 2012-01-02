@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vim 
-category: technology
+category: development 
 tags: [Vim]
 ---
 <img src="/img/technology/2012-01-01-vim/vim_logo.png" class="post-img float-right"/>
