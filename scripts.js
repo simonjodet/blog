@@ -1,7 +1,7 @@
 jQuery(function($){
   //Launch tweeter feed
   $(".tweet").tweet({
-    username: "simonjodet",
+    username: "sjodet",
     avatar_size: 32,
     count: 5,
     loading_text: "loading tweets...",
