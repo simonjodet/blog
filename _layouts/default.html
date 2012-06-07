@@ -17,7 +17,19 @@ meta-robots: "noodp, noydir"
     <meta name="description" content="{{ page.meta-description }}" />
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/jodet/blog"/>
     <link rel="canonical" href="{{ page.url | canonical }}" />
-    <script type="text/javascript">var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-26026006-1']);_gaq.push(['_trackPageview']);(function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-26026006-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
 </head>
 <body>
     <div class="topbar custom_topbar">
@@ -28,7 +40,7 @@ meta-robots: "noodp, noydir"
                     <li{% if page.title == 'Categories' %} class="active"{% endif %}><a href="/categories/index.html"><img src="/style/img/categories.png" class="menu_icon"/>Categories</a></li>
                     <li><a href="http://feeds.feedburner.com/jodet/blog"><img src="/style/img/rss_menu.png" class="menu_icon"/>RSS</a></li>
                 </ul>
-                <form class="pull-right" action="">
+                <form class="pull-right" action="" style="display:none;">
                     <input id="search_field" name="search_field" size="20" type="text" placeholder="Search">&nbsp;<button class="btn" type="submit" id="search_btn">Search</button>
                 </form>
             </div>
@@ -89,7 +101,7 @@ meta-robots: "noodp, noydir"
         </div>
     </div>
     <div class="container footer">
-        Copyright &copy; 2011 Simon Jodet - All rights reserved
+        Copyright &copy; 2012 Simon Jodet - All rights reserved
     </div>
     <script src="/tools/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="/tools/jquery.tweet.js" type="text/javascript" charset="utf-8"></script>
