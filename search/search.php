@@ -1,7 +1,6 @@
 <?php
 $db_file = __DIR__.'/../../search_indexer/search.sqlite';
 $db = new PDO('sqlite:'.$db_file);
-$_GET['search'] = 'php tdd';
 $search_words = preg_match_all('/\b[a-z0-9]+\b/i', $_GET['search'], $matches);
 $words = $matches[0];
 $other_words_query = '';
