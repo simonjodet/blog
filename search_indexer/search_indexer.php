@@ -30,3 +30,4 @@ foreach($raw_posts as $raw_post){
     $posts[] = $post;
 }
 $db = null;
+echo 'Search index updated'.PHP_EOL;
