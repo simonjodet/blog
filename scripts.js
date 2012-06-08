@@ -70,7 +70,7 @@ jQuery(function($){
         });
       }
     }
-    $.getJSON('http://blog.jodet.com/search/?search=' + $('#search_field').attr('value'), displaySearchResults);
+    $.getJSON('http://blog.jodet.com/search/search.php?search=' + $('#search_field').attr('value'), displaySearchResults);
   });
 
   $('#search_field').keypress(function(e) {
