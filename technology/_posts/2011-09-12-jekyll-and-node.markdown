@@ -4,6 +4,8 @@ title: Jekyll and Node
 category: development 
 tags: [Jekyll, JavaScript, Node]
 ---
+**Update**: I've replaced the nodejs search engine with a PHP one. Read more about it [this post](http://blog.jodet.com/back-from-nodejs/).
+
 <img src="/img/technology/2011-09-12-jekyll-and-node/jekyll_node.png" class="post-img float-left"/>
 Sorry but here's a new post about this blog. I've already talked about my choice of [Jekyll](http://jekyllrb.com/) as the engine for this blog.
 
