@@ -2,10 +2,11 @@
 layout: default
 title: Categories
 ---
-<h2>Categories</h2>
-<div class="page-header">&nbsp;</div>
-<ul>
-{% for category in page.categories %}
-	<li><h3><a href="/categories/{{ category | replace:' ', '-' | downcase  }}">{{ category }}</a></h3></li>
-{% endfor %}
-</ul>
+<div class="well" style="min-height: 500px;">
+    <h3>Categories</h3>
+    <ul>
+        {% for category in page.categories %}
+        <li><h4><a href="/categories/{{ category | replace:' ', '-' | downcase  }}">{{ category }}</a></h4></li>
+        {% endfor %}
+    </ul>
+</div>

@@ -2,109 +2,121 @@
 meta-description: "Simon's Blog contains tips and stories on web technologies. Main topics covered are web development with free and open source tools (such as Linux, Mac, PHP, JavaScript), performance and scalability, computer security, APIs. Simon is a passionate web developer living and working in Bordeaux, France. Simon is a Domain Architect for Web at F-Secure Corporation."
 meta-robots: "noodp, noydir"
 ---
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>{% if page.title != 'Home' %}{{ page.title }} - {% endif %}Simon's Blog</title>
-    <link rel="stylesheet" href="/tools/bootstrap.min.css" type="text/css" charset="utf-8"/>
-    <link rel="stylesheet" href="/style/css/style.css" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="/tools/bootstrap.min.css?cache={{ site.time|date: '%Y%m%d%H%M%S' }}" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="/style/css/style.css?cache={{ site.time|date: '%Y%m%d%H%M%S' }}" type="text/css" charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="generator" content="Jekyll">
     <meta name="author" content="Simon Jodet">
-    <meta name="robots" content="{{ page.meta-robots }}" />
-    <meta name="description" content="{{ page.meta-description }}" />
+    <meta name="robots" content="{{ page.meta-robots }}"/>
+    <meta name="description" content="{{ page.meta-description }}"/>
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/jodet/blog"/>
-    <link rel="canonical" href="{{ page.url | canonical }}" />
+    <link rel="canonical" href="{{ page.url | canonical }}"/>
     <script type="text/javascript">
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-26026006-1']);
-      _gaq.push(['_trackPageview']);
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-26026006-1']);
+        _gaq.push(['_trackPageview']);
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
 
     </script>
 </head>
 <body>
-    <div class="topbar custom_topbar">
-        <div class="fill">
-            <div class="container">
-                <a class="brand" href="/"><strong>Simon's Blog</strong></a>
-                <ul class="nav">
-                    <li{% if page.title == 'Categories' %} class="active"{% endif %}><a href="/categories/index.html"><img src="/style/img/categories.png" class="menu_icon"/>Categories</a></li>
-                    <li><a href="http://feeds.feedburner.com/jodet/blog"><img src="/style/img/rss_menu.png" class="menu_icon"/>RSS</a></li>
-                </ul>
-                <form class="pull-right" action="">
-                    <input id="search_field" name="search_field" size="20" type="text" placeholder="Search">&nbsp;<button class="btn" type="submit" id="search_btn">Search</button>
-                </form>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="banner">
+            <a href="/" class="banner">
+                <h1>Simon's Blog
+                    <small>Geek, developer, software architect</small>
+                </h1>
+            </a>
         </div>
-    </div>
-    <div class="container">
-        <div style="display:none;">
-            <h1 class="main-title">
-                <a href="/" class="main-title" id="home">Simon's Blog</a><br/>
-                <div class="twipsy below tooltips" id="home-tooltip"> 
-                    <div class="twipsy-arrow"></div> 
-                    <div class="twipsy-inner">Back to home page</div> 
-                </div>
-                <small>Not the most original blog name in the world</small>
-            </h1>
-        </div>
-    </div>
-    <div class="container page-header">
         <div class="row">
-            <div class="span11 columns">
+            <div class="span9">
+                <!--content-->
                 <div id="content_container">
                     {{ content }}
+
                 </div>
-                <div id="search_container">
+                <div class="well" id="search_container">
                     <div style="float:right;">
-                        <button class="btn" id="search_close_btn">Close</button>
+                        <button class="btn" id="search_close_btn"><i class="icon-arrow-left"></i>&nbsp;Back</button>
                     </div>
-                    <h2>Search results</h2>
+                    <h3>Search results</h3>
                     <span id="searching_message">Searching...</span>
+
                     <div id="no_result_message" class="alert-message warning">
                         <p><strong>No matching post found</strong></p>
                     </div>
                     <ul class="search_results">
                         <li id="search_result_template">
                             <div>
-                                <h3>
+                                <h4>
                                     <a href="" class="search_post_link"></a><br/>
                                     <small>Published on <span class="search_post_date"></span></a></small>
-                                </h3>
+                                </h4>
                             </div>
                         </li>
                     </ul>
                 </div>
+                <div class="well">Copyright &copy; 2012 Simon Jodet - All rights reserved</div>
             </div>
-            <div class="span4 columns offset1">
-                <div>
-                    <h3>
-                        <a href="http://twitter.com/intent/user?screen_name=simonjodet" target="_blank" class="twitter_follow_link" id="twitter-link"><img src="/style/img/twitter_bird.png" class="twitter_bird_icon"/>&nbsp;Twitter feed</a>
-                        <div class="twipsy below tooltips" id="twitter-tooltip"> 
-                            <div class="twipsy-arrow"></div> 
-                            <div class="twipsy-inner">Follow me on Twitter!</div> 
-                        </div>
-                    </h3>
+            <div class="span3">
+                <!--menu-->
+                <div style="padding: 8px 0;" class="well">
+                    <ul class="nav nav-list">
+                        <li class="nav-header" style=""><i class="icon-th-list"></i>&nbsp;Menu</li>
+                        <li
+                        {% if page.title != 'Categories' %} class="active"{% endif %}>
+                        <a href="/"><i class="{% if page.title != 'Categories' %}icon-white {% endif %}icon-home"></i>&nbsp;Home</a>
+                        </li>
+                        <li
+                        {% if page.title == 'Categories' %} class="active"{% endif %}>
+                        <a href="/categories/index.html"><i class="{% if page.title == 'Categories' %}icon-white {% endif %}icon-folder-open"></i>&nbsp;Categories</a>
+                        </li>
+                        <li>
+                            <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-retweet"></i>&nbsp;RSS</a>
+                        </li>
+                        <li class="divider" style="margin: 0 -10px 5px -10px;"></li>
+                        <li style="margin-left: -10px;">
+                            <!--<form action="">-->
+                            <div style="white-space: nowrap; vertical-align: top;">
+                                <input id="search_field" name="search_field" type="text" placeholder="Search" style="margin: 0;">
+                                <button class="btn" type="submit" id="search_btn" style="margin: 0;">
+                                    <i class="icon-search"></i></button>
+                            </div>
+                            <!--</form>-->
+                        </li>
+                    </ul>
                 </div>
-                <div class="tweet"></div>
-                
+                <div style="padding: 5px 0;" class="well">
+                    <ul class="nav nav-list">
+                        <li class="nav-header" style="">
+                            <a href="http://twitter.com/intent/user?screen_name=sjodet" target="_blank" class="twitter_follow_link" id="twitter-link">
+                                <img src="/style/img/iconmonstr-twitter-icon.png?cache={{ site.time|date: '%Y%m%d%H%M%S' }}" class="twitter_bird_icon"/>&nbsp;Twitter feed</a>
+                        </li>
+                    </ul>
+                    <div class="tweet"></div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container footer">
-        Copyright &copy; 2012 Simon Jodet - All rights reserved
-    </div>
-    <script src="/tools/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/tools/jquery.tweet.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/scripts.js" type="text/javascript" charset="utf-8"></script>
+</div>
+<img src="/img/glyphicons-halflings.png?cache={{ site.time|date: '%Y%m%d%H%M%S' }}" style="display: none;"/>
+<img src="/img/glyphicons-halflings-white.png?cache={{ site.time|date: '%Y%m%d%H%M%S' }}" style="display: none;"/>
+<script src="/tools/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/tools/jquery.tweet.js" type="text/javascript" charset="utf-8"></script>
+<script src="/scripts.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

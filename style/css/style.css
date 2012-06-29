@@ -1,97 +1,419 @@
-body,li{color:#606060;}
-code,pre{font-size:10px;line-height:150%;background-color:#EAEAEA;}
-.custom_topbar{position:relative;margin-bottom:15px;}
-.main-title,.main-title:hover,.menu a,.menu a:hover,.twitter_follow_link,.twitter_follow_link:hover{color:#404040;text-decoration:none;}
-h1.main-title,div.main-title{margin-bottom:10px;}
-.main-content{margin:10px;}
-.post-img{max-width:150px;max-height:150px;padding:0 15px 15px 0;}
-.float-right{float:right;}
-.float-left{float:left;}
-.footer{text-align:center;margin:0px auto;}
-.twitter_bird_icon{vertical-align:middle;}
-.post-separator{padding-top:25px;}
-.page-header{margin-bottom:10px;}
-.tooltips{display:none;}
-.menu_icon{vertical-align:middle;margin-bottom:4px;padding-right:5px;}
-.menu_icon_title{padding-right:6px;margin-bottom:-3px;}
-img.search_icon{padding-right:6px;margin-bottom:-6px;}
-div.search_field{margin-left:0;}
-#search_field{width:140px;}
-#home-tooltip{margin:0px 30px;}
-#menu_title-tooltip{margin-left:-25px;}
-#search_container,#search_result_template,#no_result_message{display:none;}
-.tweet,.query{font-size:100%;}
-.tweet_time,.tweet_action{font-size:85%;}
-.tweet_list{-webkit-border-radius:0.5em;-moz-border-radius:0.5em;border-radius:0.5em;list-style:none;margin:0;padding:0;overflow-y:hidden;background-color:#FFFFFF;}
-.tweet_list .awesome,.tweet_list .epic{text-transform:uppercase;}
-.tweet_list li{overflow-y:auto;overflow-x:hidden;padding:0.5em;}
-.tweet_list li a{color:#0069d6;}
-.tweet_list li a:hover{color:#0050a3;}
-.tweet_list .tweet_even{background-color:#EAEAEA;}
-.tweet_list .tweet_avatar{padding-right:.5em;float:left;}
-.tweet_list .tweet_avatar img{vertical-align:middle;}
-.tweet_icon{width:8px;height:8px;background:url("/style/img/twitter_sprite.png") 0 0 no-repeat;padding-right:1px;vertical-align:middle;}
-.tweet_reply_icon{background-position:0 0;}
-.tweet_retweet_icon{background-position:0 -16px;}
-.tweet_favorite_icon{background-position:0 -8px;}
-.highlight .hll{background-color:#ffffcc;}
-.highlight .c{color:#808080;}
-.highlight .err{color:#F00000;background-color:#f0a0a0;}
-.highlight .k{color:#008000;font-weight:bold;}
-.highlight .o{color:#303030;}
-.highlight .cm{color:#808080;}
-.highlight .cp{color:#507090;}
-.highlight .c1{color:#808080;}
-.highlight .cs{color:#cc0000;font-weight:bold;}
-.highlight .gd{color:#a00000;}
-.highlight .ge{font-style:italic;}
-.highlight .gr{color:#ff0000;}
-.highlight .gh{color:#000080;font-weight:bold;}
-.highlight .gi{color:#00a000;}
-.highlight .go{color:#808080;}
-.highlight .gp{color:#c65d09;font-weight:bold;}
-.highlight .gs{font-weight:bold;}
-.highlight .gu{color:#800080;font-weight:bold;}
-.highlight .gt{color:#0040d0;}
-.highlight .kc{color:#008000;font-weight:bold;}
-.highlight .kd{color:#008000;font-weight:bold;}
-.highlight .kn{color:#008000;font-weight:bold;}
-.highlight .kp{color:#003080;font-weight:bold;}
-.highlight .kr{color:#008000;font-weight:bold;}
-.highlight .kt{color:#303090;font-weight:bold;}
-.highlight .m{color:#6000E0;font-weight:bold;}
-.highlight .s{background-color:#fff0f0;}
-.highlight .na{color:#0000c0;}
-.highlight .nb{color:#007020;}
-.highlight .nc{color:#B00060;font-weight:bold;}
-.highlight .no{color:#003060;font-weight:bold;}
-.highlight .nd{color:#505050;font-weight:bold;}
-.highlight .ni{color:#800000;font-weight:bold;}
-.highlight .ne{color:#F00000;font-weight:bold;}
-.highlight .nf{color:#0060B0;font-weight:bold;}
-.highlight .nl{color:#907000;font-weight:bold;}
-.highlight .nn{color:#0e84b5;font-weight:bold;}
-.highlight .nt{color:#007000;}
-.highlight .nv{color:#906030;}
-.highlight .ow{color:#000000;font-weight:bold;}
-.highlight .w{color:#bbbbbb;}
-.highlight .mf{color:#6000E0;font-weight:bold;}
-.highlight .mh{color:#005080;font-weight:bold;}
-.highlight .mi{color:#0000D0;font-weight:bold;}
-.highlight .mo{color:#4000E0;font-weight:bold;}
-.highlight .sb{background-color:#fff0f0;}
-.highlight .sc{color:#0040d0;}
-.highlight .sd{color:#d04020;}
-.highlight .s2{background-color:#fff0f0;}
-.highlight .se{color:#606060;font-weight:bold;background-color:#fff0f0;}
-.highlight .sh{background-color:#fff0f0;}
-.highlight .si{background-color:#e0e0e0;}
-.highlight .sx{color:#D02000;background-color:#fff0f0;}
-.highlight .sr{color:#000000;background-color:#fff0ff;}
-.highlight .s1{background-color:#fff0f0;}
-.highlight .ss{color:#a06000;}
-.highlight .bp{color:#007020;}
-.highlight .vc{color:#306090;}
-.highlight .vg{color:#d07000;font-weight:bold;}
-.highlight .vi{color:#3030b0;}
-.highlight .il{color:#0000D0;font-weight:bold;}
+a.banner:hover {
+    text-decoration: none;
+}
+
+div.banner {
+    margin: 15px 0;
+}
+
+div.post-title {
+    margin: 0;
+}
+
+.nav-header {
+}
+
+.nav .nav-header {
+    font-size: 12px;
+    padding-left: 10px;
+    color: #727272;
+    font-size: 13px;
+}
+
+.nav > li > a {
+    font-size: 12px;
+    padding-left: 20px;
+}
+
+#search_field {
+    width: 80%;
+}
+
+.twitter_bird_icon {
+    vertical-align: top;
+}
+
+#twitter-link {
+    color: #727272;
+    font-size: 13px;
+}
+
+#twitter-link:hover {
+    background: inherit;
+}
+
+#search_container, #search_result_template, #no_result_message {
+    display: none;
+}
+
+.post-img {
+    max-width: 150px;
+    max-height: 150px;
+    padding: 0 15px 15px 0;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.post-title {
+    padding-bottom: 0;
+}
+
+.loading {
+    margin-left: 15px;
+}
+
+.tweet_text {
+    font-size: 11px;
+}
+
+.tweet, .query {
+    font-size: 100%;
+}
+
+.tweet_time, .tweet_action {
+    font-size: 85%;
+}
+
+.tweet_list {
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    border-radius: 0.5em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    background-color: #FFFFFF;
+}
+
+.tweet_list .awesome, .tweet_list .epic {
+    text-transform: uppercase;
+}
+
+.tweet_list li {
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.5em;
+}
+
+.tweet_list li a {
+    color: #0069d6;
+}
+
+.tweet_list li a:hover {
+    color: #0050a3;
+}
+
+.tweet_list .tweet_even {
+    background-color: #EAEAEA;
+}
+
+.tweet_list .tweet_avatar {
+    padding-right: .5em;
+    float: left;
+}
+
+.tweet_list .tweet_avatar img {
+    vertical-align: middle;
+}
+
+.tweet_icon {
+    width: 8px;
+    height: 8px;
+    background: url("/style/img/twitter_sprite.png") 0 0 no-repeat;
+    padding-right: 1px;
+    vertical-align: middle;
+}
+
+.tweet_reply_icon {
+    background-position: 0 0;
+}
+
+.tweet_retweet_icon {
+    background-position: 0 -16px;
+}
+
+.tweet_favorite_icon {
+    background-position: 0 -8px;
+}
+
+.highlight .hll {
+    background-color: #ffffcc;
+}
+
+.highlight .c {
+    color: #808080;
+}
+
+.highlight .err {
+    color: #F00000;
+    background-color: #f0a0a0;
+}
+
+.highlight .k {
+    color: #008000;
+    font-weight: bold;
+}
+
+.highlight .o {
+    color: #303030;
+}
+
+.highlight .cm {
+    color: #808080;
+}
+
+.highlight .cp {
+    color: #507090;
+}
+
+.highlight .c1 {
+    color: #808080;
+}
+
+.highlight .cs {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.highlight .gd {
+    color: #a00000;
+}
+
+.highlight .ge {
+    font-style: italic;
+}
+
+.highlight .gr {
+    color: #ff0000;
+}
+
+.highlight .gh {
+    color: #000080;
+    font-weight: bold;
+}
+
+.highlight .gi {
+    color: #00a000;
+}
+
+.highlight .go {
+    color: #808080;
+}
+
+.highlight .gp {
+    color: #c65d09;
+    font-weight: bold;
+}
+
+.highlight .gs {
+    font-weight: bold;
+}
+
+.highlight .gu {
+    color: #800080;
+    font-weight: bold;
+}
+
+.highlight .gt {
+    color: #0040d0;
+}
+
+.highlight .kc {
+    color: #008000;
+    font-weight: bold;
+}
+
+.highlight .kd {
+    color: #008000;
+    font-weight: bold;
+}
+
+.highlight .kn {
+    color: #008000;
+    font-weight: bold;
+}
+
+.highlight .kp {
+    color: #003080;
+    font-weight: bold;
+}
+
+.highlight .kr {
+    color: #008000;
+    font-weight: bold;
+}
+
+.highlight .kt {
+    color: #303090;
+    font-weight: bold;
+}
+
+.highlight .m {
+    color: #6000E0;
+    font-weight: bold;
+}
+
+.highlight .s {
+    background-color: #fff0f0;
+}
+
+.highlight .na {
+    color: #0000c0;
+}
+
+.highlight .nb {
+    color: #007020;
+}
+
+.highlight .nc {
+    color: #B00060;
+    font-weight: bold;
+}
+
+.highlight .no {
+    color: #003060;
+    font-weight: bold;
+}
+
+.highlight .nd {
+    color: #505050;
+    font-weight: bold;
+}
+
+.highlight .ni {
+    color: #800000;
+    font-weight: bold;
+}
+
+.highlight .ne {
+    color: #F00000;
+    font-weight: bold;
+}
+
+.highlight .nf {
+    color: #0060B0;
+    font-weight: bold;
+}
+
+.highlight .nl {
+    color: #907000;
+    font-weight: bold;
+}
+
+.highlight .nn {
+    color: #0e84b5;
+    font-weight: bold;
+}
+
+.highlight .nt {
+    color: #007000;
+}
+
+.highlight .nv {
+    color: #906030;
+}
+
+.highlight .ow {
+    color: #000000;
+    font-weight: bold;
+}
+
+.highlight .w {
+    color: #bbbbbb;
+}
+
+.highlight .mf {
+    color: #6000E0;
+    font-weight: bold;
+}
+
+.highlight .mh {
+    color: #005080;
+    font-weight: bold;
+}
+
+.highlight .mi {
+    color: #0000D0;
+    font-weight: bold;
+}
+
+.highlight .mo {
+    color: #4000E0;
+    font-weight: bold;
+}
+
+.highlight .sb {
+    background-color: #fff0f0;
+}
+
+.highlight .sc {
+    color: #0040d0;
+}
+
+.highlight .sd {
+    color: #d04020;
+}
+
+.highlight .s2 {
+    background-color: #fff0f0;
+}
+
+.highlight .se {
+    color: #606060;
+    font-weight: bold;
+    background-color: #fff0f0;
+}
+
+.highlight .sh {
+    background-color: #fff0f0;
+}
+
+.highlight .si {
+    background-color: #e0e0e0;
+}
+
+.highlight .sx {
+    color: #D02000;
+    background-color: #fff0f0;
+}
+
+.highlight .sr {
+    color: #000000;
+    background-color: #fff0ff;
+}
+
+.highlight .s1 {
+    background-color: #fff0f0;
+}
+
+.highlight .ss {
+    color: #a06000;
+}
+
+.highlight .bp {
+    color: #007020;
+}
+
+.highlight .vc {
+    color: #306090;
+}
+
+.highlight .vg {
+    color: #d07000;
+    font-weight: bold;
+}
+
+.highlight .vi {
+    color: #3030b0;
+}
+
+.highlight .il {
+    color: #0000D0;
+    font-weight: bold;
+}
