@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 <ul class="unstyled">
-    {% for post in site.posts limit: 10 %}
+    {% for post in paginator.posts %}
     <li>
         <div class="well">
             <div class="page-header post-title">
@@ -20,3 +20,10 @@ title: Home
     </li>
     {% endfor %}
 </ul>
+<div style="padding:0 100px;">
+    <div class="btn-group" style="margin: 0 0 20px 0;">
+        <a class="btn{% if paginator.page >= paginator.total_pages %} disabled{% endif %}" style="width:100px;" href="/page{{ paginator.next_page }}/">&larr; Older</a>
+        <button class="btn disabled" style="width: 250px">Page {{ paginator.page }}/{{ paginator.total_pages }}</button>
+        <a class="btn{% if paginator.page < 2 %} disabled{% endif %}" style="width:100px" href="{% if paginator.page == 2 %}/{% else %}/page{{ paginator.previous_page }}/{% endif %}">Newer &rarr;</a>
+    </div>
+</div>
