@@ -36,4 +36,4 @@ For the same reason, testing a basic getter doesn't make more sense to me.
 
 You disagree? Please leave a *civilized and argumented* comment :)
 
-PS: Thanks to [@mageekguy](https://twitter.com/mageekguy) for giving a topic for a new post ^^
+PS: Thanks to [@mageekguy](https://twitter.com/mageekguy) for giving me a topic for a new post ^^
