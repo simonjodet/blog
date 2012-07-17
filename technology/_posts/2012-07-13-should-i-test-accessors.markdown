@@ -37,3 +37,8 @@ For the same reason, testing a basic getter doesn't make more sense to me.
 You disagree? Please leave a *civilized and argumented* comment :)
 
 PS: Thanks to [@mageekguy](https://twitter.com/mageekguy) for giving me a topic for a new post ^^
+
+**EDIT:** I asked this question to [J.B. Rainsberger](http://www.jbrains.ca/ "jbrains")  on Twitter. His answer is pretty clear. If you're new to TDD, test everything. But after a while you should consider if accessors are too simple to break.
+
+<blockquote class="twitter-tweet tw-align-center" data-in-reply-to="224756188980584448"><p>@<a href="https://twitter.com/sjodet">sjodet</a> Novices <a href="http://t.co/yVDnqeVg" title="http://link.jbrains.ca/sYj5Y">link.jbrains.ca/sYj5Y</a> should test everything; Advanced Beginners explore Too Simple to Break <a href="http://t.co/cd8JSvlA" title="http://link.jbrains.ca/mZwHzi">link.jbrains.ca/mZwHzi</a></p>&mdash; ☕ J. B. Rainsberger (@jbrains) <a href="https://twitter.com/jbrains/status/224861598739730432" data-datetime="2012-07-16T13:42:37+00:00">July 16, 2012</a></blockquote>
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
