@@ -1,0 +1,20 @@
+{% extends "_layout/default.twig" %}
+
+{% block content %}
+<ul class="unstyled">
+    {% for page in pages|reverse %}
+    <li>
+        <div class="well">
+            <div class="page-header post-title">
+                <h3>
+                    <a href="{{ page.location }}">{{ page.title }}</a><br/>
+                    <small>Published on {{ page.date|date("Y-m-d") }}. Tags: {% for tag in page.tags %}{% if not loop.last %}{{ tag }}, {% else %}{{ tag  }}{% endif %}{% endfor %}</small>
+                </h3>
+            </div>
+            <div style="margin-top:5px;">{{ page.html }}</div>
+            <div class="post-separator"></div>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

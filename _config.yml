@@ -1,6 +1,0 @@
-paginate: 3
-auto: false
-pygments: true
-markdown: rdiscount
-exclude: ["README.markdown", "lib", "search_indexer", "less", "jodet.com.esproj"]
-permalink: /:title

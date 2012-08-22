@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% if page.title != 'Home' and page.title != '' %}{{ page.title }} - {% endif %}Simon's Blog</title>
+    <link rel="stylesheet" href="/tools/bootstrap.min.css?cache={{ site.time }}" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="/style/css/style.css?cache={{ site.time }}" type="text/css" charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="generator" content="Jekyll">
+    <meta name="author" content="Simon Jodet">
+    <meta name="robots" content="{{ page.meta-robots }}"/>
+    <meta name="description" content="{{ page.meta-description }}"/>
+    <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/jodet/blog"/>
+    <link rel="canonical" href="{{ page.location }}"/>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-26026006-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="banner">
+            <a href="/" class="banner">
+                <h1>Simon's Blog
+                    <small>Geek, developer, software architect</small>
+                </h1>
+            </a>
+        </div>
+        <div class="row">
+            <div class="span9">
+                <!--content-->
+                <div id="content_container">
+                    {% block content %}{% endblock %}
+
+                </div>
+                <div class="well" id="search_container">
+                    <div style="float:right;">
+                        <button class="btn" id="search_close_btn"><i class="icon-arrow-left"></i>&nbsp;Back</button>
+                    </div>
+                    <h3>Search results</h3>
+                    <span id="searching_message">Searching...</span>
+
+                    <div id="no_result_message" class="alert-message warning">
+                        <p><strong>No matching post found</strong></p>
+                    </div>
+                    <ul class="search_results">
+                        <li id="search_result_template">
+                            <div>
+                                <h4>
+                                    <a href="" class="search_post_link"></a><br/>
+                                    <small>Published on <span class="search_post_date"></span></a></small>
+                                </h4>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="well">Copyright &copy; 2012 Simon Jodet - All rights reserved</div>
+            </div>
+            <div class="span3">
+                <!--menu-->
+                <div style="padding: 8px 0;" class="well">
+                    <ul class="nav nav-list">
+                        <li class="nav-header" style=""><i class="icon-th-list"></i>&nbsp;Menu</li>
+                        <li
+                                {% if page.title != 'Categories' %} class="active"{% endif %}>
+                            <a href="/"><i class="{% if page.title != 'Categories' %}icon-white {% endif %}icon-home"></i>&nbsp;Home</a>
+                        </li>
+                        <li
+                                {% if page.title == 'Categories' %} class="active"{% endif %}>
+                            <a href="/categories/index.html"><i class="{% if page.title == 'Categories' %}icon-white {% endif %}icon-folder-open"></i>&nbsp;Categories</a>
+                        </li>
+                        <li>
+                            <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-retweet"></i>&nbsp;RSS</a>
+                        </li>
+                        <li class="divider" style="margin: 0 -10px 5px -10px;"></li>
+                        <li style="margin-left: -10px;">
+                            <!--<form action="">-->
+                            <div style="white-space: nowrap; vertical-align: top;">
+                                <input id="search_field" name="search_field" type="text" placeholder="Search" style="margin: 0;">
+                                <button class="btn" type="submit" id="search_btn" style="margin: 0;">
+                                    <i class="icon-search"></i></button>
+                            </div>
+                            <!--</form>-->
+                        </li>
+                    </ul>
+                </div>
+                <div style="padding: 5px 0;" class="well">
+                    <ul class="nav nav-list">
+                        <li class="nav-header" style="">
+                            <a href="http://twitter.com/intent/user?screen_name=sjodet" target="_blank" class="twitter_follow_link" id="twitter-link">
+                                <img src="/style/img/iconmonstr-twitter-icon.png?cache={{ site.time }}" class="twitter_bird_icon"/>&nbsp;Twitter feed</a>
+                        </li>
+                    </ul>
+                    <div class="tweet"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<img src="/img/glyphicons-halflings.png?cache={{ site.time }}" style="display: none;"/>
+<img src="/img/glyphicons-halflings-white.png?cache={{ site.time }}" style="display: none;"/>
+<script src="/tools/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/tools/jquery.tweet.js" type="text/javascript" charset="utf-8"></script>
+<script src="/scripts.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
