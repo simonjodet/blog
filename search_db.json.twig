@@ -1,0 +1,11 @@
+{
+    "pages":[
+    {% for page in pages %}
+    {
+        "title":{{ page.title|json_encode() }},
+        "location":{{ page.location|json_encode() }},
+        "content":{{ page.html|striptags|json_encode() }}
+    }
+    {% endfor %}
+    ]
+}
