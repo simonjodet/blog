@@ -73,7 +73,7 @@ jQuery(function ($) {
 
     var JsonSearch = function (search) {
       var search = search;
-      $.getJSON("http://localhost:8000/search_db.json", function (json) {
+      $.getJSON("search_db.json", function (json) {
         jsonCallback(json, search);
       });
 
@@ -107,7 +107,7 @@ jQuery(function ($) {
   if ($('#pagination_btn').length == 1) {
     $('#pagination_btn').click(function (event) {
       event.preventDefault();
-      $.getJSON("http://localhost:8000/page_db.json", function (json) {
+      $.getJSON("page_db.json", function (json) {
         var post_count = $('.page-list-item').length;
 
         for (var i = post_count; i < (post_count + 5); i++) {
