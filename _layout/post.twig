@@ -5,11 +5,11 @@
     <div class="page-header post-title">
         <h3>
             {{ page.title }}<br/>
-            <small>Published on {{ page.date|date("Y-m-d") }}. Tags: {% for tag in page.tags %}{% if not loop.last %}{{ tag }}, {% else %}{{ tag  }}{% endif %}{% endfor %}</small>
+            <small>Published on {{ page.date|date("Y-m-d") }}. Tags: {{ page.tags|join(', ') }}</small>
         </h3>
     </div>
     <div style="margin-top:5px;">
-{{ content }}    
+{{ content }}
 </div>
 </div>
 <div class="well">

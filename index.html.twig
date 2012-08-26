@@ -8,7 +8,7 @@
             <div class="page-header post-title">
                 <h3>
                     <a href="{{ page.location }}">{{ page.title }}</a><br/>
-                    <small>Published on {{ page.date|date("Y-m-d") }}. Tags: {% for tag in page.tags %}{% if not loop.last %}{{ tag }}, {% else %}{{ tag  }}{% endif %}{% endfor %}</small>
+                    <small>Published on {{ page.date|date("Y-m-d") }}. Tags: {{ page.tags|join(', ') }}</small>
                 </h3>
             </div>
             <div style="margin-top:5px;">{{ page.html }}</div>
