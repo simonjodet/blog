@@ -54,6 +54,7 @@ jQuery(function ($) {
     $('#content_container').hide();
     $('#search_container').show();
     resetSearch();
+
     var displaySearchResults = function (data) {
       $('#searching_message').hide();
       if (!$.isArray(data) || data.length < 1) {
@@ -63,13 +64,37 @@ jQuery(function ($) {
         $('#search_container').show();
         $.each(data, function (index, post) {
           var search_result = $('#search_result_template').clone().insertAfter($('#search_result_template')).addClass('search_result').removeAttr('id').show();
-          search_result.find('.search_post_link').html(post.title).attr('href', post.post);
+          search_result.find('.search_post_link').html(post.title).attr('href', "/" + post.location);
           search_result.find('.search_post_date').html(post.date);
           search_result.find('.search_post_content').html(post.content);
         });
       }
-    }
-    $.getJSON('http://blog.jodet.com/search/search.php?search=' + $('#search_field').attr('value'), displaySearchResults);
+    };
+
+    var JsonSearch = function (search) {
+      var search = search;
+      $.getJSON("http://localhost:8000/search_db.json", function (json) {
+        jsonCallback(json, search);
+      });
+
+      function jsonCallback(json, search) {
+        var pages = json.pages;
+        var results = jQuery.grep(pages, function (page, index) {
+          if (page.title.indexOf(search) != -1) {
+            return true;
+          }
+          if (page.title.toLowerCase().indexOf(search.toLowerCase()) != -1) {
+            return true;
+          }
+          if (page.content.toLowerCase().indexOf(search.toLowerCase()) != -1) {
+            return true;
+          }
+        });
+        displaySearchResults(results);
+      }
+    };
+    JsonSearch($('#search_field').attr('value'));
+
   });
 
   $('#search_field').keypress(function (e) {

@@ -1,11 +1,12 @@
 {
     "pages":[
     {% for page in pages %}
-    {
-        "title":{{ page.title|json_encode() }},
-        "location":{{ page.location|json_encode() }},
-        "content":{{ page.html|striptags|json_encode() }}
-    }
-    {% endfor %}
+        {
+            "title":{{ page.title|json_encode() }},
+            "location":{{ page.location|json_encode() }},
+            "date":{{ page.date|date("Y-m-d")|json_encode() }},
+            "content":{{ page.html|striptags|json_encode() }}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
     ]
 }
