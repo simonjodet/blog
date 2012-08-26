@@ -117,6 +117,7 @@ jQuery(function ($) {
           if (i >= json.pages.length) {
             $('#pagination_btn').css('display', 'none');
           }
+          prettyPrint();
         }
       });
 
@@ -138,4 +139,6 @@ jQuery(function ($) {
       }
     });
   }
+
+  prettyPrint();
 });

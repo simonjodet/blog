@@ -20,14 +20,15 @@ But we're not in the 20th century anymore and even if I don't need 99% of the fe
 I like the external links of my site to open a new tab/window (with the HTML `target="_blank"` attribute).  
 Since I didn't want to dig into Jekyll's rendering process, I chose to add the HTML attribute to all external links with some JavaScript:  
 
-
-    var domain_root = document.location.protocol+'//'+document.location.host;
-    var all_links = $('a').each(function(index,element){
-      if(element.href.substr(0,domain_root.length) !== domain_root)
-      {
-        element.target = '_blank';
-      }
-    });
+<pre class="prettyprint">
+var domain_root = document.location.protocol+'//'+document.location.host;
+var all_links = $('a').each(function(index,element){
+  if(element.href.substr(0,domain_root.length) !== domain_root)
+  {
+    element.target = '_blank';
+  }
+});
+</pre>
 
 Yes I use jQuery and yes some of you will scream but I don't care, most of your CPU's cores are idle right now so I decided to put them to work a bit.  
 In modern browsers, it shouldn't slow down your browsing experience at all.
@@ -83,62 +84,64 @@ The [server](https://github.com/simonjodet/blog/blob/master/search/search.js) qu
 So the search indexer is ran at built time from a git hook script.  
 I have a bare repository (`/var/www/blog_repo/`) acting as a remote for both my local repo and the deployed repo (`/var/www/blog/`). I also have a Github repo to share this *great* code. When I push from my local repo, the bare repo post-receive hook is ran:
 
-
-    git push github master # Push updates to the Github repo
-    cd /var/www/blog/ # Go to the deployed repo
-    env -i git pull origin master # Update the deployed repo
-    export PATH="/var/lib/gems/1.8/bin/:$PATH"
-    jekyll --no-auto # Build the blog 
-    cd /var/www/blog/search_indexer/
-    node search_indexer.js # Build the search index
-
+<pre class="prettyprint">
+git push github master # Push updates to the Github repo
+cd /var/www/blog/ # Go to the deployed repo
+env -i git pull origin master # Update the deployed repo
+export PATH="/var/lib/gems/1.8/bin/:$PATH"
+jekyll --no-auto # Build the blog 
+cd /var/www/blog/search_indexer/
+node search_indexer.js # Build the search index
+</pre>
 
 The only thing it doesn't do is start the node server because I didn't figured out yet how to run an [upstart](http://upstart.ubuntu.com/) script as a non-root user. Here's the upstart script:
 
+<pre class="prettyprint">
+description "node.js server"
+author      "Simon Jodet"
 
-    description "node.js server"
-    author      "Simon Jodet"
+start on started mountall
+stop on shutdown
 
-    start on started mountall
-    stop on shutdown
+respawn
+respawn limit 99 5
 
-    respawn
-    respawn limit 99 5
-
-    script
-        export HOME="/var/www"
-        exec sudo -u www-data /usr/bin/node /var/www/blog/search/search.js >> /var/log/node.log 2>&1
-    end script
+script
+    export HOME="/var/www"
+    exec sudo -u www-data /usr/bin/node /var/www/blog/search/search.js >> /var/log/node.log 2>&1
+end script
+</pre>
 
 The good thing is that I only need to reload it when I update the search server script which is not that often.
 
 Finally, the server is behind a Nginx reverse proxy. I'll let you search the web on how to setup Nginx as a reverse proxy. Here's the virtual host configuration:
 
-
-    server
+<pre class="prettyprint">
+server
+{
+    listen   80;
+    server_name  blog.jodet.com;
+    location = /50x.html
     {
-        listen   80;
-        server_name  blog.jodet.com;
-        location = /50x.html
-        {
-            root /var/www/nginx-default;
-        }
-
-        access_log  /var/log/nginx/jodet_access.log;
-        error_log  /var/log/nginx/jodet_error.log debug;
-
-        index index.html;
-
-        location /search/
-        {
-            proxy_pass         http://127.0.0.1:1337/;
-        }
-
-        location /
-        {
-            root  /var/www/blog/_site;
-        }
+        root /var/www/nginx-default;
     }
+
+    access_log  /var/log/nginx/jodet_access.log;
+    error_log  /var/log/nginx/jodet_error.log debug;
+
+    index index.html;
+
+    location /search/
+    {
+        proxy_pass         http://127.0.0.1:1337/;
+    }
+
+    location /
+    {
+        root  /var/www/blog/_site;
+    }
+}
+</pre>
 
 Simple, right? Nginx rocks! And guess, what? It is built on an event loop too.
 

@@ -10,24 +10,22 @@
 
 Should one test getters and setters? I mean default accessors like these ones:
 
+<pre class="prettyprint">
+class MyClass
+{
+    private $MyProperty;
 
-    <?php
-    class MyClass
+    public function setMyProperty($MyProperty)
     {
-        private $MyProperty;
-
-        public function setMyProperty($MyProperty)
-        {
-            $this->MyProperty = $MyProperty;
-        }
-
-        public function getMyProperty()
-        {
-            return $this->MyProperty;
-        }
+        $this->MyProperty = $MyProperty;
     }
-    ?>
 
+    public function getMyProperty()
+    {
+        return $this->MyProperty;
+    }
+}
+</pre>
 
 A quick Google search on the topic shows there is no clear agreement on the topic. I would tend to say I should not unit test them if I don't see a point in testing them. Unecessary tests are waste.
 

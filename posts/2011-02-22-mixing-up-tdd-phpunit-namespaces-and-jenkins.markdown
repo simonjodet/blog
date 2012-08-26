@@ -28,35 +28,34 @@ I got 3 major issues with PHPUnit:
 
 3- Mocks are cool but they're not meant to fix all your problems. You want to test if an object's method is called: mocks are the solution. You want to make sure that during a future rewrite your fellow developer will not forget to update the client class of another? Use a real instance of the object, not a mock of it. Here's a stupid example:
 
-    <?php
-    class Conf
+<pre class="prettyprint">
+class Conf
+{
+    public function get_conf($key)
     {
-        public function get_conf($key)
-        {
-            //do something
-        }
-
-        public function set_conf($key,$value)
-        {
-            //do something
-        }
+        //do something
     }
 
-    class Client
+    public function set_conf($key,$value)
     {
-        public function __construct(Conf $conf)
+        //do something
+    }
+}
+
+class Client
+{
+    public function __construct(Conf $conf)
+    {
+        $conf_entry = $conf->get_conf('key');
+        $conf->set_conf('key2','value2');
+        $conf_entry_2 = $conf->get_conf('key2');
+        if($conf_entry_2 === false)
         {
-            $conf_entry = $conf->get_conf('key');
-            $conf->set_conf('key2','value2');
-            $conf_entry_2 = $conf->get_conf('key2');
-            if($conf_entry_2 === false)
-            {
-                 throw new Exception();
-            }
+             throw new Exception();
         }
     }
-    ?>
-
+}
+</pre>
 
 To make sure the ``get_conf`` method is called by ``Client``'s constructor, use a mock.
 To make sure the exception is thrown if ``$conf_entry_2`` is empty, use an instance of ``Conf``. Why?
