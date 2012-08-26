@@ -104,4 +104,38 @@ jQuery(function ($) {
     }
   });
 
+  if ($('#pagination_btn').length == 1) {
+    $('#pagination_btn').click(function (event) {
+      event.preventDefault();
+      $.getJSON("http://localhost:8000/page_db.json", function (json) {
+        var post_count = $('.page-list-item').length;
+
+        for (var i = post_count; i < (post_count + 5); i++) {
+          if (json.pages[i]) {
+            createNewPage(json.pages[i]);
+          }
+          if (i >= json.pages.length) {
+            $('#pagination_btn').css('display', 'none');
+          }
+        }
+      });
+
+      var createNewPage = function (page) {
+        var clone = $('#page-list-item-tpl').clone();
+        clone.children('div.well').children('div.page-header').children('h3').children('a')[0].setAttribute('href', page.location);
+        clone.children('div.well').children('div.page-header').children('h3').children('a')[0].innerHTML = page.title;
+        var subtitle = clone.children('div.well').children('div.page-header').children('h3').children('small')[0].innerHTML;
+        subtitle = subtitle.replace("__page.date__", page.date);
+        subtitle = subtitle.replace("__page.tags__", page.tags.join(', '));
+        clone.children('div.well').children('div.page-header').children('h3').children('small')[0].innerHTML = subtitle;
+        clone.children('div.well').children('div.post-content')[0].innerHTML = page.content;
+        clone.css('display', 'block');
+        clone.animate({
+          'opacity':1
+        }, 1000);
+
+        $('#page-list').append(clone);
+      }
+    });
+  }
 });

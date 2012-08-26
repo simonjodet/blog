@@ -1,9 +1,9 @@
 {% extends "_layout/default.twig" %}
 
 {% block content %}
-<ul class="unstyled">
-    {% for page in pages|reverse %}
-    <li>
+<ul class="unstyled" id="page-list">
+    {% for page in pages|reverse|slice(0,5) %}
+    <li class="page-list-item">
         <div class="well">
             <div class="page-header post-title">
                 <h3>
@@ -16,5 +16,21 @@
         </div>
     </li>
     {% endfor %}
+    <li class="page-list-item" id="page-list-item-tpl" style="display: none;opacity:0;">
+        <div class="well">
+            <div class="page-header post-title">
+                <h3>
+                    <a href="__page.location__"></a><br/>
+                    <small>Published on __page.date__. Tags: __page.tags__</small>
+                </h3>
+            </div>
+            <div style="margin-top:5px;" class="post-content"></div>
+            <div class="post-separator"></div>
+        </div>
+    </li>
 </ul>
+
+<div style="margin-bottom: 25px;" align="center">
+    <button class="btn btn-large btn-block" id="pagination_btn"><i class="icon-chevron-down" style="vertical-align: baseline;"></i>&nbsp;Display more posts&nbsp;<i class="icon-chevron-down" style="vertical-align: baseline;"></i></button>
+</div>
 {% endblock %}
