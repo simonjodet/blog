@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Simon's Blog</title>
+    <link href="http://blog.jodet.com/atom.xml" rel="self"/>
+    <link href="http://blog.jodet.com/"/>
+    <updated>{{ pages|reverse[0].date|date(DATE_ATOM) }}</updated>
+    <id>http://blog.jodet.com/</id>
+    <author>
+        <name>Simon Jodet</name>
+        <email>simon@jodet.com</email>
+    </author>
+
+    {% for page in pages|reverse %}
+    <entry>
+        <title>{{ page.title }}</title>
+        <link href="http://blog.jodet.com{{ page.location }}"/>
+        <updated>{{ page.date|date(DATE_ATOM) }}</updated>
+        <id>http://blog.jodet.com/{{ page.location }}</id>
+        <content type="html"><![CDATA[{{ page.html }}]]></content>
+    </entry>
+    {% endfor %}
+
+</feed>
