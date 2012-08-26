@@ -80,9 +80,6 @@ jQuery(function ($) {
       function jsonCallback(json, search) {
         var pages = json.pages;
         var results = jQuery.grep(pages, function (page, index) {
-          if (page.title.indexOf(search) != -1) {
-            return true;
-          }
           if (page.title.toLowerCase().indexOf(search.toLowerCase()) != -1) {
             return true;
           }
