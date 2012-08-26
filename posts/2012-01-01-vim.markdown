@@ -1,0 +1,21 @@
+***
+{
+    "title":"Vim",
+    "date":"2012-01-01",
+    "category":"development",
+    "layout":"post.twig",
+    "tags":["Vim"]
+}
+***
+
+<img src="/img/2012-01-01-vim/vim_logo.png" class="post-img float-right"/>
+While I'm learning Ruby (and a bit of Python) I decided to make things a bit more difficult and I started to learn [Vim](http://www.vim.org/).
+
+For a while, I thought Vim was just a way for some developers to show off and snob us, the stupid people using "notepad-like" editors.
+While I still think that really smart "notepad-like" editors like Eclipse, Netbeans and Intellij Idea can be really useful and let developers code and read code faster, I can now understand why Vim is a very valid contender in the race to the best text editor. But damn! The learning curve is steap!
+
+To help me, I found this blog from this canadian dude, Derek Wyatt, and his screencasts teaching how to use Vim. He's a bit crazy (especially in the first video) but his style and passion actually helps a lot.
+
+So if you ever consider learning how to use Vim or get better at using it, take the time to watch [Derek Wyatt's screencasts](http://www.derekwyatt.org/vim/vim-tutorial-videos/vim-novice-tutorial-videos/). 
+
+By the way, this is my first post written using Vim and I swear I didn't used the arrow keys (almost).

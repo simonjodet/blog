@@ -1,0 +1,20 @@
+***
+{
+    "title":"One",
+    "date":"2011-08-24",
+    "category":"development",
+    "layout":"post.twig",
+    "tags":["blog", "security", "speed", "performance", "git", "markdown", "sphinx"]
+}
+***
+
+<img src="/img/2011-08-24-one/u2_one.jpg" class="post-img float-right"/>
+Ok. For the _tenth_ time at least, I'm starting a blog. I'm like a little school girl promising to herself every year to keep a diary. Epic fail each time...
+
+Every time, there is a good reason for me to start a blog. This time around, I really wanted to use Jekyll and get rid of Wordpress.
+
+Wordpress is probably one of the best blog engine out there. However, it doesn't fit my needs and has a number of major flaws:
+
+* Wordpress is too stressful. I mean my blog got hacked a couple of time with 0-day injection issues. This engine is way to much used and like Windows is a favorite target for hackers.
+* I don't need this bloated engine to write maybe ten posts in total before I switch to something else again. 
+* Jekyll seems to be a nice little tool and it gives me an excuse to use 2 things I've been using a lot lately: Git and markdown-like writing with Sphynx.
