@@ -1,3 +1,4 @@
 {
-  "timezone":"Europe/Paris"
+  "timezone":"Europe/Paris",
+  "blacklist":["README.md"]
 }
