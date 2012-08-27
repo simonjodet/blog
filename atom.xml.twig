@@ -9,7 +9,6 @@
         <name>Simon Jodet</name>
         <email>simon@jodet.com</email>
     </author>
-
     {% for page in pages|reverse %}
     <entry>
         <title>{{ page.title }}</title>
@@ -19,5 +18,4 @@
         <content type="html"><![CDATA[{{ page.html }}]]></content>
     </entry>
     {% endfor %}
-
 </feed>
