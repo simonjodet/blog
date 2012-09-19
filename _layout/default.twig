@@ -11,6 +11,8 @@
     <meta name="description" content="{{ page.meta-description }}"/>
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/jodet/blog"/>
     <link rel="canonical" href="{{ page.location }}"/>
+    <link href="/tools/google-code-prettify/prettify.css?cache={{ "now"|date("U") }}" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="/tools/google-code-prettify/prettify.js?cache={{ "now"|date("U") }}"></script>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -77,10 +79,10 @@
                                 {% if page.title != 'Categories' %} class="active"{% endif %}>
                             <a href="/"><i class="{% if page.title != 'Categories' %}icon-white {% endif %}icon-home"></i>&nbsp;Home</a>
                         </li>
-                        <li
-                                {% if page.title == 'Categories' %} class="active"{% endif %}>
-                            <a href="/categories/index.html"><i class="{% if page.title == 'Categories' %}icon-white {% endif %}icon-folder-open"></i>&nbsp;Categories</a>
-                        </li>
+                        {#<li#}
+                                {#{% if page.title == 'Categories' %} class="active"{% endif %}>#}
+                            {#<a href="/categories/index.html"><i class="{% if page.title == 'Categories' %}icon-white {% endif %}icon-folder-open"></i>&nbsp;Categories</a>#}
+                        {#</li>#}
                         <li>
                             <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-retweet"></i>&nbsp;RSS</a>
                         </li>
