@@ -1,7 +1,7 @@
 ***
 {
     "title":"TDD, BDD, Potato, Potatoe*",
-    "date":"2012-08-26",
+    "date":"2012-10-11",
     "category":"development",
     "layout":"post.twig",
     "tags":["TDD", "BDD"]
