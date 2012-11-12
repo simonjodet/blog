@@ -85,7 +85,7 @@ sudo gem install github
 That's right, how do I install Apache (or nginx)? How do I setup MySQL (or PostgreSQL)?
 
 Well I don't. I don't like adding listening services on my Mac. It's a security concern I don't want to bother myself with.  
-So either I use PHP's 5.4 built-in web server + SQLite databases or I use a debian/ubuntu virtual machine, something I only run when I'm coding. The virtual machine setup also limit what you expose to the outer world to your code. Your mails and other personal stuff is isolated.  
+So either I use PHP's 5.4 built-in web server + SQLite databases or I use a debian/ubuntu virtual machine, something I only run when I'm coding. The virtual machine setup also limit what you expose to the outer world. Your mails and other personal stuff is isolated.  
 Another reason why I use a virtual machine is that my production servers will use Linux, not Mac OS and you should do development and continuous integration on the production system.
 
 ### Install PHP
