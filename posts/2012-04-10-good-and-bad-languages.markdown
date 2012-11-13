@@ -40,7 +40,7 @@ The last major advantage of PHP is that you can set it up fast for development. 
 
 I agree with most stuff Jeff Atwood writes but not this tweet:
 
-![image](/img/2012-04-10-good-and-bad-languages/jeff_atwood_tweet.png.jpg)
+![image](/posts/img/2012-04-10-good-and-bad-languages/jeff_atwood_tweet.png.jpg)
 
 So please continue to create projects using PHP. And please continue ranting on the bad parts of the language to the community, that'll make it better.
 

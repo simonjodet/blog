@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <title>{% if page.title != 'Home' and page.title != '' %}{{ page.title }} - {% endif %}Simon's Blog</title>
-    <link rel="stylesheet" href="/tools/bootstrap.min.css?cache={{ "now"|date("U") }}" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="/style/css/bootstrap.min.css?cache={{ "now"|date("U") }}" type="text/css" charset="utf-8"/>
     <link rel="stylesheet" href="/style/css/style.css?cache={{ "now"|date("U") }}" type="text/css" charset="utf-8"/>
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="generator" content="Gumdrop">
     <meta name="author" content="Simon Jodet">
@@ -12,8 +12,8 @@
     <meta name="description" content="{{ page.meta-description }}"/>
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/jodet/blog"/>
     <link rel="canonical" href="{{ page.location }}"/>
-    <link href="/tools/google-code-prettify/prettify.css?cache={{ "now"|date("U") }}" type="text/css" rel="stylesheet" />
-    <script type="text/javascript" src="/tools/google-code-prettify/prettify.js?cache={{ "now"|date("U") }}"></script>
+    <link href="/style/google-code-prettify/prettify.css?cache={{ "now"|date("U") }}" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="/style/google-code-prettify/prettify.js?cache={{ "now"|date("U") }}"></script>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -84,8 +84,9 @@
                                 {#{% if page.title == 'Categories' %} class="active"{% endif %}>#}
                             {#<a href="/categories/index.html"><i class="{% if page.title == 'Categories' %}icon-white {% endif %}icon-folder-open"></i>&nbsp;Categories</a>#}
                         {#</li>#}
+
                         <li>
-                            <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-retweet"></i>&nbsp;RSS</a>
+                        <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-retweet"></i>&nbsp;RSS</a>
                         </li>
                         <li class="divider" style="margin: 0 -10px 5px -10px;"></li>
                         <li style="margin-left: -10px;">
@@ -100,16 +101,24 @@
                     </ul>
                 </div>
                 <div>
-					<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/sjodet" data-widget-id="243791053436620800" data-link-color="#366ddc">Tweets by @sjodet</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/sjodet" data-widget-id="243791053436620800" data-link-color="#366ddc">Tweets by @sjodet</a>
+                    <script>!function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");</script>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<img src="/img/glyphicons-halflings.png?cache={{ "now"|date("U") }}" style="display: none;"/>
-<img src="/img/glyphicons-halflings-white.png?cache={{ "now"|date("U") }}" style="display: none;"/>
-<script src="/tools/jquery.min.js?cache={{ "now"|date("U") }}" type="text/javascript" charset="utf-8"></script>
+<img src="/style/img/glyphicons-halflings.png?cache={{ "now"|date("U") }}" style="display: none;"/>
+<img src="/style/img/glyphicons-halflings-white.png?cache={{ "now"|date("U") }}" style="display: none;"/>
+<script src="/style/js/jquery.min.js?cache={{ "now"|date("U") }}" type="text/javascript" charset="utf-8"></script>
 <script src="/scripts.js?cache={{ "now"|date("U") }}" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

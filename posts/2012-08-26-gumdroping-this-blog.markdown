@@ -35,7 +35,7 @@ Essentially, it's similar to Jekyll. But there are significant differences:
 
 - It's less orientated toward blogs. It can handle any kind of site, not just blogs. It actually has zero blog-specific features today.
 - It's written in PHP. "Why?!? Oh why?!? Not in PHP!!!" is probably screaming Jeff Atwood right now if he reads me (I doubt he is ^^).
-<div align="center">![image](/img/2012-04-10-good-and-bad-languages/jeff_atwood_tweet.png.jpg)</div>
+<div align="center">![image](/posts/img/2012-04-10-good-and-bad-languages/jeff_atwood_tweet.png.jpg)</div>
 
   So why PHP?
 	- I consider myself a PHP expert and I didn't want to learn a new language. I needed it pretty bad, I actually like writing blog posts once in a while.
