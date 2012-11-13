@@ -1,0 +1,20 @@
+***
+{
+    "title":"GitRepos",
+    "date":"2012-11-13",
+    "category":"development",
+    "layout":"post.twig",
+    "tags":["Git","GitRepos","Personal project","PHP","TDD","Silex"]
+}
+***
+
+Just a short post to announce that I'm working on a new open-source project called **GitRepos**.
+
+This is a web tool to self-host Git repositories. Kind of like Bitbucket and Github but on your own Linux server. You'll be able to set up your SSH keys to access your Git repositories, add contributors to your projects and more.  
+I want to be clear, this is *not* another Github. Ok it's sort of a Github Enterprise but free and open-source.  
+
+I've just started the project on my spare time and I may have (or not) more time to work on it in the coming weeks. The project is based on the [Silex](http://silex.sensiolabs.org/) PHP micro-framework, coded doing TDD (unit and end-to-end tests). The project source is currently hosted on [Github](https://github.com/simonjodet/gitrepos). How ironic, I know ;o)
+
+Contributions are welcome. So fork it! Ok not right now, I've only written sign in and log in. Just wait until it's reached the *Minimum Viable Product* status.
+
+Updates to come here and on [Github](https://github.com/simonjodet/gitrepos). In the meantime, if you're interested in the project or have questions, don't hesitate leave a comment here.
