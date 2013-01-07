@@ -3,14 +3,14 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://blog.jodet.com/</loc>
-        <lastmod>{{ "now"|date(DATE_ATOM) }}</lastmod>
+        <lastmod>{{ "now"|date("Y-m-d\\TH:i:sP","GMT") }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     {% for page in pages|reverse|slice(0, 20) %}
     <url>
         <loc>http://blog.jodet.com/{{ page.location }}/</loc>
-        <lastmod>{{ page.date|date(DATE_ATOM) }}</lastmod>
+        <lastmod>{{ page.date|date("Y-m-d\\TH:i:sP","GMT") }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
