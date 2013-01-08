@@ -10,7 +10,7 @@
     <meta name="author" content="Simon Jodet">
     <meta name="robots" content="{{ page.meta-robots }}"/>
     <meta name="description" content="{{ page.meta-description }}"/>
-    <meta name="google-site-verification" content="ddMwfYxR4aOU2aF3oVqQRc38OOfcJZSYpjjCJQu6EQU" />
+    <meta name="google-site-verification" content="ddMwfYxR4aOU2aF3oVqQRc38OOfcJZSYpjjCJQu6EQU"/>
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/jodet/blog"/>
     <link rel="canonical" href="{{ page.location }}"/>
     <link href="/style/google-code-prettify/prettify.css?cache={{ "now"|date("U") }}" type="text/css" rel="stylesheet"/>
@@ -70,7 +70,6 @@
                         </li>
                     </ul>
                 </div>
-                <div class="well">Copyright &copy; 2012 Simon Jodet - All rights reserved</div>
             </div>
             <div class="span3">
                 <!--menu-->
@@ -82,12 +81,12 @@
                             <a href="/"><i class="{% if page.title != 'Categories' %}icon-white {% endif %}icon-home"></i>&nbsp;Home</a>
                         </li>
                         {#<li#}
-                                {#{% if page.title == 'Categories' %} class="active"{% endif %}>#}
-                            {#<a href="/categories/index.html"><i class="{% if page.title == 'Categories' %}icon-white {% endif %}icon-folder-open"></i>&nbsp;Categories</a>#}
+                        {#{% if page.title == 'Categories' %} class="active"{% endif %}>#}
+                        {#<a href="/categories/index.html"><i class="{% if page.title == 'Categories' %}icon-white {% endif %}icon-folder-open"></i>&nbsp;Categories</a>#}
                         {#</li>#}
 
                         <li>
-                        <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-retweet"></i>&nbsp;RSS</a>
+                            <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-retweet"></i>&nbsp;RSS</a>
                         </li>
                         <li class="divider" style="margin: 0 -10px 5px -10px;"></li>
                         <li style="margin-left: -10px;">
@@ -104,14 +103,16 @@
                 <div>
                     <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/sjodet" data-widget-id="243791053436620800" data-link-color="#366ddc">Tweets by @sjodet</a>
                     <script>!function (d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (!d.getElementById(id)) {
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = "//platform.twitter.com/widgets.js";
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }
-                    }(document, "script", "twitter-wjs");</script>
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "//platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        }(document, "script", "twitter-wjs");</script>
+                </div>
+                <div class="well" style="margin-top:20px;padding:8px 4px;color:gray;font-size:12px;text-align:center;">Copyright &copy; 2012 Simon Jodet<br/>All rights reserved
                 </div>
             </div>
         </div>
