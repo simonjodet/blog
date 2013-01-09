@@ -8,7 +8,7 @@
             <div class="page-header post-title">
                 <h3>
                     <a href="{{ page.location }}">{{ page.title }}</a><br/>
-                    <small>Published on {{ page.date|date("Y-m-d") }}. Tags: {{ page.tags|join(', ') }}</small>
+                    <small>Published on {{ page.date|date("Y-m-d") }}. Tags: <span class="post_tag">{{ page.tags|join('</span>, <span class="post_tag">') }}</span></small>
                 </h3>
             </div>
             <div style="margin-top:5px;">{{ page.html }}</div>

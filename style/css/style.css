@@ -12,7 +12,7 @@ div.banner {
 
 .banner > h1 > img {
 	margin-right:10px;
-	padding-bottom:5px;	
+	padding-bottom:5px;
 }
 
 div.post-title {
@@ -58,4 +58,9 @@ div.post-title {
 
 .post-title {
     padding-bottom: 0;
+}
+
+.post_tag:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
