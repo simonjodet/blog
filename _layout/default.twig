@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <title>{% if page.title != 'Home' and page.title != '' %}{{ page.title }} - {% endif %}Simon's Blog</title>
-    <link rel="stylesheet" href="/style/css/bootstrap.min.css?cache={{ "now"|date("U") }}" type="text/css" charset="utf-8"/>
-    <link rel="stylesheet" href="/style/css/style.css?cache={{ "now"|date("U") }}" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css?cache={{ "now"|date("U") }}" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="/static/css/style.css?cache={{ "now"|date("U") }}" type="text/css" charset="utf-8"/>
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="generator" content="Gumdrop">
@@ -13,8 +13,8 @@
     <meta name="google-site-verification" content="ddMwfYxR4aOU2aF3oVqQRc38OOfcJZSYpjjCJQu6EQU"/>
     <link rel="alternate" type="application/rss+xml" href="http://feeds.feedburner.com/jodet/blog"/>
     <link rel="canonical" href="{{ page.location }}"/>
-    <link href="/style/google-code-prettify/prettify.css?cache={{ "now"|date("U") }}" type="text/css" rel="stylesheet"/>
-    <script type="text/javascript" src="/style/google-code-prettify/prettify.js?cache={{ "now"|date("U") }}"></script>
+    <link href="/static/google-code-prettify/prettify.css?cache={{ "now"|date("U") }}" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="/static/google-code-prettify/prettify.js?cache={{ "now"|date("U") }}"></script>
     <script type="text/javascript">
 
         var _gaq = _gaq || [];
@@ -37,7 +37,7 @@
     <div class="row">
         <div class="banner">
             <a href="/" class="banner">
-                <h1><img src="/style/img/logo.png"/><span>Simon's Blog</span>
+                <h1><img src="/static/img/logo.png"/><span>Simon's Blog</span>
                     <small>Geek, developer, software architect</small>
                 </h1>
             </a>
@@ -75,18 +75,23 @@
                 <!--menu-->
                 <div style="padding: 8px 0;" class="well">
                     <ul class="nav nav-list">
-                        <li class="nav-header" style=""><i class="icon-th-list"></i>&nbsp;Menu</li>
-                        <li
-                                {% if page.title != 'Categories' %} class="active"{% endif %}>
-                            <a href="/"><i class="{% if page.title != 'Categories' %}icon-white {% endif %}icon-home"></i>&nbsp;Home</a>
-                        </li>
-                        {#<li#}
-                        {#{% if page.title == 'Categories' %} class="active"{% endif %}>#}
-                        {#<a href="/categories/index.html"><i class="{% if page.title == 'Categories' %}icon-white {% endif %}icon-folder-open"></i>&nbsp;Categories</a>#}
-                        {#</li>#}
-
                         <li>
-                            <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-retweet"></i>&nbsp;RSS</a>
+                            <a href="/"><i class="icon-home"></i>&nbsp;Home</a>
+                        </li>
+                        <li>
+                            <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-rss"></i>&nbsp;RSS</a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/#!/sjodet"><i class="icon-twitter"></i>&nbsp;Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/simonjodet/"><i class="icon-github-text"></i>&nbsp;Github</a>
+                        </li>
+                        <li>
+                            <a href="http://instagram.com/sjodet"><i class="icon-instagram"></i>&nbsp;Instagram</a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/profile/view?id=109351958"><i class="icon-linkedin"></i>&nbsp;LinkedIn</a>
                         </li>
                         <li class="divider" style="margin: 0 -10px 5px -10px;"></li>
                         <li style="margin-left: -10px;">
@@ -118,9 +123,9 @@
         </div>
     </div>
 </div>
-<img src="/style/img/glyphicons-halflings.png?cache={{ "now"|date("U") }}" style="display: none;"/>
-<img src="/style/img/glyphicons-halflings-white.png?cache={{ "now"|date("U") }}" style="display: none;"/>
-<script src="/style/js/jquery.min.js?cache={{ "now"|date("U") }}" type="text/javascript" charset="utf-8"></script>
+<img src="/static/img/glyphicons-halflings.png?cache={{ "now"|date("U") }}" style="display: none;"/>
+<img src="/static/img/glyphicons-halflings-white.png?cache={{ "now"|date("U") }}" style="display: none;"/>
+<script src="/static/js/jquery.min.js?cache={{ "now"|date("U") }}" type="text/javascript" charset="utf-8"></script>
 <script src="/scripts.js?cache={{ "now"|date("U") }}" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
