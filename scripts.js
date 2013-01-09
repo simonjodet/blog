@@ -153,6 +153,8 @@ jQuery(function ($) {
     $(window).on('scroll', infiniteScrolling);
   }
 
+  attachTagSearch();
+
   //Pretty print of code blocks
   prettyPrint();
 });
