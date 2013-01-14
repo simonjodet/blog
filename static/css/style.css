@@ -65,3 +65,7 @@ div.post-title {
     cursor: pointer;
     text-decoration: underline;
 }
+
+ul ul,ul ol,ol ol,ol ul{
+	margin-bottom:10px;
+}
