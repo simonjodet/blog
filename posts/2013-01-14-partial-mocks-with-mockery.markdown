@@ -17,7 +17,8 @@ I really like atoum and highly recommend it. However, because it's a young proje
 * The documentation was really lagging but it's getting there
 * Integration with other tools is poor
 
-The integration issue for me is really a deal-breaker. I really like to have a green bar in [IntelliJ IDEA](http://www.jetbrains.com/idea/). I sometimes like to check test coverage live in the IDE. There was no Jenkins plugin for atoum (I didn't check lately though).
+The integration issue for me is really a deal-breaker. I really like to have a green bar in [IntelliJ IDEA](http://www.jetbrains.com/idea/). I sometimes like to check test coverage live in the IDE. <span style="text-decoration: line-through;">There was no Jenkins plugin for atoum (I didn't check lately though).</span>  
+**Update:** [atoum works with Jenkins](https://github.com/atoum/atoum/wiki/atoum-et-Jenkins-(ou-Hudson)) as his author [indicates to me](https://twitter.com/mageekguy/status/290863062636969984). And I should have mentioned the [feature request](http://blog.mageekbox.net/?post/2012/11/07/You-use-atoum-and-PhpStorm) for atoum support in IntelliJ IDEA. I signed it and you should too.
 
 And then I stumbled on [Mockery](https://github.com/padraic/mockery). Unlike atoum, it doesn't replace PHPUnit, it just replaces its mocking system with a more elegant, powerful and reliable one.
 
