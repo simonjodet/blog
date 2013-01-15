@@ -12,7 +12,7 @@
     {% for page in pages|reverse %}
     <entry>
         <title>{{ page.title }}</title>
-        <link href="http://blog.jodet.com{{ page.location }}"/>
+        <link href="http://blog.jodet.com/{{ page.location }}"/>
         <updated>{{ page.date|date(DATE_ATOM) }}</updated>
         <id>http://blog.jodet.com/{{ page.location }}</id>
         <content type="html"><![CDATA[{{ page.html }}]]></content>
