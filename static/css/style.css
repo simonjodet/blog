@@ -1,3 +1,9 @@
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: black;
+}
+
 a.banner:hover {
     text-decoration: none;
 }
@@ -5,6 +11,7 @@ a.banner:hover {
 div.banner {
     margin: 15px 0;
     white-space: nowrap;
+    padding: 0 19px;
 }
 
 .banner > h1 > span {
@@ -66,6 +73,6 @@ div.post-title {
     text-decoration: underline;
 }
 
-ul ul,ul ol,ol ol,ol ul{
-	margin-bottom:10px;
+ul ul, ul ol, ol ol, ol ul {
+    margin-bottom: 10px;
 }

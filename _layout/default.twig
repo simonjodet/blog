@@ -35,96 +35,102 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="banner">
-            <a href="/" class="banner">
-                <h1><img src="/static/img/logo.png"/><span>Simon's Blog</span>
-                    <small>Geek, developer, software architect</small>
-                </h1>
-            </a>
-        </div>
-        <div class="row">
-            <div class="span9">
-                <!--content-->
-                <div id="content_container">
-                    {% block content %}{% endblock %}
-
-                </div>
-                <div class="well" id="search_container">
-                    <div style="float:right;">
-                        <button class="btn" id="search_close_btn"><i class="icon-arrow-left"></i>&nbsp;Back</button>
-                    </div>
-                    <h3>Search results</h3>
-                    <span id="searching_message">Searching...</span>
-
-                    <div id="no_result_message" class="alert-message warning">
-                        <p><strong>No matching post found</strong></p>
-                    </div>
-                    <ul class="search_results">
-                        <li id="search_result_template">
-                            <div>
-                                <h4>
-                                    <a href="" class="search_post_link"></a><br/>
-                                    <small>Published on <span class="search_post_date"></span></a></small>
-                                </h4>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        <div class="span12">
+            <div class="well banner">
+                <a href="/" class="banner">
+                    <h1><img src="/static/img/logo.png"/><span>Simon's Blog</span>
+                        <small>Geek, developer, software architect</small>
+                    </h1>
+                </a>
             </div>
-            <div class="span3">
-                <!--menu-->
-                <div style="padding: 8px 0;" class="well">
-                    <ul class="nav nav-list">
-                        <li>
-                            <a href="/"><i class="icon-home"></i>&nbsp;Home</a>
-                        </li>
-                        <li>
-                            <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-rss"></i>&nbsp;RSS</a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/#!/sjodet"><i class="icon-twitter"></i>&nbsp;Twitter</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/simonjodet/"><i class="icon-github-text"></i>&nbsp;Github</a>
-                        </li>
-                        <li>
-                            <a href="http://instagram.com/sjodet"><i class="icon-instagram"></i>&nbsp;Instagram</a>
-                        </li>
-                        <li>
-                            <a href="http://www.linkedin.com/profile/view?id=109351958"><i class="icon-linkedin"></i>&nbsp;LinkedIn</a>
-                        </li>
-                        <li class="divider" style="margin: 0 -10px 5px -10px;"></li>
-                        <li style="margin-left: -10px;">
-                            <!--<form action="">-->
-                            <div style="white-space: nowrap; vertical-align: top;">
-                                <input id="search_field" name="search_field" type="text" placeholder="Search" style="margin: 0;">
-                                <button class="btn" type="submit" id="search_btn" style="margin: 0;">
-                                    <i class="icon-search"></i></button>
-                            </div>
-                            <!--</form>-->
-                        </li>
-                    </ul>
+        </div>
+
+        <div class="span9">
+            <!--content-->
+            <div id="content_container">
+                {% block content %}{% endblock %}
+
+            </div>
+            <div class="well" id="search_container">
+                <div style="float:right;">
+                    <button class="btn" id="search_close_btn"><i class="icon-arrow-left"></i>&nbsp;Back</button>
                 </div>
-                <div>
-                    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/sjodet" data-widget-id="243791053436620800" data-link-color="#366ddc">Tweets by @sjodet</a>
-                    <script>!function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0];
-                            if (!d.getElementById(id)) {
-                                js = d.createElement(s);
-                                js.id = id;
-                                js.src = "//platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js, fjs);
-                            }
-                        }(document, "script", "twitter-wjs");</script>
+                <h3>Search results</h3>
+                <span id="searching_message">Searching...</span>
+
+                <div id="no_result_message" class="alert-message warning">
+                    <p><strong>No matching post found</strong></p>
                 </div>
-                <div class="well" style="margin-top:20px;padding:8px 4px;color:gray;font-size:12px;text-align:center;">Copyright &copy; 2011-{{ "now"|date("Y") }} - Simon Jodet<br/>All rights reserved
-                </div>
+                <ul class="search_results">
+                    <li id="search_result_template">
+                        <div>
+                            <h4>
+                                <a href="" class="search_post_link"></a><br/>
+                                <small>Published on <span class="search_post_date"></span></a></small>
+                            </h4>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="span3">
+            <!--menu-->
+            <div style="padding: 8px 0;" class="well">
+                <ul class="nav nav-list">
+                    <li>
+                        <a href="/"><i class="icon-home"></i>&nbsp;Home</a>
+                    </li>
+                    <li>
+                        <a href="http://feeds.feedburner.com/jodet/blog"><i class="icon-rss"></i>&nbsp;RSS</a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/#!/sjodet"><i class="icon-twitter"></i>&nbsp;Twitter</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/simonjodet/"><i class="icon-github-text"></i>&nbsp;Github</a>
+                    </li>
+                    <li>
+                        <a href="http://instagram.com/sjodet"><i class="icon-instagram"></i>&nbsp;Instagram</a>
+                    </li>
+                    <li>
+                        <a href="http://www.linkedin.com/profile/view?id=109351958"><i class="icon-linkedin"></i>&nbsp;LinkedIn</a>
+                    </li>
+                    <li class="divider" style="margin: 0 -10px 5px -10px;"></li>
+                    <li style="margin-left: -10px;">
+                        <!--<form action="">-->
+                        <div style="white-space: nowrap; vertical-align: top;">
+                            <input id="search_field" name="search_field" type="text" placeholder="Search" style="margin: 0;">
+                            <button class="btn" type="submit" id="search_btn" style="margin: 0;">
+                                <i class="icon-search"></i></button>
+                        </div>
+                        <!--</form>-->
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/sjodet" data-widget-id="243791053436620800" data-link-color="#366ddc">Tweets by @sjodet</a>
+                <script>!function (d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");</script>
+            </div>
+            <div class="well" style="margin-top:20px;padding:8px 4px;color:gray;font-size:12px;text-align:center;">Copyright &copy; 2011-{{ "now"|date("Y") }} - Simon Jodet<br/>All rights reserved
             </div>
         </div>
     </div>
 </div>
 <img src="/static/img/glyphicons-halflings.png?cache={{ "now"|date("U") }}" style="display: none;"/>
 <img src="/static/img/glyphicons-halflings-white.png?cache={{ "now"|date("U") }}" style="display: none;"/>
+<script>
+    var blog_jodet = {
+        'cache_date': '{{ "now"|date("U") }}'
+    }
+</script>
 <script src="/static/js/jquery.min.js?cache={{ "now"|date("U") }}" type="text/javascript" charset="utf-8"></script>
 <script src="/scripts.js?cache={{ "now"|date("U") }}" type="text/javascript" charset="utf-8"></script>
 </body>
