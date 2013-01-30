@@ -160,7 +160,7 @@ jQuery(function ($) {
 
   //Background
   var bg_min = 101;
-  var bg_max = 105;
+  var bg_max = 115;
   var background_id = Math.floor(Math.random() * (bg_max - bg_min + 1)) + bg_min;
   $(document.body).css('background-image', 'url(/static/img/bg/bg' + background_id + '.jpg?cache=' + blog_jodet.cache_date + ')');
 });
