@@ -123,6 +123,8 @@ pear config-set auto_discover 1
 pear update-channels
 pear upgrade
 pear install pear.phpunit.de/PHPUnit
+brew unlink php54
+brew link php54
 </pre>
 The first command is to make it so you don't have to use `sudo` when you install PEAR packages.
 
