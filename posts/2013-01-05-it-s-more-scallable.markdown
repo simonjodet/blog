@@ -70,7 +70,7 @@ Your languages are strong but not *that* strong.
 #### That's all trolls!
 That's the last time I'll spend time on this holy war of languages. We got the same argument with web browsers and operating systems before that. And actual religions before that.
 
-People tend to take offence when you criticise their preferred language the same way they'd take offence if you criticised their culture or religion. So don't do it, that's petty, mean and counter-productive.
+People tend to take offense when you criticise their preferred language the same way they'd take offence if you criticised their culture or religion. So don't do it, that's petty, mean and counter-productive.
 
 You'd better spend your time developing great apps instead, whatever language you use.
 
