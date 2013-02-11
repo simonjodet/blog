@@ -1,6 +1,11 @@
 {% extends "_layout/default.twig" %}
 
 {% block content %}
+<style type="text/css">
+a.read_more{
+    display:block;
+}
+</style>
 <ul class="unstyled" id="page-list">
     {% for page in pages|reverse|slice(0,5) %}
     <li class="page-list-item">
