@@ -76,3 +76,10 @@ div.post-title {
 ul ul, ul ol, ol ol, ol ul {
     margin-bottom: 10px;
 }
+
+div.below_fold{
+    display: none;
+}
+a.read_more{
+    display: none;
+}
