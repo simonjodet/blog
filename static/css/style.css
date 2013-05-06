@@ -4,6 +4,43 @@ body {
     background-color: black;
 }
 
+.main_container {
+    position: relative;
+    top: 0;
+}
+
+.bgtext_container {
+    position: absolute;
+    width: 70%;
+    overflow: hidden;
+    z-index: -9000;
+}
+
+.bgtext_container:after {
+    margin-left: 50px;
+    color: rgba(255, 255, 255, .15);
+    content: attr(data-code);
+    font-size: 13px;
+    font-family: monospace;
+    left: 0;
+    max-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    white-space: pre;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+}
+
+.bgtext_container_right {
+    right: 0;
+    width: 30%;
+}
+
 a.banner:hover {
     text-decoration: none;
 }
@@ -77,9 +114,10 @@ ul ul, ul ol, ol ol, ol ul {
     margin-bottom: 10px;
 }
 
-div.below_fold{
+div.below_fold {
     display: none;
 }
-a.read_more{
+
+a.read_more {
     display: none;
 }
