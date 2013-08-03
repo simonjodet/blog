@@ -122,7 +122,7 @@ jQuery(function ($) {
         $.getJSON("page_db.json", function (json) {
           var post_count = $('.page-list-item').length;
 
-          for (var i = post_count; i < (post_count + 5); i++) {
+          for (var i = post_count-1; i < (post_count + 5); i++) {
             if (json.pages[i]) {
               drawNewPage(json.pages[i]);
             }
