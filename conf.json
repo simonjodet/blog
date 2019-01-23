@@ -1,8 +1,0 @@
-{
-    "timezone":"Europe/Paris",
-    "blacklist":[
-        "composer.json",
-        "composer.lock",
-        "README.md"
-    ]
-}
