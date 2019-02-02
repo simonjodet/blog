@@ -1,13 +1,3 @@
-***
-{
-    "title":"TDD, BDD, Potato, Potatoe*",
-    "date":"2012-10-11",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["TDD", "BDD"]
-}
-***
-
 I already twitted about it but it's worth repeating as I got the same discussion a couple of days ago. TDD and BDD are not the same thing but TDD and BDD frameworks are often the same thing.
 
 <blockquote class="twitter-tweet tw-align-center"><p>TDD=unit tests, BDD=end-to-end tests. You can do TDD with BDD frameworks but don’t call it BDD like here: <a href="http://t.co/0VuKLfZQ" title="http://www.slideshare.net/bmabey/the-why-behind-tddbdd-and-the-how-with-rspec">slideshare.net/bmabey/the-why…</a> (cc @<a href="https://twitter.com/damln">damln</a>)</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/237544589085511680" data-datetime="2012-08-20T13:40:18+00:00">August 20, 2012</a></blockquote>

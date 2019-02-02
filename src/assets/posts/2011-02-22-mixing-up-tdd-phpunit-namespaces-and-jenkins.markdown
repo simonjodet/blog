@@ -1,13 +1,3 @@
-***
-{
-    "title":"Mixing up TDD, PHPUnit, Namespaces and Jenkins",
-    "date":"2011-02-22",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["TDD", "PHPUnit", "namespace", "Jenkins", "PHP"]
-}
-***
-
 Hi all,
 
 First of all, if you're not a PHP developer, don't read this.

@@ -1,13 +1,3 @@
-***
-{
-    "title":"Recent PHP discoveries",
-    "date":"2011-08-25",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["PHP", "trim", "curl", "head", "british", "humour"]
-}
-***
-
 <img src="/posts/img/2011-08-25-recent-php-discoveries/php-med-trans.png" class="post-img float-left"/>
 
 __Trim__

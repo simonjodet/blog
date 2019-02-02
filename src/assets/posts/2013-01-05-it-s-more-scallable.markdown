@@ -1,13 +1,3 @@
-***
-{
-    "title":"‟It's More Scallable”",
-    "date":"2013-01-05",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["language","development","PHP","Java","Ruby","JavaScript","Python"]
-}
-***
-
 In a matter of a week, I've been "trolled" twice - I may be exaggerating a bit here - on Twitter by two very serious and talented developers: [@dhh](https://twitter.com/intent/user?screen_name=dhh) (creator of Ruby on Rails) and [@JBossMike](https://twitter.com/intent/user?screen_name=JBossMike) (a core engineer at JBoss).
 
 #### The DHH incident

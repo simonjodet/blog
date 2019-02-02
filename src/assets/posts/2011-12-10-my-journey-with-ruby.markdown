@@ -1,13 +1,3 @@
-***
-{
-    "title":"My journey with Ruby",
-    "date":"2011-12-10",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["Ruby"]
-}
-***
-
 <img src="/posts/img/2011-12-10-my-journey-with-ruby/ruby.png" class="post-img float-left"/>
 I'm a developer. But as a developer, I'm fairly faithful. I really seriously started programming with PHP. I learned and used this language thouroughly. I consider myself an expert programmer in this language.
 

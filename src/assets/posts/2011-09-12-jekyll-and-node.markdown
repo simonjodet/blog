@@ -1,13 +1,3 @@
-***
-{
-    "title":"Jekyll and Node",
-    "date":"2011-09-12",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["Jekyll", "JavaScript", "Node"]
-}
-***
-
 **Update**: I've replaced the nodejs search engine with a PHP one. Read more about it [this post](http://blog.jodet.com/back-from-nodejs/).
 
 <img src="/posts/img/2011-09-12-jekyll-and-node/jekyll_node.png" class="post-img float-left"/>

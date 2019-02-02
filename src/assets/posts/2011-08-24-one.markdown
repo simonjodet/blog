@@ -1,13 +1,3 @@
-***
-{
-    "title":"One",
-    "date":"2011-08-24",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["blog", "security", "speed", "performance", "git", "markdown", "sphinx"]
-}
-***
-
 <img src="/posts/img/2011-08-24-one/u2_one.jpg" class="post-img float-right"/>
 Ok. For the _tenth_ time at least, I'm starting a blog. I'm like a little school girl promising to herself every year to keep a diary. Epic fail each time...
 

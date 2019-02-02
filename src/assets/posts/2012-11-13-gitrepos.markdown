@@ -1,13 +1,3 @@
-***
-{
-    "title":"GitRepos",
-    "date":"2012-11-13",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["Git","GitRepos","Personal project","PHP","TDD","Silex"]
-}
-***
-
 Just a short post to announce that I'm working on a new open-source project called **GitRepos**.
 
 This is a web tool to self-host Git repositories. Kind of like Bitbucket and Github but on your own Linux server. You'll be able to set up your SSH keys to access your Git repositories, add contributors to your projects and more.  

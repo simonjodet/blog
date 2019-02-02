@@ -1,13 +1,3 @@
-***
-{
-    "title":"Vim",
-    "date":"2012-01-01",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["Vim"]
-}
-***
-
 <img src="/posts/img/2012-01-01-vim/vim_logo.png" class="post-img float-right"/>
 While I'm learning Ruby (and a bit of Python) I decided to make things a bit more difficult and I started to learn [Vim](http://www.vim.org/).
 

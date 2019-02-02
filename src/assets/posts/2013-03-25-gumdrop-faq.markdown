@@ -1,12 +1,3 @@
-***
-{
-    "title":"Gumdrop FAQ",
-    "date":"2013-03-25",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["Gumdrop","PHP","Twig","blog","git"]
-}
-***
 Yesterday, menasquez posted a [comment](http://blog.jodet.com/posts/2012-08-26-gumdroping-this-blog.htm#comment-841009401) asking me a lot of questions regarding Gumdrop and this blog.  
 I figured I should answer them in an article (as he has a lot of questions ^^) and make it a first draft of Gumdrop's FAQ.
 

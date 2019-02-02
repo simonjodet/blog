@@ -1,13 +1,3 @@
-***
-{
-    "title":"Gumdroping this blog",
-    "date":"2012-08-26",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["TDD", "PHP", "Gumdrop", "Gem", "Ruby", "Jekyll"]
-}
-***
-
 Hi, it's been a while right?
 
 It's not that I was lacking motivation to post here but for a while, I've been without any practical way to update this blog.

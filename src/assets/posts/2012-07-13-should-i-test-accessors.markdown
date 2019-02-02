@@ -1,13 +1,3 @@
-***
-{
-    "title":"Should I test accessors?",
-    "date":"2012-07-13",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["TDD", "PHP", "Atoum", "Accessors"]
-}
-***
-
 Should one test getters and setters? I mean default accessors like these ones:
 
 <pre class="prettyprint">

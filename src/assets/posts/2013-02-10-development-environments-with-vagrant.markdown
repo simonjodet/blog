@@ -1,12 +1,3 @@
-***
-{
-    "title":"Development environments with Vagrant",
-    "date":"2013-02-10",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["vagrant","development","ubuntu"]
-}
-***
 <img src="/posts/img/2013-02-10-development-environments-with-vagrant/vagrant.jpg" class="post-img float-right"/>
 As promised on Twitter, I'm going to explain how I'm now using [Vagrant](http://www.vagrantup.com/) to develop Gitrepos instead of running it on my development Macbook Air.
 

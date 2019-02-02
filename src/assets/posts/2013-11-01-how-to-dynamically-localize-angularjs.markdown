@@ -1,12 +1,3 @@
-***
-{
-    "title":"How to dynamically localize AngularJS",
-    "date":"2013-11-01",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["javascript","angular","angularjs","l10n","i18n"]
-}
-***
 The other day, I found out some things in [AngularJS](http://angularjs.org/) are still not really well polished. One of those things in internationalization. 
 
 I18n and l10n in AngularJS are ["natively"](http://docs.angularjs.org/guide/i18n) supported. First of all, that's not completely true. Components of AngularJS can be easily localized (and yet not really, we'll talk about that). For your code and your texts, you're on your own.  

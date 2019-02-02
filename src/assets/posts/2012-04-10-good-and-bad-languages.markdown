@@ -1,13 +1,3 @@
-***
-{
-    "title":"Good and bad languages",
-    "date":"2012-04-10",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["PHP", "JavaScript", "languages", "Trolls"]
-}
-***
-
 I was in pretty good mood this morning. Then I went to browse my Twitter feed and stumbled upon an article linked by one of the guys I truly admire, [Jeff Atwood](http://www.codinghorror.com/).
 
 The article I'm talking about is [this one](http://me.veekun.com/blog/2012/04/09/php-a-fractal-of-bad-design/).

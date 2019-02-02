@@ -1,13 +1,3 @@
-***
-{
-    "title":"How I set up my development environment on Mac",
-    "date":"2012-11-11",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["PHP", "Mac", "Homebrew", "PHPUnit"]
-}
-***
-
 I thought the other day I should share how I setup my development environment on OS X. It'll serve as a reminder for me too.
 
 The first part is language-agnostic but the second part focuses on PHP.

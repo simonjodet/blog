@@ -1,13 +1,3 @@
-***
-{
-    "title":"Anonymous classes in PHP",
-    "date":"2012-06-07",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["PHP"]
-}
-***
-
 Anonymous classes are already there in PHP with the StdClass but it was not designed to be used with method but just properties.
 
 So I wrote a small class to create Anonymous classes that accept closure members and consider them methods.

@@ -1,13 +1,3 @@
-***
-{
-    "title":"Back from NodeJS",
-    "date":"2012-06-25",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["PHP", "NodeJS"]
-}
-***
-
 I just realized I didn't tell you about the latest changes on this blog. A couple of weeks ago, I've updated my server to the latest Ubuntu.
 Everything went find except for 2 things: my installed gems and my nodejs search tool.
 

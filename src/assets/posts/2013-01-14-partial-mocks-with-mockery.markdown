@@ -1,12 +1,3 @@
-***
-{
-    "title":"Partial mocks with Mockery",
-    "date":"2013-01-14",
-    "category":"development",
-    "layout":"post.twig",
-    "tags":["PHP","unit tests","Mockery","PHPUnit","TDD", "atoum"]
-}
-***
 I've learned a long time ago that PHPUnit mocks suck. Big time. They're just a pain to use.
 
 So I looked for alternatives. I didn't look for long as a [former colleague](https://github.com/fdussert) of mine is one of the original contributors of [atoum](https://github.com/atoum/atoum).
