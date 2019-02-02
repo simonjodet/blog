@@ -13,7 +13,7 @@
           <v-card-actions>
             <div class="caption font-weight-light">
               Tags:
-              <span class="font-weight-thin">{{ post.tags.join(', ') }}</span>
+              <span class="font-weight-thin">{{ post.tags }}</span>
             </div>
           </v-card-actions>
         </v-card>
@@ -23,32 +23,13 @@
 </template>
 
 <script>
-import markdown from 'markdown';
-import * as moment from 'moment';
-import postsJson from '../assets/posts.json';
-const postsMap = new Map(postsJson);
-
-const context = require.context('../assets/posts/', true, /.*\.markdown$/);
-const extensionLength = '.markdown'.length;
-
-for (const postFilePath of context.keys()) {
-  const markdownContent = context(postFilePath);
-  const postId = postFilePath.substring(2, postFilePath.length - extensionLength);
-
-  if (postsMap.has(postId)) {
-    const post = postsMap.get(postId);
-    post.markdown = markdownContent;
-    post.html = markdown.parse(markdownContent);
-    post.date = moment(post.date).format('LL');
-  }
-}
-
 export default {
   name: 'posts',
-  data() {
-    return {
-      posts: [...postsMap.values()].reverse()
-    };
+  props: {
+    posts: {
+      type: Array,
+      required: true
+    }
   }
 };
 </script>
