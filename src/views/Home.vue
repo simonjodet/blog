@@ -1,13 +1,13 @@
 <template>
-  <HelloWorld />
+  <posts></posts>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+import posts from '../components/posts.vue';
 
-  export default {
-    components: {
-      HelloWorld
-    }
+export default {
+  components: {
+    posts
   }
+};
 </script>
