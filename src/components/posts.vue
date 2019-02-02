@@ -1,19 +1,20 @@
 <template>
   <v-container grid-list-xl>
     <v-layout row wrap>
-      <v-flex xl12
-        v-for = "post of posts"
-        :key = "post.id">
+      <v-flex xl12 v-for="post of posts" :key="post.id">
         <v-card>
           <v-card-title>
             <div>
-              <div class = "title">{{ post.title }}</div>
-              <div class = "caption font-weight-light">{{ post.date }}</div>
+              <div class="title">{{ post.title }}</div>
+              <div class="caption font-weight-light">{{ post.date }}</div>
             </div>
           </v-card-title>
           <v-card-text v-html="post.html"></v-card-text>
           <v-card-actions>
-            <div class = "caption font-weight-light">Tags: <span class = "font-weight-thin">{{ post.tags.join(', ') }}</span></div>
+            <div class="caption font-weight-light">
+              Tags:
+              <span class="font-weight-thin">{{ post.tags.join(', ') }}</span>
+            </div>
           </v-card-actions>
         </v-card>
       </v-flex>
@@ -39,7 +40,6 @@ for (const postFilePath of context.keys()) {
     post.markdown = markdownContent;
     post.html = markdown.parse(markdownContent);
     post.date = moment(post.date).format('LL');
-
   }
 }
 
@@ -49,10 +49,6 @@ export default {
     return {
       posts: [...postsMap.values()].reverse()
     };
-  },
-  mounted() {}
+  }
 };
 </script>
-
-<style>
-</style>
