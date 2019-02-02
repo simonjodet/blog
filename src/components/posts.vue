@@ -5,7 +5,9 @@
         <v-card>
           <v-card-title>
             <div>
-              <div class="title">{{ post.title }}</div>
+              <div class="title">
+                <router-link :to="'/' + post.id">{{ post.title }}</router-link>
+              </div>
               <div class="caption font-weight-light">{{ post.date }}</div>
             </div>
           </v-card-title>

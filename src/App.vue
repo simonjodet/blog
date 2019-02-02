@@ -1,6 +1,9 @@
 <template>
   <v-app>
     <v-toolbar app>
+      <v-btn dark fab exact color="primary" to="/" v-if="isBackButtonDisplayed">
+        <v-icon>arrow_back</v-icon>
+      </v-btn>
       <v-toolbar-title class="headline text-uppercase">
         <span>Simon Jodet</span>
       </v-toolbar-title>
@@ -15,6 +18,11 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  computed: {
+    isBackButtonDisplayed() {
+      return this.$route.name !== 'home';
+    }
+  }
 };
 </script>
