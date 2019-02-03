@@ -13,11 +13,20 @@ export default {
     posts: {
       type: Map,
       required: true
+    },
+    search: {
+      type: String
     }
   },
   computed: {
     postList() {
-      return [...this.posts.values()].reverse();
+      let posts = [...this.posts.values()];
+      if (this.search) {
+        posts = posts.filter((post) => {
+          return post.markdown.includes(this.search) || post.tags.includes(this.search);
+        });
+      }
+      return posts.reverse();
     }
   }
 };
