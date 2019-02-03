@@ -1,3 +1,5 @@
+**ARCHIVE**
+
 In a matter of a week, I've been "trolled" twice - I may be exaggerating a bit here - on Twitter by two very serious and talented developers: [@dhh](https://twitter.com/intent/user?screen_name=dhh) (creator of Ruby on Rails) and [@JBossMike](https://twitter.com/intent/user?screen_name=JBossMike) (a core engineer at JBoss).
 
 #### The DHH incident
@@ -26,14 +28,14 @@ I can't argue with that, he probably knows better than I do what language is use
 #### Scalability is not the only criterium
 But, like @dhh, @JBossMike missed my point or ignored it. There is a good reason Google was initially using Python. Facebook still uses PHP heavily and Twitter was created with Rails.
 
-The reason is those languages and their ecosystem allow for a quick development and are easily deployable. I'm no Java expert but I'd suspect Java doesn't perform as well on small architectures as those 3 languages.  
-I'd also suspect that in order to deliver a working prototype of Facebook, Google or Twitter, the amount of code/work necessary in Java is higher.  
+The reason is those languages and their ecosystem allow for a quick development and are easily deployable. I'm no Java expert but I'd suspect Java doesn't perform as well on small architectures as those 3 languages.
+I'd also suspect that in order to deliver a working prototype of Facebook, Google or Twitter, the amount of code/work necessary in Java is higher.
 And finally, I think Java developers are more expensive than their fellow developers specialised in PHP, Python or Ruby.
 
 #### Silver bullet
-*"Oh look what he's done in this last chapter, he's trolling Java!"* Maybe but I just wanted to prove that Java, like Ruby (and Rails) are not the silver bullet that solves every problem.  
-I could go on about Java, even though I know very little about it and not be that far from the truth. I mean, the [article](http://ocpsoft.org/opensource/javascript-is-the-new-perl/) that started the discussion with @JBossMike is referring CoffeeScript replacing JavaScript. Like Scala is replacing Java?  
-*"Java is a strongly-typed language so it's more maintainable and failure-proof"* I've worked several years with very talented C/C++ developers and they still had much more difficulties refactoring their apps than me with my MVC framework written in PHP. Strongly-typed has *nothing* to do with code quality or maintainability.  
+*"Oh look what he's done in this last chapter, he's trolling Java!"* Maybe but I just wanted to prove that Java, like Ruby (and Rails) are not the silver bullet that solves every problem.
+I could go on about Java, even though I know very little about it and not be that far from the truth. I mean, the [article](http://ocpsoft.org/opensource/javascript-is-the-new-perl/) that started the discussion with @JBossMike is referring CoffeeScript replacing JavaScript. Like Scala is replacing Java?
+*"Java is a strongly-typed language so it's more maintainable and failure-proof"* I've worked several years with very talented C/C++ developers and they still had much more difficulties refactoring their apps than me with my MVC framework written in PHP. Strongly-typed has *nothing* to do with code quality or maintainability.
 It happens I'm reading [Clean Code](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882) again. All the examples are in Java but I can't remember an occurrence where Uncle Bob refers to Java being strongly-typed having anything to do with writing clean code.
 
 #### You're not your code, you're not your language!
@@ -47,12 +49,14 @@ The language you're using doesn't tell me how good a developer you are. That's n
 Actually it's more impressive for someone to master a flawed language (and PHP, JavaScript, Perl are majorly flawed) than to master strong languages such as Java.
 
 #### To DHH and Mike Brock
-Finally, to answer directly to DHH and Mike Brock, I know why you took some time to argue with me on this topic. You, more than others, invested *a lot* in your respective language and you have all the reasons in the world to try to convince people it is better than PHP, Python, JavaScript or Perl. Lincoln's article is just about proselytising Java.  
-The more people you convince other languages suck, the more product/expertise in your preferred language you're gonna sell to them. 
+Finally, to answer directly to DHH and Mike Brock, I know why you took some time to argue with me on this topic. You, more than others, invested *a lot* in your respective language and you have all the reasons in the world to try to convince people it is better than PHP, Python, JavaScript or Perl. Lincoln's article is just about proselytising Java.
+The more people you convince other languages suck, the more product/expertise in your preferred language you're gonna sell to them.
 
 But face it guys.
 PHP powers much more web sites than Ruby and Java:
-<div style="text-align:center;"><a href="http://w3techs.com/technologies/overview/programming_language/all">![Server Side Programming Languages](/posts/img/2013-01-05-your-preferred-language-is-not-better/server_side_programming_languages.png)</a></div>
+<div style="text-align:center;"><a href="http://w3techs.com/technologies/overview/programming_language/all">
+![Server Side Programming Languages](/images/2015/02/server_side_programming_languages.png)
+</a></div>
 And against the odds - and Java applets, VBScript and Flash - JavaScript, as flawed as it is, is the de-facto browser's language (I'm not convinced yet it's an appropriate server-side language but node.js and SilkJS are promising).
 
 Your languages are strong but not *that* strong.
@@ -63,4 +67,3 @@ That's the last time I'll spend time on this holy war of languages. We got the s
 People tend to take offense when you criticise their preferred language the same way they'd take offence if you criticised their culture or religion. So don't do it, that's petty, mean and counter-productive.
 
 You'd better spend your time developing great apps instead, whatever language you use.
-

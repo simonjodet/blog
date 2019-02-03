@@ -1,4 +1,6 @@
-<img src="/img/2013-02-10-development-environments-with-vagrant/vagrant.jpg" class="post-img float-right"/>
+**ARCHIVE**
+
+<img src="/images/2015/02/vagrant.jpg" style="float:right">
 As promised on Twitter, I'm going to explain how I'm now using [Vagrant](http://www.vagrantup.com/) to develop Gitrepos instead of running it on my development Macbook Air.
 
 #### Technical debt
@@ -9,21 +11,21 @@ Against my better judgment, I started developing Gitrepos on my Mac without both
 
 While I was working on Gitrepos, I had this nagging feeling that I should start testing it on a production-like environment ASAP. I was sure I was building [technical debt](http://techcrunch.com/2013/02/09/technical-debt-will-kill-you/) and, guess what, I was...
 
-<blockquote class="blockquote" data-cards="hidden"><p>In this commit (<a href="https://t.co/hwFQEVJq" title="https://github.com/simonjodet/gitrepos/commit/1697136112fbde2463d040a392569e3a44468d5b">github.com/simonjodet/git…</a>) I've switched my dev environment to a vagrant VM. PHP server -&gt; Apache, SQLite -&gt; MySQL...</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299939650649333760">February 8, 2013</a></blockquote>
+<blockquote class="twitter-tweet" align="center" data-cards="hidden"><p>In this commit (<a href="https://t.co/hwFQEVJq" title="https://github.com/simonjodet/gitrepos/commit/1697136112fbde2463d040a392569e3a44468d5b">github.com/simonjodet/git…</a>) I've switched my dev environment to a vagrant VM. PHP server -&gt; Apache, SQLite -&gt; MySQL...</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299939650649333760">February 8, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="blockquote"><p>...I found out Apache changes exotic HTTP codes such as 230 into 500 and that "keys" is a reserved word for MySQL but not for SQLite.</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299939663957864448">February 8, 2013</a></blockquote>
+<blockquote class="twitter-tweet" align="center"><p>...I found out Apache changes exotic HTTP codes such as 230 into 500 and that "keys" is a reserved word for MySQL but not for SQLite.</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299939663957864448">February 8, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 #### Enters Vagrant
 Then the other day, I went through my (very long) [Pocket](http://getpocket.com/) list and took a look at Vagrant. I mainly use Pocket as note pad/todo list and I had flagged Vagrant as something I should take a look at. It looked exactly as the best solution to solve my environment problem.
 
 But I used VirtualBox in the past and I remember it being a PITA to setup, especially the folder sharing stuff. So I gave Vagrant a try, almost convinced it would failed. But it didn't!
-<blockquote class="blockquote"><p>I'm amazed how little hassle it is to use Vagrant: in 2 hours, I've created a base box from scratch and setup Chef to create a LAMP server</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299471302404763648">February 7, 2013</a></blockquote>
+<blockquote class="twitter-tweet" align="center"><p>I'm amazed how little hassle it is to use Vagrant: in 2 hours, I've created a base box from scratch and setup Chef to create a LAMP server</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299471302404763648">February 7, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I eventually dumped Chef to use a basic [shell script](https://github.com/simonjodet/gitrepos/blob/150ec043f066f4be63a582bace7ba2fb1ae18640/deploy/deploy.sh) though:
 
-<pre class="bash">
+```language-bash
 #!/bin/sh
 echo mysql-server mysql-server/root_password select "vagrant" | debconf-set-selections
 echo mysql-server mysql-server/root_password_again select "vagrant" | debconf-set-selections
@@ -45,7 +47,7 @@ mysql -u root -p"vagrant" -e ";DROP DATABASE test;DROP USER ''@'localhost';CREAT
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
 service mysql restart
 apt-get clean
-</pre>
+```
 Going through this script quickly:
 
 * I pre-configure MySQL so `apt-get` runs silently and set the correct passwords
@@ -55,7 +57,7 @@ Going through this script quickly:
 
 And here's my `Vagrantfile`:
 
-<pre class="ruby">
+```language-ruby
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -64,7 +66,8 @@ Vagrant::Config.run do |config|
   config.vm.network :hostonly, "192.168.242.2"
   config.vm.provision :shell, :path => "deploy/deploy.sh"
 end
-</pre>
+```
+
 As you may have noticed I don't use a NAT network for my VM but a "Host-Only" network so I have a fixed IP that is only accessible from the host it's running on. That way I don't expose my application to the outer world.
 
 But I have 2 issues with Vagrant:
@@ -76,24 +79,24 @@ I'm not a paranoiac but since I worked for a security company, I smell a securit
 
 So I decided to build my own Ubuntu Server 12.10 amd64 base box.
 <a href="{{ page.location }}#read_more" class="read_more"><strong>Read more...</strong></a>
-<div class="below_fold" markdown="1">
-<a id="read_more"></a>
+
 #### Build your own base box
+
 ##### Creating the VM
 
 First, you'll need to install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and download the [Ubuntu Server image](http://www.ubuntu.com/download/server).
 
 In a few screenshots, here's how to start the setup:
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_01.png" align="center"/><br>
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_02.png" align="center"/><br>
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_03.png" align="center"/><br>
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_04.png" align="center"/><br>
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_05.png" align="center"/><br>
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_06.png" align="center"/><br>
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_07.png" align="center"/><br>
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_08.png" align="center"/><br>
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_09.png" align="center"/><br>
-<img src="/img/2013-02-10-development-environments-with-vagrant/setup_10.png" align="center"/><br>
+<img src="/images/2015/02/setup_01.png" align="center"/><br>
+<img src="/images/2015/02/setup_02.png" align="center"/><br>
+<img src="/images/2015/02/setup_03.png" align="center"/><br>
+<img src="/images/2015/02/setup_04.png" align="center"/><br>
+<img src="/images/2015/02/setup_05.png" align="center"/><br>
+<img src="/images/2015/02/setup_06.png" align="center"/><br>
+<img src="/images/2015/02/setup_07.png" align="center"/><br>
+<img src="/images/2015/02/setup_08.png" align="center"/><br>
+<img src="/images/2015/02/setup_09.png" align="center"/><br>
+<img src="/images/2015/02/setup_10.png" align="center"/><br>
 
 ##### Installing Ubuntu
 
@@ -117,7 +120,7 @@ Finally, install Grub with the default options and reboot.
 At this step, since the VM's network uses NAT, you can't login through SSH and copy-pasting to the VM is not possible.
 
 Login as vagrant/vagrant. I've aggregated the different steps in a [bash script](http://blog.jodet.com/uploads/vagrant.sh). Just follow these steps:
-<pre class="bash">
+<pre class="prettyprint lang-bash">
 cd /tmp
 wget http://blog.jodet.com/uploads/vagrant.sh
 chmod +x vagrant.sh
@@ -126,7 +129,7 @@ sudo ./vagrant.sh
 
 The last step is to let the `vagrant` user "sudo" without having to type his password.
 
-<pre class="bash">
+<pre class="prettyprint lang-bash">
 sudo chmod 644 /etc/sudoers
 sudo vim /etc/sudoers
 </pre>
@@ -134,7 +137,7 @@ sudo vim /etc/sudoers
 Add `Defaults    env_keep="SSH_AUTH_SOCK"` to the "Defaults" and replace `%admin ALL=(ALL) ALL` by `%admin ALL=NOPASSWD: ALL`.
 
 It should look like this:
-<pre class="bash">
+```language-bash
 #
 # This file MUST be edited with the 'visudo' command as root.
 #
@@ -166,7 +169,7 @@ root    ALL=(ALL:ALL) ALL
 # See sudoers(5) for more information on "#include" directives:
 
 #includedir /etc/sudoers.d
-</pre>
+```
 
 Now you're done, just shutdown the system with `sudo shutdown -h now`.
 
@@ -174,24 +177,22 @@ Now you're done, just shutdown the system with `sudo shutdown -h now`.
 
 Open a terminal, go to the folder containing your VM and run:
 
-<pre class="bash">
+```language-bash
 cd VirtualBox\ VMs/ubuntu_base
-vagrant package --base ubuntu_base 
-</pre>
+vagrant package --base ubuntu_base
+```
 
 Your new base box is named `package.box`. You can now add it to your system and use it in a project like this:
 
-<pre class="bash">
+```language-bash
 vagrant box add vagrant-ubuntu-12-10-amd64 package.box
 mkdir test_environment
 cd test_environment
 vagrant init vagrant-ubuntu-12-10-amd64
 vagrant up
 vagrant ssh
-</pre>
+```
 
 You can store the package.box file in a safe location and delete the VirtualBox VM if you need space.
 
 Sources: [Creating a vagrant base box for ubuntu 12.04 32bit server](https://github.com/fespinoza/checklist_and_guides/wiki/Creating-a-vagrant-base-box-for-ubuntu-12.04-32bit-server) and the [official documentation](http://docs.vagrantup.com/v1/docs/base_boxes.html).
-
-</div>

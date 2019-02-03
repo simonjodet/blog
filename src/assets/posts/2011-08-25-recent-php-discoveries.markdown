@@ -1,4 +1,4 @@
-<img src="/img/2011-08-25-recent-php-discoveries/php-med-trans.png" class="post-img float-left"/>
+**ARCHIVE**
 
 __Trim__
 
@@ -6,7 +6,7 @@ I just discovered that the [trim](http://us.php.net/manual/en/function.trim.php 
 
 __Curl issue with PHP 5.3.8__
 
-I've encountered an issue on a project after updating to PHP 5.3.8 (the dotdeb package on Debian).  
+I've encountered an issue on a project after updating to PHP 5.3.8 (the dotdeb package on Debian).
 If you're calling a HTTPS domain with a self-signed certificate, `CURLOPT_SSL_VERIFYPEER` to 0 is not enough anymore. `CURLOPT_SSL_VERIFYHOST` should be also set to 0.
 
 __HEAD stop__

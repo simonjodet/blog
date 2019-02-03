@@ -2,187 +2,126 @@
   [
     "2011-02-22-mixing-up-tdd-phpunit-namespaces-and-jenkins",
     {
-      "id": "2011-02-22-mixing-up-tdd-phpunit-namespaces-and-jenkins",
       "title": "Mixing up TDD, PHPUnit, Namespaces and Jenkins",
-      "date": "2011-02-22",
-      "category": "development",
-      "tags": ["TDD", "PHPUnit", "namespace", "Jenkins", "PHP"]
+      "date": "2011-02-22 11:00:00",
+      "tags": ["development", "old-blog", "php", "tdd"],
+      "id": "2011-02-22-mixing-up-tdd-phpunit-namespaces-and-jenkins"
     }
   ],
   [
     "2011-06-18-filtering-a-phar-content",
     {
-      "id": "2011-06-18-filtering-a-phar-content",
       "title": "Filtering a Phar content",
-      "date": "2011-06-18",
-      "category": "development",
-      "tags": ["PHP", "Phar"]
-    }
-  ],
-  [
-    "2011-08-24-one",
-    {
-      "id": "2011-08-24-one",
-      "title": "One",
-      "date": "2011-08-24",
-      "category": "development",
-      "tags": ["blog", "security", "speed", "performance", "git", "markdown", "sphinx"]
+      "date": "2011-06-18 10:00:00",
+      "tags": ["development", "old-blog", "php"],
+      "id": "2011-06-18-filtering-a-phar-content"
     }
   ],
   [
     "2011-08-25-recent-php-discoveries",
     {
-      "id": "2011-08-25-recent-php-discoveries",
       "title": "Recent PHP discoveries",
-      "date": "2011-08-25",
-      "category": "development",
-      "layout": "post.twig",
-      "tags": ["PHP", "trim", "curl", "head", "british", "humour"]
+      "date": "2011-08-25 10:00:00",
+      "tags": ["development", "old-blog", "php"],
+      "id": "2011-08-25-recent-php-discoveries"
     }
   ],
   [
-    "2011-09-12-jekyll-and-node",
+    "2011-10-06-rip-steve-jobs",
     {
-      "id": "2011-09-12-jekyll-and-node",
-      "title": "Jekyll and Node",
-      "date": "2011-09-12",
-      "category": "development",
-      "layout": "post.twig",
-      "tags": ["Jekyll", "JavaScript", "Node"]
-    }
-  ],
-  [
-    "2011-10-06-rip_steve",
-    {
-      "id": "2011-10-06-rip_steve",
       "title": "RIP Steve Jobs",
-      "date": "2011-10-06",
-      "category": "misc",
-      "layout": "post.twig",
-      "tags": ["Steve", "Jobs", "RIP", "Apple"]
+      "date": "2011-10-06 10:00:00",
+      "tags": ["steve-jobs", "apple"],
+      "id": "2011-10-06-rip-steve-jobs"
     }
   ],
   [
     "2011-12-10-my-journey-with-ruby",
     {
       "title": "My journey with Ruby",
-      "date": "2011-12-10",
-      "category": "development",
-      "tags": ["Ruby"],
+      "date": "2011-12-10 11:00:00",
+      "tags": ["development", "old-blog", "ruby"],
       "id": "2011-12-10-my-journey-with-ruby"
     }
   ],
   [
-    "2011-12-18-some-quick-ruby-port",
+    "2011-12-18-a-quick-ruby-port",
     {
       "title": "A quick Ruby port",
-      "date": "2011-12-18",
-      "category": "development",
-      "tags": ["Ruby"],
-      "id": "2011-12-18-some-quick-ruby-port"
+      "date": "2011-12-18 11:00:00",
+      "tags": ["development", "old-blog", "ruby"],
+      "id": "2011-12-18-a-quick-ruby-port"
     }
   ],
   [
     "2012-01-01-vim",
-    { "title": "Vim", "date": "2012-01-01", "category": "development", "tags": ["Vim"], "id": "2012-01-01-vim" }
+    {
+      "title": "Vim",
+      "date": "2012-01-01 11:00:00",
+      "tags": ["development", "old-blog", "vim"],
+      "id": "2012-01-01-vim"
+    }
   ],
   [
     "2012-04-10-good-and-bad-languages",
     {
       "title": "Good and bad languages",
-      "date": "2012-04-10",
-      "category": "development",
-      "tags": ["PHP", "JavaScript", "languages", "Trolls"],
+      "date": "2012-04-10 10:00:00",
+      "tags": ["development", "old-blog", "php"],
       "id": "2012-04-10-good-and-bad-languages"
     }
   ],
   [
-    "2012-06-07-php-anonymous-class",
+    "2012-06-07-anonymous-classes-in-php",
     {
       "title": "Anonymous classes in PHP",
-      "date": "2012-06-07",
-      "category": "development",
-      "tags": ["PHP"],
-      "id": "2012-06-07-php-anonymous-class"
-    }
-  ],
-  [
-    "2012-06-25-back-from-nodejs",
-    {
-      "title": "Back from NodeJS",
-      "date": "2012-06-25",
-      "category": "development",
-      "tags": ["PHP", "NodeJS"],
-      "id": "2012-06-25-back-from-nodejs"
+      "date": "2012-06-07 10:00:00",
+      "tags": ["development", "old-blog", "php"],
+      "id": "2012-06-07-anonymous-classes-in-php"
     }
   ],
   [
     "2012-07-13-should-i-test-accessors",
     {
       "title": "Should I test accessors?",
-      "date": "2012-07-13",
-      "category": "development",
-      "tags": ["TDD", "PHP", "Atoum", "Accessors"],
+      "date": "2012-07-13 10:00:00",
+      "tags": ["development", "old-blog", "tests"],
       "id": "2012-07-13-should-i-test-accessors"
     }
   ],
   [
-    "2012-08-26-gumdroping-this-blog",
+    "2012-10-11-tdd-bdd-potato-potatoe",
     {
-      "title": "Gumdroping this blog",
-      "date": "2012-08-26",
-      "category": "development",
-      "tags": ["TDD", "PHP", "Gumdrop", "Gem", "Ruby", "Jekyll"],
-      "id": "2012-08-26-gumdroping-this-blog"
+      "title": "TDD, BDD, Potato, Potatoe",
+      "date": "2012-10-11 10:00:00",
+      "tags": ["development", "old-blog", "tdd", "bdd", "tests"],
+      "id": "2012-10-11-tdd-bdd-potato-potatoe"
     }
   ],
   [
-    "2012-10-11-bdd-tdd-potato-potatoe",
-    {
-      "title": "TDD, BDD, Potato, Potatoe*",
-      "date": "2012-10-11",
-      "category": "development",
-      "tags": ["TDD", "BDD"],
-      "id": "2012-10-11-bdd-tdd-potato-potatoe"
-    }
-  ],
-  [
-    "2012-11-11-set-up-dev-env-on-mac",
+    "2012-11-11-how-i-set-up-my-development-environment-on-mac",
     {
       "title": "How I set up my development environment on Mac",
-      "date": "2012-11-11",
-      "category": "development",
-      "tags": ["PHP", "Mac", "Homebrew", "PHPUnit"],
-      "id": "2012-11-11-set-up-dev-env-on-mac"
+      "date": "2012-11-11 11:00:00",
+      "tags": ["development", "old-blog", "php", "mac", "zsh", "intellij-idea"],
+      "id": "2012-11-11-how-i-set-up-my-development-environment-on-mac"
     }
   ],
   [
-    "2012-11-13-gitrepos",
-    {
-      "title": "GitRepos",
-      "date": "2012-11-13",
-      "category": "development",
-      "tags": ["Git", "GitRepos", "Personal project", "PHP", "TDD", "Silex"],
-      "id": "2012-11-13-gitrepos"
-    }
-  ],
-  [
-    "2013-01-05-it-s-more-scallable",
+    "2013-01-05-its-more-scallable",
     {
       "title": "‟It's More Scallable”",
-      "date": "2013-01-05",
-      "category": "development",
-      "tags": ["language", "development", "PHP", "Java", "Ruby", "JavaScript", "Python"],
-      "id": "2013-01-05-it-s-more-scallable"
+      "date": "2013-01-05 11:00:00",
+      "tags": ["development", "old-blog", "php"],
+      "id": "2013-01-05-its-more-scallable"
     }
   ],
   [
     "2013-01-14-partial-mocks-with-mockery",
     {
       "title": "Partial mocks with Mockery",
-      "date": "2013-01-14",
-      "category": "development",
-      "tags": ["PHP", "unit tests", "Mockery", "PHPUnit", "TDD", "atoum"],
+      "date": "2013-01-14 11:00:00",
+      "tags": ["development", "old-blog", "php", "mockery"],
       "id": "2013-01-14-partial-mocks-with-mockery"
     }
   ],
@@ -190,30 +129,78 @@
     "2013-02-10-development-environments-with-vagrant",
     {
       "title": "Development environments with Vagrant",
-      "date": "2013-02-10",
-      "category": "development",
-      "tags": ["vagrant", "development", "ubuntu"],
+      "date": "2013-02-10 11:00:00",
+      "tags": ["development", "old-blog", "vagrant"],
       "id": "2013-02-10-development-environments-with-vagrant"
-    }
-  ],
-  [
-    "2013-03-25-gumdrop-faq",
-    {
-      "title": "Gumdrop FAQ",
-      "date": "2013-03-25",
-      "category": "development",
-      "tags": ["Gumdrop", "PHP", "Twig", "blog", "git"],
-      "id": "2013-03-25-gumdrop-faq"
     }
   ],
   [
     "2013-11-01-how-to-dynamically-localize-angularjs",
     {
       "title": "How to dynamically localize AngularJS",
-      "date": "2013-11-01",
-      "category": "development",
-      "tags": ["javascript", "angular", "angularjs", "l10n", "i18n"],
+      "date": "2013-11-01 11:00:00",
+      "tags": ["development", "angularjs", "jquery", "javascript", "old-blog"],
       "id": "2013-11-01-how-to-dynamically-localize-angularjs"
     }
+  ],
+  [
+    "2014-12-22-about-the-star-wars-episode-vii-teaser-trailer",
+    {
+      "title": "About the Star Wars Episode VII teaser trailer",
+      "date": "2014-12-22 11:00:00",
+      "tags": ["geek", "star-wars", "movies", "trailer", "teaser", "stormtrooper", "may-the-force-be-with-you"],
+      "id": "2014-12-22-about-the-star-wars-episode-vii-teaser-trailer"
+    }
+  ],
+  [
+    "2014-12-22-joe-cocker",
+    {
+      "title": "Joe Cocker",
+      "date": "2014-12-22 21:22:00",
+      "tags": ["joe-cocker", "woodstock"],
+      "id": "2014-12-22-joe-cocker"
+    }
+  ],
+  [
+    "2014-12-24-my-quest-to-the-perfect-headphones",
+    {
+      "title": "My quest to the perfect headphones",
+      "date": "2014-12-24 14:13:00",
+      "tags": ["headphones", "bose", "sennheiser", "akg", "audio-technica", "fiio"],
+      "id": "2014-12-24-my-quest-to-the-perfect-headphones"
+    }
+  ],
+  [
+    "2015-01-19-transcoding",
+    {
+      "title": "Transcoding",
+      "date": "2015-01-19 17:00:00",
+      "tags": ["geek", "video", "transcoding", "plex", "handbrake", "don-melton", "bluray", "dvd"],
+      "id": "2015-01-19-transcoding"
+    }
+  ],
+  [
+    "2015-05-04-gibson-sg-customization",
+    {
+      "title": "Gibson SG customization",
+      "date": "2015-05-04 08:31:19",
+      "tags": [
+        "gibson",
+        "guitar",
+        "customization",
+        "hardware",
+        "pickup-rings",
+        "knobs",
+        "pickup-selector-ring",
+        "fender",
+        "noiseless",
+        "stratocaster"
+      ],
+      "id": "2015-05-04-gibson-sg-customization"
+    }
+  ],
+  [
+    "2016-12-02-macbook-pro-2016-issues",
+    { "title": "MacBook Pro Late 2016 - Some issues", "date": "2016-12-02", "id": "2016-12-02-macbook-pro-2016-issues" }
   ]
 ]

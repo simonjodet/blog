@@ -1,14 +1,16 @@
+**ARCHIVE**
+
 I've learned a long time ago that PHPUnit mocks suck. Big time. They're just a pain to use.
 
 So I looked for alternatives. I didn't look for long as a [former colleague](https://github.com/fdussert) of mine is one of the original contributors of [atoum](https://github.com/atoum/atoum).
 
-Maybe because it's younger (and thus requires PHP 5.3 or above), atoum expressiveness is much better than [PHPUnit](https://github.com/sebastianbergmann/phpunit).  
+Maybe because it's younger (and thus requires PHP 5.3 or above), atoum expressiveness is much better than [PHPUnit](https://github.com/sebastianbergmann/phpunit).
 I really like atoum and highly recommend it. However, because it's a young project, I have two problems with it:
 
 * The documentation was really lagging but it's getting there
 * Integration with other tools is poor
 
-The integration issue for me is really a deal-breaker. I really like to have a green bar in [IntelliJ IDEA](http://www.jetbrains.com/idea/). I sometimes like to check test coverage live in the IDE. <span style="text-decoration: line-through;">There was no Jenkins plugin for atoum (I didn't check lately though).</span>  
+The integration issue for me is really a deal-breaker. I really like to have a green bar in [IntelliJ IDEA](http://www.jetbrains.com/idea/). I sometimes like to check test coverage live in the IDE. <span style="text-decoration: line-through;">There was no Jenkins plugin for atoum (I didn't check lately though).</span>
 **Update:** [atoum works with Jenkins](https://github.com/atoum/atoum/wiki/atoum-et-Jenkins-(ou-Hudson)) as his author [indicates to me](https://twitter.com/mageekguy/status/290863062636969984). And I should have mentioned the [feature request](http://blog.mageekbox.net/?post/2012/11/07/You-use-atoum-and-PhpStorm) for atoum support in IntelliJ IDEA. I signed it and you should too.
 
 And then I stumbled on [Mockery](https://github.com/padraic/mockery). Unlike atoum, it doesn't replace PHPUnit, it just replaces its mocking system with a more elegant, powerful and reliable one.
@@ -23,42 +25,42 @@ Here's a real life example. Let's say we have a `Database` class with:
 * a `listTables` method to list existing tables in a given database
 * a `getSchema` method to get the database SQL schema
 
-Those 3 methods will be used to reset (empty it of all data) the database: list tables, delete them then execute the SQL requests of the schema.  
-To me, there is no other logical place for a `reset` method than the `Database` class. That's a typical scenario when you need a partial mock.  
+Those 3 methods will be used to reset (empty it of all data) the database: list tables, delete them then execute the SQL requests of the schema.
+To me, there is no other logical place for a `reset` method than the `Database` class. That's a typical scenario when you need a partial mock.
 
 Here's the `Database` class:
 
-<pre class="php">
-&lt;?php
- 
+```language-php
+<?php
+
 class Database
 {
     /**
      * @var \Doctrine\DBAL\Connection
      */
     private $conn;
- 
+
     public function __construct(\Silex\Application $app)
     {
         $this->conn = $app['db'];
     }
- 
+
     public function getSchema($version = null)
     {
         //...
     }
- 
+
     public function listTables()
     {
         //...
- 
+
     }
- 
+
     public function dropTable($table)
     {
         //...
     }
- 
+
     public function reset($version = null)
     {
         $tables = $this->listTables();
@@ -66,27 +68,29 @@ class Database
         {
             $this->dropTable($table);
         }
- 
+
         $schema = $this->getSchema($version);
         foreach ($schema as $query)
         {
             $this->conn->query($query);
         }
- 
+
     }
 }
-</pre>
+```
 
 To create partial mocks, you have to give Mockery the class to mock (so don't create an anonymous mock) and the methods that will be mocked surrounded by square braces:
 
-<pre class="php">$Database = \Mockery::mock('MyClass[methodToMock1,methodToMock2]', array('constructor parameter 1', 'constructor parameter 2'))</pre>
+```language-php
+$Database = \Mockery::mock('MyClass[methodToMock1,methodToMock2]', array('constructor parameter 1', 'constructor parameter 2'))
+```
 
 You can also pass some parameters to the mock's constructor. It's especially handy when you need to inject external dependencies.
 
 And here's how it's applied to our example:
 
-<pre class="php">
-&lt;?php
+```language-php
+<?php
 
 namespace Tests\UnitTests;
 
@@ -137,4 +141,4 @@ class DatabaseTest extends PHPUnit_Framework_TestCase
         $Database->reset(1);
     }
 }
-</pre>
+```

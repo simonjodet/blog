@@ -13,7 +13,7 @@
           </v-card-title>
           <v-card-text v-html="post.html"></v-card-text>
           <v-card-actions>
-            <div class="caption font-weight-light">
+            <div class="caption font-weight-light" v-if="post.tags">
               Tags:
               <span class="font-weight-thin">{{ post.tags }}</span>
             </div>
@@ -61,5 +61,9 @@ code {
 .post-img {
   max-width: 200px;
   max-height: 200px;
+}
+img{
+  max-width: 400px;
+  max-height: 400px;
 }
 </style>

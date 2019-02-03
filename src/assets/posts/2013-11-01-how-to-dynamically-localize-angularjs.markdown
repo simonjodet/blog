@@ -1,6 +1,8 @@
-The other day, I found out some things in [AngularJS](http://angularjs.org/) are still not really well polished. One of those things in internationalization. 
+**ARCHIVE**
 
-I18n and l10n in AngularJS are ["natively"](http://docs.angularjs.org/guide/i18n) supported. First of all, that's not completely true. Components of AngularJS can be easily localized (and yet not really, we'll talk about that). For your code and your texts, you're on your own.  
+The other day, I found out some things in [AngularJS](http://angularjs.org/) are still not really well polished. One of those things in internationalization.
+
+I18n and l10n in AngularJS are ["natively"](http://docs.angularjs.org/guide/i18n) supported. First of all, that's not completely true. Components of AngularJS can be easily localized (and yet not really, we'll talk about that). For your code and your texts, you're on your own.
 I chose to write my own directive and filter because that's actually really easy with AngularJS. You can also look around, I found several libraries for that purpose and more. Whatever solution you choose, you'll have a dynamically localizable app. Except for that part that AngularJS localize himself.
 
 There is no official way to change the locale of the AngularJS components without reloading the page. And if like me the other day, you're working on an app that is completely client-side (no server-side code to load the correct locale file), you're screwed.
@@ -18,7 +20,7 @@ My first idea was to:
 4. include my app's files
 
 Something like this:
-
+```language-markup
 	<!DOCTYPE html>
 	<html ng-app="myApp">
 	<head>
@@ -35,6 +37,7 @@ Something like this:
 	    <!--etc.-->
 	</head>
 	<body ng-controller="myController">
+```
 
 That will probably work if you have enough files in your app that AngularJS, jQuery and your locale file are downloaded before your app starts. But that's not certain and that's a dirty trick anyway - inline code = not good.
 
@@ -43,7 +46,7 @@ Another issue is that it makes things significantly more difficult when you want
 So how did I fixed this?
 
 First the inline code went in its own file and function so it can be concatenated and localized like the rest of my code:
-
+```language-javascript
 	var myAppUtils = myAppUtils || {};
 	myAppUtils.i18nUtils = {
 	    "loadAngularLocaleFile": function(callback) {
@@ -52,13 +55,13 @@ First the inline code went in its own file and function so it can be concatenate
 		    $.getScript("lib/angular-i18n/angular-locale_" + locale + ".js");
 	    }
 	};
-
+```
 Then I removed the `ng-app="myApp"` directive from the `html` tag. It is necessary because this directive [automatically bootstraps](http://docs.angularjs.org/guide/bootstrap) AngularJS, starting your app as soon as possible.
 
 Finally, I added this code at the bottom of `js/myApp.js`:
-
+```language-javascript
 	myAppUtils.i18nUtils.loadAngularLocaleFile(function() {
 	    angular.bootstrap(document, ["myApp"]);
 	});
-
+```
 It bootstraps my app in the callback of the locale loading, that way I'm sure the locale file and the libs are loaded before the app starts.

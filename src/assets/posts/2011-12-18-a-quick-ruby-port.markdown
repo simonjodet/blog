@@ -1,3 +1,5 @@
+**ARCHIVE**
+
 Still on my journey to learning the Ruby language, I've ported a small PHP script I've written a while ago to quickly eject external drives on my MacBook Pro in Ruby.
 
 I converted it to [an app](/uploads/usb_eject.app.zip) with Automator
