@@ -11,7 +11,7 @@ So, how do I rip my disks? Well, first, I followed Don's README file instruction
 
 * Scan your media using the `--title 0` option: `./transcode-video.sh --title 0 /Volumes/MY_DISC/ | less`. I pipe the output to `less` because the output is usually pretty long and you need to search in it. I usually search with this pattern `/\+ duration` then scroll through result with `n` to find the longest title. Here's an example:  
 
-```
+<pre>
 + title 1:
   + Main Feature
   + playlist: 00000.MPLS
@@ -52,7 +52,7 @@ So, how do I rip my disks? Well, first, I followed Don's README file instruction
     + 4, English (TrueHD) (2.0 ch) (iso639-2: eng)
   + subtitle tracks:
   + combing detected, may be interlaced or telecined
-```
+</pre>
 
 * From that information, I built this command: `./transcode-video.sh --title 1 --big --audio 1 --allow-dts --filter decomb /Volumes/MY_DISC/`
 

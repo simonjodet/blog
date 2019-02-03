@@ -25,7 +25,7 @@ But I used VirtualBox in the past and I remember it being a PITA to setup, espec
 
 I eventually dumped Chef to use a basic [shell script](https://github.com/simonjodet/gitrepos/blob/150ec043f066f4be63a582bace7ba2fb1ae18640/deploy/deploy.sh) though:
 
-```language-bash
+<pre class="bash">
 #!/bin/sh
 echo mysql-server mysql-server/root_password select "vagrant" | debconf-set-selections
 echo mysql-server mysql-server/root_password_again select "vagrant" | debconf-set-selections
@@ -47,7 +47,7 @@ mysql -u root -p"vagrant" -e ";DROP DATABASE test;DROP USER ''@'localhost';CREAT
 sed -i 's/127.0.0.1/0.0.0.0/g' /etc/mysql/my.cnf
 service mysql restart
 apt-get clean
-```
+</pre>
 Going through this script quickly:
 
 * I pre-configure MySQL so `apt-get` runs silently and set the correct passwords
@@ -57,7 +57,7 @@ Going through this script quickly:
 
 And here's my `Vagrantfile`:
 
-```language-ruby
+<pre class="ruby">
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -66,7 +66,7 @@ Vagrant::Config.run do |config|
   config.vm.network :hostonly, "192.168.242.2"
   config.vm.provision :shell, :path => "deploy/deploy.sh"
 end
-```
+</pre>
 
 As you may have noticed I don't use a NAT network for my VM but a "Host-Only" network so I have a fixed IP that is only accessible from the host it's running on. That way I don't expose my application to the outer world.
 
@@ -137,7 +137,7 @@ sudo vim /etc/sudoers
 Add `Defaults    env_keep="SSH_AUTH_SOCK"` to the "Defaults" and replace `%admin ALL=(ALL) ALL` by `%admin ALL=NOPASSWD: ALL`.
 
 It should look like this:
-```language-bash
+<pre class="bash">
 #
 # This file MUST be edited with the 'visudo' command as root.
 #
@@ -169,7 +169,7 @@ root    ALL=(ALL:ALL) ALL
 # See sudoers(5) for more information on "#include" directives:
 
 #includedir /etc/sudoers.d
-```
+</pre>
 
 Now you're done, just shutdown the system with `sudo shutdown -h now`.
 
@@ -177,21 +177,21 @@ Now you're done, just shutdown the system with `sudo shutdown -h now`.
 
 Open a terminal, go to the folder containing your VM and run:
 
-```language-bash
+<pre class="bash">
 cd VirtualBox\ VMs/ubuntu_base
 vagrant package --base ubuntu_base
-```
+</pre>
 
 Your new base box is named `package.box`. You can now add it to your system and use it in a project like this:
 
-```language-bash
+<pre class="bash">
 vagrant box add vagrant-ubuntu-12-10-amd64 package.box
 mkdir test_environment
 cd test_environment
 vagrant init vagrant-ubuntu-12-10-amd64
 vagrant up
 vagrant ssh
-```
+</pre>
 
 You can store the package.box file in a safe location and delete the VirtualBox VM if you need space.
 

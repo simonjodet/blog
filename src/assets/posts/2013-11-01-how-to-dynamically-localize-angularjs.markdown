@@ -20,24 +20,24 @@ My first idea was to:
 4. include my app's files
 
 Something like this:
-```language-markup
-	<!DOCTYPE html>
-	<html ng-app="myApp">
-	<head>
-	    <script src="lib/angular/angular.js"></script>
-	    <script src="lib/jquery/jquery.js"></script>
-	    <script>
+<pre class="markup">
+	&lt;!DOCTYPE html&gt;
+	&lt;html ng-app="myApp"&gt;
+	&lt;head&gt;
+	    &lt;script src="lib/angular/angular.js"&gt;&lt;/script&gt;
+	    &lt;script src="lib/jquery/jquery.js"&gt;&lt;/script&gt;
+	    &lt;script&gt;
 	    //Some code to find out the locale
 	    var locale = "fr";
 	    $.getScript("lib/angular-i18n/angular-locale_" + locale + ".js");
-	    </script>
-	    <script src="js/myApp.js"></script>
-	    <script src="js/controllers/myController.js"></script>
-	    <script src="js/factories/myFactory.js"></script>
-	    <!--etc.-->
-	</head>
-	<body ng-controller="myController">
-```
+	    &lt;/script&gt;
+	    &lt;script src="js/myApp.js"&gt;&lt;/script&gt;
+	    &lt;script src="js/controllers/myController.js"&gt;&lt;/script&gt;
+	    &lt;script src="js/factories/myFactory.js"&gt;&lt;/script&gt;
+	    &lt;!--etc.--&gt;
+	&lt;/head&gt;
+	&lt;body ng-controller="myController"&gt;
+</pre>
 
 That will probably work if you have enough files in your app that AngularJS, jQuery and your locale file are downloaded before your app starts. But that's not certain and that's a dirty trick anyway - inline code = not good.
 
@@ -46,7 +46,7 @@ Another issue is that it makes things significantly more difficult when you want
 So how did I fixed this?
 
 First the inline code went in its own file and function so it can be concatenated and localized like the rest of my code:
-```language-javascript
+<pre class="javascript">
 	var myAppUtils = myAppUtils || {};
 	myAppUtils.i18nUtils = {
 	    "loadAngularLocaleFile": function(callback) {
@@ -55,13 +55,13 @@ First the inline code went in its own file and function so it can be concatenate
 		    $.getScript("lib/angular-i18n/angular-locale_" + locale + ".js");
 	    }
 	};
-```
+</pre>
 Then I removed the `ng-app="myApp"` directive from the `html` tag. It is necessary because this directive [automatically bootstraps](http://docs.angularjs.org/guide/bootstrap) AngularJS, starting your app as soon as possible.
 
 Finally, I added this code at the bottom of `js/myApp.js`:
-```language-javascript
+<pre class="javascript">
 	myAppUtils.i18nUtils.loadAngularLocaleFile(function() {
 	    angular.bootstrap(document, ["myApp"]);
 	});
-```
+</pre>
 It bootstraps my app in the callback of the locale loading, that way I'm sure the locale file and the libs are loaded before the app starts.

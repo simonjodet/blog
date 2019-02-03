@@ -6,18 +6,18 @@ The first part is language-agnostic but the second part focuses on PHP.
 
 ### Install [Homebrew](http://mxcl.github.com/homebrew/):
 
-```language-bash
+<pre class="bash">
 ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
-```
+</pre>
 
 
 ### Install ZSH and [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
 
 
-```language-bash
+<pre class="bash">
 brew install zsh zsh-completions
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-```
+</pre>
 
 ### Configure ZSH `mate ~/.zshrc`:
 Some notes here:
@@ -28,7 +28,7 @@ Some notes here:
 * Added some plugins related to the tools I most often use
 * **Important**: I've changed the path so `/usr/local/bin` and `/usr/local/sbin` are upfront. Otherwise system binaries will be used instead of homebrew binaries (you get OS X's php binary instead of the homebrew one).
 
-```language-bash
+<pre class="bash">
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -70,13 +70,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin
-```
+</pre>
 
 ### Install the github gem
 Just use Homebrew:
-```language-bash
+<pre class="bash">
 sudo gem install github
-```
+</pre>
 
 ### What about HTTP and database servers?
 That's right, how do I install Apache (or nginx)? How do I setup MySQL (or PostgreSQL)?
@@ -89,31 +89,31 @@ Another reason why I use a virtual machine is that my production servers will us
 
 * Tap the PHP repository formula
 
-```language-bash
+<pre class="bash">
 brew tap homebrew/dupes
 brew tap josegonzalez/homebrew-php
-```
+</pre>
 
 * I suggest you take a look at the options before installing PHP:
 
-```language-bash
+<pre class="bash">
 brew options php54
-```
+</pre>
 I usually use `--with-pgsql`, `--with-mysql`, `--with-suhosin`, `--with-fpm`, `--with-intl`.
 
 Now add the following path to your PATH (in the `~/.zshrc` file): `$(brew --prefix php54)/bin`
-```language-bash
+<pre class="bash">
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin
-```
+</pre>
 becomes
-```language-bash
+<pre class="bash">
 export PATH=$(brew --prefix php54)/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin
-```
+</pre>
 This will make php binaries such as `phpunit` available.
 
 ### Install PHPUnit
 
-```language-bash
+<pre class="bash">
 chmod -R ug+w `brew --prefix php54`/lib/php
 pear config-set php_ini /usr/local/etc/php/5.4/php.ini
 pear config-set auto_discover 1
@@ -122,14 +122,14 @@ pear upgrade
 pear install pear.phpunit.de/PHPUnit
 brew unlink php54
 brew link php54
-```
+</pre>
 The first command is to make it so you don't have to use `sudo` when you install PEAR packages.
 
 ### Install Composer
 Just use Homebrew:
-```language-bash
+<pre class="bash">
 brew install composer
-```
+</pre>
 
 ### Bonus: IntelliJ IDEA PHP project setup
 A nice little tip if you're an IntelliJ IDEA user: go to Preferences (cmd+,)/Project Settings/PHP/Include path and add (with the `+` button) the following path: `/usr/local/opt/php54/lib/php/PHPUnit`.
