@@ -5,7 +5,7 @@ import post from './views/post.vue';
 
 Vue.use(Router);
 
-import markdown from 'markdown';
+import marked from 'marked';
 import * as moment from 'moment';
 import postsJson from './assets/posts.json';
 const posts = new Map(postsJson);
@@ -20,7 +20,7 @@ for (const postFilePath of context.keys()) {
   if (posts.has(postId)) {
     const post = posts.get(postId);
     post.markdown = markdownContent;
-    post.html = markdown.parse(markdownContent);
+    post.html = marked(markdownContent);
     post.date = moment(post.date).format('LL');
     post.tags = post.tags.join(', ');
   }

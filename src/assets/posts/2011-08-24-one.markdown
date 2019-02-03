@@ -1,5 +1,4 @@
-<img src="/posts/img/2011-08-24-one/u2_one.jpg" class="post-img float-right"/>
-Ok. For the _tenth_ time at least, I'm starting a blog. I'm like a little school girl promising to herself every year to keep a diary. Epic fail each time...
+<img src="/img/2011-08-24-one/u2_one.jpg" class="post-img float-right"/>Ok. For the _tenth_ time at least, I'm starting a blog. I'm like a little school girl promising to herself every year to keep a diary. Epic fail each time...
 
 Every time, there is a good reason for me to start a blog. This time around, I really wanted to use Jekyll and get rid of Wordpress.
 

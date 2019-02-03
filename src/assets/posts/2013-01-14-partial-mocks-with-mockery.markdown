@@ -28,7 +28,7 @@ To me, there is no other logical place for a `reset` method than the `Database` 
 
 Here's the `Database` class:
 
-<pre class="prettyprint lang-php">
+<pre class="php">
 &lt;?php
  
 class Database
@@ -79,13 +79,13 @@ class Database
 
 To create partial mocks, you have to give Mockery the class to mock (so don't create an anonymous mock) and the methods that will be mocked surrounded by square braces:
 
-<pre class="prettyprint lang-php">$Database = \Mockery::mock('MyClass[methodToMock1,methodToMock2]', array('constructor parameter 1', 'constructor parameter 2'))</pre>
+<pre class="php">$Database = \Mockery::mock('MyClass[methodToMock1,methodToMock2]', array('constructor parameter 1', 'constructor parameter 2'))</pre>
 
 You can also pass some parameters to the mock's constructor. It's especially handy when you need to inject external dependencies.
 
 And here's how it's applied to our example:
 
-<pre class="prettyprint lang-php">
+<pre class="php">
 &lt;?php
 
 namespace Tests\UnitTests;

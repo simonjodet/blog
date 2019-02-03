@@ -1,6 +1,6 @@
 **Update**: I've replaced the nodejs search engine with a PHP one. Read more about it [this post](http://blog.jodet.com/back-from-nodejs/).
 
-<img src="/posts/img/2011-09-12-jekyll-and-node/jekyll_node.png" class="post-img float-left"/>
+<img src="/img/2011-09-12-jekyll-and-node/jekyll_node.png" class="post-img float-left"/>
 Sorry but here's a new post about this blog. I've already talked about my choice of [Jekyll](http://jekyllrb.com/) as the engine for this blog.
 
 Don't worry, I'm still very happy with it!  

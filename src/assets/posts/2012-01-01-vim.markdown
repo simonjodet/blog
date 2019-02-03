@@ -1,4 +1,4 @@
-<img src="/posts/img/2012-01-01-vim/vim_logo.png" class="post-img float-right"/>
+<img src="/img/2012-01-01-vim/vim_logo.png" class="post-img float-right"/>
 While I'm learning Ruby (and a bit of Python) I decided to make things a bit more difficult and I started to learn [Vim](http://www.vim.org/).
 
 For a while, I thought Vim was just a way for some developers to show off and snob us, the stupid people using "notepad-like" editors.

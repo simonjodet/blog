@@ -1,4 +1,4 @@
-<img src="/posts/img/2011-08-25-recent-php-discoveries/php-med-trans.png" class="post-img float-left"/>
+<img src="/img/2011-08-25-recent-php-discoveries/php-med-trans.png" class="post-img float-left"/>
 
 __Trim__
 

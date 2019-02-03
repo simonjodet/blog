@@ -1,4 +1,4 @@
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/vagrant.jpg" class="post-img float-right"/>
+<img src="/img/2013-02-10-development-environments-with-vagrant/vagrant.jpg" class="post-img float-right"/>
 As promised on Twitter, I'm going to explain how I'm now using [Vagrant](http://www.vagrantup.com/) to develop Gitrepos instead of running it on my development Macbook Air.
 
 #### Technical debt
@@ -23,7 +23,7 @@ But I used VirtualBox in the past and I remember it being a PITA to setup, espec
 
 I eventually dumped Chef to use a basic [shell script](https://github.com/simonjodet/gitrepos/blob/150ec043f066f4be63a582bace7ba2fb1ae18640/deploy/deploy.sh) though:
 
-<pre class="prettyprint lang-bash">
+<pre class="bash">
 #!/bin/sh
 echo mysql-server mysql-server/root_password select "vagrant" | debconf-set-selections
 echo mysql-server mysql-server/root_password_again select "vagrant" | debconf-set-selections
@@ -55,7 +55,7 @@ Going through this script quickly:
 
 And here's my `Vagrantfile`:
 
-<pre class="prettyprint lang-ruby">
+<pre class="ruby">
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -84,16 +84,16 @@ So I decided to build my own Ubuntu Server 12.10 amd64 base box.
 First, you'll need to install [Virtualbox](https://www.virtualbox.org/wiki/Downloads) and download the [Ubuntu Server image](http://www.ubuntu.com/download/server).
 
 In a few screenshots, here's how to start the setup:
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_01.png" align="center"/><br>
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_02.png" align="center"/><br>
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_03.png" align="center"/><br>
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_04.png" align="center"/><br>
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_05.png" align="center"/><br>
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_06.png" align="center"/><br>
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_07.png" align="center"/><br>
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_08.png" align="center"/><br>
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_09.png" align="center"/><br>
-<img src="/posts/img/2013-02-10-development-environments-with-vagrant/setup_10.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_01.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_02.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_03.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_04.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_05.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_06.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_07.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_08.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_09.png" align="center"/><br>
+<img src="/img/2013-02-10-development-environments-with-vagrant/setup_10.png" align="center"/><br>
 
 ##### Installing Ubuntu
 
@@ -117,7 +117,7 @@ Finally, install Grub with the default options and reboot.
 At this step, since the VM's network uses NAT, you can't login through SSH and copy-pasting to the VM is not possible.
 
 Login as vagrant/vagrant. I've aggregated the different steps in a [bash script](http://blog.jodet.com/uploads/vagrant.sh). Just follow these steps:
-<pre class="prettyprint lang-bash">
+<pre class="bash">
 cd /tmp
 wget http://blog.jodet.com/uploads/vagrant.sh
 chmod +x vagrant.sh
@@ -126,7 +126,7 @@ sudo ./vagrant.sh
 
 The last step is to let the `vagrant` user "sudo" without having to type his password.
 
-<pre class="prettyprint lang-bash">
+<pre class="bash">
 sudo chmod 644 /etc/sudoers
 sudo vim /etc/sudoers
 </pre>
@@ -134,7 +134,7 @@ sudo vim /etc/sudoers
 Add `Defaults    env_keep="SSH_AUTH_SOCK"` to the "Defaults" and replace `%admin ALL=(ALL) ALL` by `%admin ALL=NOPASSWD: ALL`.
 
 It should look like this:
-<pre class="prettyprint lang-bash">
+<pre class="bash">
 #
 # This file MUST be edited with the 'visudo' command as root.
 #
@@ -174,14 +174,14 @@ Now you're done, just shutdown the system with `sudo shutdown -h now`.
 
 Open a terminal, go to the folder containing your VM and run:
 
-<pre class="prettyprint lang-bash">
+<pre class="bash">
 cd VirtualBox\ VMs/ubuntu_base
 vagrant package --base ubuntu_base 
 </pre>
 
 Your new base box is named `package.box`. You can now add it to your system and use it in a project like this:
 
-<pre class="prettyprint lang-bash">
+<pre class="bash">
 vagrant box add vagrant-ubuntu-12-10-amd64 package.box
 mkdir test_environment
 cd test_environment

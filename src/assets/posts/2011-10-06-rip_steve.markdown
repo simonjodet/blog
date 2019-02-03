@@ -1,1 +1,1 @@
-<div style="text-align:center;"><a href="http://www.apple.com/stevejobs/"><img src="/posts/img/2011-10-06-rip_steve/rip_steve.png" style="max-width:600px;"/></a></div>
+<div style="text-align:center;"><a href="http://www.apple.com/stevejobs/"><img src="/img/2011-10-06-rip_steve/rip_steve.png" style="max-width:600px;"/></a></div>

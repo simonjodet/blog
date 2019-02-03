@@ -1,4 +1,4 @@
-<img src="/posts/img/2011-12-10-my-journey-with-ruby/ruby.png" class="post-img float-left"/>
+<img src="/img/2011-12-10-my-journey-with-ruby/ruby.png" class="post-img float-left"/>
 I'm a developer. But as a developer, I'm fairly faithful. I really seriously started programming with PHP. I learned and used this language thouroughly. I consider myself an expert programmer in this language.
 
 It's more or less my native language. My second language is JavaScript. I started playing with it a long time ago but really discovered its power in 2007 with Mootools.  

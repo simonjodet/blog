@@ -4,11 +4,11 @@ The first part is language-agnostic but the second part focuses on PHP.
 
 ### Install [Homebrew](http://mxcl.github.com/homebrew/):
 
-<pre class="prettyprint lang-sh">ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"</pre>
+<pre class="bash">ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"</pre>
 
 ### Install ZSH and [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh):
 
-<pre class="prettyprint lang-sh">
+<pre class="bash">
 brew install zsh zsh-completions
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 </pre>
@@ -21,7 +21,7 @@ Some notes here:
 * Added some plugins related to the tools I most often use
 * **Important**: I've changed the path so `/usr/local/bin` and `/usr/local/sbin` are upfront. Otherwise system binaries will be used instead of homebrew binaries (you get OS X's php binary instead of the homebrew one).
 
-<pre class="prettyprint lang-sh">
+<pre class="bash">
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -67,7 +67,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/bin:/bin:/usr
 
 ### Install the github gem
 Just use Homebrew:
-<pre class="prettyprint lang-sh">
+<pre class="bash">
 sudo gem install github
 </pre>
 
@@ -82,31 +82,31 @@ Another reason why I use a virtual machine is that my production servers will us
 
 * Tap the PHP repository formula
 
-<pre class="prettyprint lang-sh">
+<pre class="bash">
 brew tap homebrew/dupes
 brew tap josegonzalez/homebrew-php
 </pre>
 
 * I suggest you take a look at the options before installing PHP:
   
-<pre class="prettyprint lang-sh">
+<pre class="bash">
 brew options php54
 </pre>
 I usually use `--with-pgsql`, `--with-mysql`, `--with-suhosin`, `--with-fpm`, `--with-intl`.
 
 Now add the following path to your PATH (in the `~/.zshrc` file): `$(brew --prefix php54)/bin`
-<pre class="prettyprint lang-sh">
+<pre class="bash">
 export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin
 </pre>
 becomes
-<pre class="prettyprint lang-sh">
+<pre class="bash">
 export PATH=$(brew --prefix php54)/bin:/usr/local/bin:/usr/local/sbin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/X11/bin
 </pre>
 This will make php binaries such as `phpunit` available.
 
 ### Install PHPUnit
 
-<pre class="prettyprint lang-sh">
+<pre class="bash">
 chmod -R ug+w `brew --prefix php54`/lib/php
 pear config-set php_ini /usr/local/etc/php/5.4/php.ini
 pear config-set auto_discover 1
@@ -120,7 +120,7 @@ The first command is to make it so you don't have to use `sudo` when you install
 
 ### Install Composer
 Just use Homebrew:
-<pre class="prettyprint lang-sh">
+<pre class="bash">
 brew install composer
 </pre>
 

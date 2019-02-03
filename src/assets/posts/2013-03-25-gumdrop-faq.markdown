@@ -42,7 +42,7 @@ My publishing workflow involves Git. My blog's main Git repository is hosted on 
 
 Here it is:
 
-<pre class="prettyprint lang-bash">
+<pre class="bash">
 echo "Updating Github repository"
 git push github master
 echo "Updating sources"

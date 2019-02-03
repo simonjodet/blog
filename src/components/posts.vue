@@ -25,6 +25,8 @@
 </template>
 
 <script>
+import hljs from 'highlight.js';
+
 export default {
   name: 'posts',
   props: {
@@ -32,6 +34,32 @@ export default {
       type: Array,
       required: true
     }
+  },
+  mounted() {
+    document.querySelectorAll('pre').forEach((block) => {
+      hljs.highlightBlock(block);
+    });
   }
 };
 </script>
+<style lang="scss">
+@import '~highlight.js/styles/github.css';
+
+code {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+  box-shadow: none;
+}
+
+.float-right {
+  float: right;
+}
+
+.post-img {
+  max-width: 200px;
+  max-height: 200px;
+}
+</style>

@@ -18,7 +18,7 @@ I got 3 major issues with PHPUnit:
 
 3- Mocks are cool but they're not meant to fix all your problems. You want to test if an object's method is called: mocks are the solution. You want to make sure that during a future rewrite your fellow developer will not forget to update the client class of another? Use a real instance of the object, not a mock of it. Here's a stupid example:
 
-<pre class="prettyprint">
+<pre class="php">
 class Conf
 {
     public function get_conf($key)
