@@ -62,7 +62,7 @@ code {
   max-width: 200px;
   max-height: 200px;
 }
-img{
+img {
   max-width: 400px;
   max-height: 400px;
 }
