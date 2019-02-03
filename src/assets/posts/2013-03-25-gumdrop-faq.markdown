@@ -1,13 +1,13 @@
 Yesterday, menasquez posted a [comment](http://blog.jodet.com/posts/2012-08-26-gumdroping-this-blog.htm#comment-841009401) asking me a lot of questions regarding Gumdrop and this blog.  
 I figured I should answer them in an article (as he has a lot of questions ^^) and make it a first draft of Gumdrop's FAQ.
 
-####Question
+#### Question
 "*Do I need to learn PHP to use Gumdrop?*"
 
 No you don't. Really. However, if you want to build your own templates, you need to know some HTML, some CSS and some [Twig](http://twig.sensiolabs.org/). Check the [documentation for template designers](http://twig.sensiolabs.org/doc/templates.html) to learn more about Twig's syntax.  
 If you want to add some dynamic features to your site, you'll need to use JavaScript or some other client-side language as Gumdrop generates **static** web sites.
 
-####Question
+#### Question
 "*Do you need to write a new post in html to add it on your blog or do you have an alternative way?*"
 
 No, the goal of Gumdrop is to convert [Markdown](http://daringfireball.net/projects/markdown/) to HTML. So my workflow to post a new article on this blog is quite simple:
@@ -17,7 +17,7 @@ No, the goal of Gumdrop is to convert [Markdown](http://daringfireball.net/proje
   3. Check how it is rendered using both `r` and `w` options of gumdrop: `_vendor/bin/gumdrop -rw` and go to [http://localhost:8000/](http://localhost:8000/),
   4. Commit the new file to git and push it to the remote (more on that later).
 
-####Question
+#### Question
 "*What are the files you modified to build your template?*"
 
 Well, Gumdrop is agnostic to the type of site you want to build with it. You can build a blog, you can build a technical documentation, etc. To build a blog with Gumdrop, some work is needed.
@@ -28,12 +28,12 @@ Then you need a page listing the articles. Mine is [there](https://github.com/si
 
 This is basically the blog-specific stuff I did, the rest is explained in [Gumdrop's documentation](http://gumdropapp.com/).
 
-####Question
+#### Question
 "*How did I implemented the search engine on my blog?*"
 
 I used the iteration mechanism I just talked about to build a [JSON representation](https://github.com/simonjodet/blog/blob/master/search_db.json.twig) of all the articles on my blog. Then with [some JavaScript](https://github.com/simonjodet/blog/blob/master/scripts.js#L24-L85), I query this JSON file, filter the articles that match the search string then display the list.
 
-####Question
+#### Question
 "*How you installed it on the server? What are the requirement on the server side?*"
 
 All you need on your machine is a web server able to serve static files. The usual suspects are Apache, Nginx, Lighttpd, IIS, etc. I personally use Nginx.

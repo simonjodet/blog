@@ -9,16 +9,16 @@ Against my better judgment, I started developing Gitrepos on my Mac without both
 
 While I was working on Gitrepos, I had this nagging feeling that I should start testing it on a production-like environment ASAP. I was sure I was building [technical debt](http://techcrunch.com/2013/02/09/technical-debt-will-kill-you/) and, guess what, I was...
 
-<blockquote class="twitter-tweet" align="center" data-cards="hidden"><p>In this commit (<a href="https://t.co/hwFQEVJq" title="https://github.com/simonjodet/gitrepos/commit/1697136112fbde2463d040a392569e3a44468d5b">github.com/simonjodet/git…</a>) I've switched my dev environment to a vagrant VM. PHP server -&gt; Apache, SQLite -&gt; MySQL...</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299939650649333760">February 8, 2013</a></blockquote>
+<blockquote class="blockquote" data-cards="hidden"><p>In this commit (<a href="https://t.co/hwFQEVJq" title="https://github.com/simonjodet/gitrepos/commit/1697136112fbde2463d040a392569e3a44468d5b">github.com/simonjodet/git…</a>) I've switched my dev environment to a vagrant VM. PHP server -&gt; Apache, SQLite -&gt; MySQL...</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299939650649333760">February 8, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-<blockquote class="twitter-tweet" align="center"><p>...I found out Apache changes exotic HTTP codes such as 230 into 500 and that "keys" is a reserved word for MySQL but not for SQLite.</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299939663957864448">February 8, 2013</a></blockquote>
+<blockquote class="blockquote"><p>...I found out Apache changes exotic HTTP codes such as 230 into 500 and that "keys" is a reserved word for MySQL but not for SQLite.</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299939663957864448">February 8, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 #### Enters Vagrant
 Then the other day, I went through my (very long) [Pocket](http://getpocket.com/) list and took a look at Vagrant. I mainly use Pocket as note pad/todo list and I had flagged Vagrant as something I should take a look at. It looked exactly as the best solution to solve my environment problem.
 
 But I used VirtualBox in the past and I remember it being a PITA to setup, especially the folder sharing stuff. So I gave Vagrant a try, almost convinced it would failed. But it didn't!
-<blockquote class="twitter-tweet" align="center"><p>I'm amazed how little hassle it is to use Vagrant: in 2 hours, I've created a base box from scratch and setup Chef to create a LAMP server</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299471302404763648">February 7, 2013</a></blockquote>
+<blockquote class="blockquote"><p>I'm amazed how little hassle it is to use Vagrant: in 2 hours, I've created a base box from scratch and setup Chef to create a LAMP server</p>&mdash; Simon Jodet (@sjodet) <a href="https://twitter.com/sjodet/status/299471302404763648">February 7, 2013</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 I eventually dumped Chef to use a basic [shell script](https://github.com/simonjodet/gitrepos/blob/150ec043f066f4be63a582bace7ba2fb1ae18640/deploy/deploy.sh) though:
