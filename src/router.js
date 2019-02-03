@@ -22,7 +22,7 @@ for (const postFilePath of context.keys()) {
     post.markdown = markdownContent;
     post.html = marked(markdownContent);
     post.date = moment(post.date).format('LL');
-    post.tags = post.tags.join(', ');
+    post.tags = post.tags ? post.tags.join(', ') : '';
   }
 }
 
@@ -41,6 +41,15 @@ export default new Router({
       name: 'post',
       component: post,
       props: { posts }
+    },
+    {
+      path: '/:year/:month/:day/:id',
+      redirect: (route) => {
+        return `${route.params.year}-${route.params.month}-${route.params.day}-${route.params.id.substring(
+          0,
+          route.params.id.length - 5
+        )}`;
+      }
     }
   ],
   scrollBehavior(to, from, savedPosition) {
