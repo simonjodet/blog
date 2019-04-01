@@ -3,11 +3,10 @@ This github repository contains [my personal blog](http://blog.jodet.com)'s sour
 
 ## Description ##
 This repository contains all the development I've done on my personal blog.
-It is built with [Gumdrop](http://simonjodet.github.com/gumdrop/), styled with [Bootstrap](http://twitter.github.com/bootstrap/), connected to Twitter with [Tweet!](http://tweet.seaofclouds.com/) and enhanced with custom JavaScript code of my own.
-If you wish to know more about how this blog is built, read [this post about it](http://blog.jodet.com/posts/2012-08-26-gumdroping-this-blog.htm). 
+It is built with VueJS (https://vuejs.org) and styled with Vuetify (https://vuetifyjs.com/en/).
 
 ## License ##
-All post files (usually but not always in *\_posts* folders) are personal and all rights on them are reserved by me, Simon Jodet. They cannot be used without my written consent.
+All post files (in the `src/assets/posts` folder) are personal and all rights on them are reserved by me, Simon Jodet. They cannot be used without my written consent.
 
 Eveything else (meaning code) is released under the MIT license:
 Copyright (C) 2011 by Simon Jodet.
